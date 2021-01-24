@@ -33,7 +33,7 @@ int ft_make_parse(t_print_flags *my_struct, va_list *v_list, int *res_len);
 
 int ft_print_char(va_list *v_list, int *res_len);
 
-int ft_print_string(va_list v_list, int res_len);
+int ft_print_string(t_print_flags *my_struct, va_list *v_list, int *res_len);
 
 int ft_print_pointer(va_list v_list, int res_len);
 
@@ -55,5 +55,5 @@ char *ft_num_for_sruct(char **p);
 void ft_make_string_clear(char **str);
 
 //вывод строки + возврат ее длины
-int	ft_putstr_printf(char *s);
+int	ft_putstr_printf(char *s, int precis_len);
 #endif

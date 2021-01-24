@@ -100,11 +100,13 @@ void ft_make_string_clear(char **str)
 	free(tmp);
 }
 
-int	ft_putstr_printf(char *s)
+int	ft_putstr_printf(char *s, int precis_len)
 {
     int str_len;
-
-    str_len = ft_strlen(s);
+    if (!precis_len)
+        str_len = ft_strlen(s);
+    else
+        str_len = precis_len;
 	if (s)
 		write(1, s, str_len);
     return (str_len);
