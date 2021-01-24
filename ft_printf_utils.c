@@ -112,7 +112,7 @@ int	ft_putstr_printf(char *s, int precis_len)
     return (str_len);
 }
 
-int	ft_get_capacity(int n)
+int	ft_get_capacity(int n, int base)
 {
 	int nm;
 	int num_cap;
@@ -121,8 +121,54 @@ int	ft_get_capacity(int n)
 	num_cap = 0;
 	while (nm != 0)
 	{
-		nm = nm / 10;
+		nm = nm / base;
 		num_cap++;
 	}
 	return (num_cap);
+}
+
+//конвертируем в 16тиричную систему число
+char ft_convert_to_x(int n, char *base)
+{
+    char res;
+    if (n<10)
+        res = n + '0';
+    else
+        res = base[n - 10];
+    return (res);
+}
+
+
+char	*ft_fill_x_s(char *s, int x_num, int num_cap, char *base) {
+    int divis;
+    if (x_num == 0)
+        s[0] = '0';
+    while (num_cap > 0) {
+        divis = x_num % 16;
+        s[num_cap - 1] = ft_convert_to_x(divis, base);
+        x_num = x_num / 16;
+        num_cap--;
+    }
+    return (s);
+}
+
+char *ft_get_x_num_str(int x_num, int num_cap, char *base)
+{
+    int size;
+    char *s;
+    int start;
+
+    start = 0;
+    size = (x_num < 1) ? num_cap + 2 : num_cap + 1;
+    s = malloc(size * sizeof(char));
+    if (!s)
+        return (NULL);
+    s[size] = '\0';
+    if (x_num < 0)
+    {
+        s[start] = '-';
+        num_cap = num_cap * (-1);
+        start++;
+    }
+    return(ft_fill_x_s(&s[start], x_num, num_cap, base));
 }

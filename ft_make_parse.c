@@ -51,6 +51,7 @@ int ft_print_int(t_print_flags *my_struct, va_list *v_list, int *res_len)
 	int		zero_num;
 	char 	width_symbol;
 	int		width_symbol_num;
+	char    *start_p;
 
 	zero_num = 0;
 	width_symbol_num = 0;
@@ -60,11 +61,11 @@ int ft_print_int(t_print_flags *my_struct, va_list *v_list, int *res_len)
 	//printf("\nMY VA_ARG\n %d\n", print_num);
 
 	//вычисляем длину инта
-	num_len = ft_get_capacity(print_num);
-    if (print_num < 0)
-        print_num = print_num * (-1);
+	num_len = ft_get_capacity(print_num, 10);
+//    if (print_num < 0)
+//        print_num = print_num * (-1);
 	num_string = ft_itoa(print_num);
-
+	start_p = num_string;
 	//если есть ширина
 	if (my_struct->width)
 	{
@@ -97,6 +98,7 @@ int ft_print_int(t_print_flags *my_struct, va_list *v_list, int *res_len)
 		if (print_num < 0)
 		{
 			write(1, "-", 1);
+			start_p++;
             (*res_len)++;
 		}
 		while (zero_num > 0)
@@ -105,7 +107,7 @@ int ft_print_int(t_print_flags *my_struct, va_list *v_list, int *res_len)
             (*res_len)++;
 			zero_num--;
 		}
-        (*res_len) = (*res_len) + ft_putstr_printf(num_string, 0);
+        (*res_len) = (*res_len) + ft_putstr_printf(start_p, 0);
 	}
 	//если есть флаг минус
 	else
@@ -115,6 +117,7 @@ int ft_print_int(t_print_flags *my_struct, va_list *v_list, int *res_len)
         {
             write(1, "-", 1);
             (*res_len)++;
+            start_p++;
         }
         while (zero_num > 0)
         {
@@ -122,7 +125,7 @@ int ft_print_int(t_print_flags *my_struct, va_list *v_list, int *res_len)
             (*res_len)++;
             zero_num--;
         }
-        (*res_len) = (*res_len) + ft_putstr_printf(num_string, 0);
+        (*res_len) = (*res_len) + ft_putstr_printf(start_p, 0);
         //в конце пробелы
         while (width_symbol_num > 0)
         {
@@ -225,6 +228,7 @@ int ft_print_Xx(t_print_flags *my_struct, va_list *v_list, int *res_len)
     int		zero_num;
     char 	width_symbol;
     int		width_symbol_num;
+    char    *start_p;
 
     zero_num = 0;
     width_symbol_num = 0;
@@ -234,10 +238,82 @@ int ft_print_Xx(t_print_flags *my_struct, va_list *v_list, int *res_len)
 
 
     if (my_struct->type == 'X')
-        base = "0123456789ABCDEF";
+        base = "ABCDEF";
     else
-        base = "0123456789abcdef";
+        base = "abcdef";
+    num_len = ft_get_capacity(print_num, 16);
+    x_num_string = ft_get_x_num_str(print_num, num_len, base);
+    start_p = x_num_string;
 
+    if (my_struct->width)
+    {
+        if (my_struct->flag_zero)
+            width_symbol = '0';
+        //считаем пробелы без вычета нулей
+        width_symbol_num = my_struct->width - num_len;
+        //если число меньше нуля еще уменьшаем
+        if (print_num < 0)
+            width_symbol_num--;
+    }
+    //если есть точность, считаем нули
+    if (my_struct->precis)
+    {
+        zero_num = my_struct->precis - num_len;
+        width_symbol = ' ';
+        if (zero_num > 0)
+            width_symbol_num = width_symbol_num - zero_num;
+    }
+    //если  не минус
+    if (!(my_struct->flag_minus))
+    {
+        //сперва пробелы
+        while (width_symbol_num > 0)
+        {
+            write(1, &width_symbol, 1);
+            (*res_len)++;
+            width_symbol_num--;
+        }
+        if (print_num < 0)
+        {
+            write(1, "-", 1);
+            start_p++;
+            (*res_len)++;
+        }
+        while (zero_num > 0)
+        {
+            write(1, "0", 1);
+            (*res_len)++;
+            zero_num--;
+        }
+        (*res_len) = (*res_len) + ft_putstr_printf(start_p, 0);
+    }
+        //если есть флаг минус
+    else
+    {
+//сперва минус
+        if (print_num < 0)
+        {
+            write(1, "-", 1);
+            (*res_len)++;
+            start_p++;
+        }
+        while (zero_num > 0)
+        {
+            write(1, "0", 1);
+            (*res_len)++;
+            zero_num--;
+        }
+        (*res_len) = (*res_len) + ft_putstr_printf(start_p, 0);
+        //в конце пробелы
+        while (width_symbol_num > 0)
+        {
+            write(1, &width_symbol, 1);
+            (*res_len)++;
+            width_symbol_num--;
+        }
+    }
+    free(x_num_string);
+    x_num_string = NULL;
     return (*res_len);
 }
 	

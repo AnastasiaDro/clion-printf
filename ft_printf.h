@@ -43,7 +43,7 @@ int ft_print_Xx(t_print_flags *my_struct, va_list *v_list, int *res_len);
 
 //считаем длину числа
 int ft_take_num_length(int number);
-int	ft_get_capacity(int n);
+int	ft_get_capacity(int n, int base);
 
 //utils
 t_print_flags *ft_create_struct();
@@ -58,4 +58,6 @@ void ft_make_string_clear(char **str);
 
 //вывод строки + возврат ее длины
 int	ft_putstr_printf(char *s, int precis_len);
+
+char *ft_get_x_num_str(int x_num, int num_cap, char *base);
 #endif
