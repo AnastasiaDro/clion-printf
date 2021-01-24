@@ -74,7 +74,7 @@ int ft_print_int(t_print_flags *my_struct, va_list *v_list, int *res_len)
 		//если число меньше нуля еще уменьшаем
 		if (print_num < 0)
 			width_symbol_num--;
-	} 
+	}
 	//если есть точность, считаем нули
 	if (my_struct->precis)
 	{
@@ -86,25 +86,11 @@ int ft_print_int(t_print_flags *my_struct, va_list *v_list, int *res_len)
 	//если  не минус
 	if (!(my_struct->flag_minus))
 	{
-		//сперва пробелы
-		while (width_symbol_num > 0)
-		{
-			write(1, &width_symbol, 1);
-            (*res_len)++;
-			width_symbol_num--;
-		}
+		//сперва ширина
+        ft_print_width(width_symbol_num, width_symbol, res_len);
 		if (print_num < 0)
-		{
-			write(1, "-", 1);
-			start_p++;
-            (*res_len)++;
-		}
-		while (zero_num > 0)
-		{
-			write(1, "0", 1);
-            (*res_len)++;
-			zero_num--;
-		}
+		ft_print_minus(&start_p, res_len);
+        ft_print_precis(zero_num, res_len);
         (*res_len) = (*res_len) + ft_putstr_printf(start_p, 0);
 	}
 	//если есть флаг минус
@@ -112,25 +98,11 @@ int ft_print_int(t_print_flags *my_struct, va_list *v_list, int *res_len)
 	{
 //сперва минус
         if (print_num < 0)
-        {
-            write(1, "-", 1);
-            (*res_len)++;
-            start_p++;
-        }
-        while (zero_num > 0)
-        {
-            write(1, "0", 1);
-            (*res_len)++;
-            zero_num--;
-        }
+            ft_print_minus(&start_p, res_len);
+        ft_print_precis(zero_num, res_len);
         (*res_len) = (*res_len) + ft_putstr_printf(start_p, 0);
         //в конце пробелы
-        while (width_symbol_num > 0)
-        {
-            write(1, &width_symbol, 1);
-            (*res_len)++;
-            width_symbol_num--;
-        }
+        ft_print_width(width_symbol_num, width_symbol, res_len);
 	}
 	free(num_string);
 	num_string = NULL;
@@ -148,9 +120,6 @@ int ft_print_string(t_print_flags *my_struct, va_list *v_list, int *res_len)
     width_symbol_num = 0;
     str_for_print = va_arg(*v_list, char *);
     str_len = ft_strlen(str_for_print);
-    //проверим флаг 0
-//    if(my_struct->flag_zero && !(my_struct->flag_minus))
-//        width_symbol = '0';
     //узнаем длину строки с учетом точности
     //и присвоим итоговой длине выведенной строки
     if (my_struct->precis < str_len)
@@ -160,23 +129,13 @@ int ft_print_string(t_print_flags *my_struct, va_list *v_list, int *res_len)
         width_symbol_num = my_struct->width - str_len;
     if(!(my_struct->flag_minus))
     {
-        while (width_symbol_num > 0)
-        {
-            write(1, &width_symbol, 1);
-            (*res_len)++;
-            width_symbol_num--;
-        }
+        ft_print_width(width_symbol_num, width_symbol, res_len);
         (*res_len) = (*res_len) + ft_putstr_printf(str_for_print, str_len);
     }
     else
     {
         (*res_len) = (*res_len) + ft_putstr_printf(str_for_print, str_len);
-        while (width_symbol_num > 0)
-        {
-            write(1, &width_symbol, 1);
-            (*res_len)++;
-            width_symbol_num--;
-        }
+        ft_print_width(width_symbol_num, width_symbol, res_len);
     }
     return (*res_len);
 }
@@ -194,12 +153,7 @@ int ft_print_char(t_print_flags *my_struct, va_list *v_list, int *res_len)
 
     if (!(my_struct->flag_minus))
     {
-        while (width_symbol_num > 0)
-        {
-            write(1, &width_symbol, 1);
-            (*res_len)++;
-            width_symbol_num--;
-        }
+        ft_print_width(width_symbol_num, width_symbol, res_len);
         write(1, &char_for_print, 1);
         (*res_len)++;
     }
@@ -207,12 +161,7 @@ int ft_print_char(t_print_flags *my_struct, va_list *v_list, int *res_len)
     {
         write(1, &char_for_print, 1);
         (*res_len)++;
-        while (width_symbol_num > 0)
-        {
-            write(1, &width_symbol, 1);
-            (*res_len)++;
-            width_symbol_num--;
-        }
+        ft_print_width(width_symbol_num, width_symbol, res_len);
     }
 	return (*res_len);
 }
@@ -265,24 +214,10 @@ int ft_print_Xx(t_print_flags *my_struct, va_list *v_list, int *res_len)
     if (!(my_struct->flag_minus))
     {
         //сперва пробелы
-        while (width_symbol_num > 0)
-        {
-            write(1, &width_symbol, 1);
-            (*res_len)++;
-            width_symbol_num--;
-        }
+        ft_print_width(width_symbol_num, width_symbol, res_len);
         if (print_num < 0)
-        {
-            write(1, "-", 1);
-            start_p++;
-            (*res_len)++;
-        }
-        while (zero_num > 0)
-        {
-            write(1, "0", 1);
-            (*res_len)++;
-            zero_num--;
-        }
+            ft_print_minus(&start_p, res_len);
+        ft_print_precis(zero_num, res_len);
         (*res_len) = (*res_len) + ft_putstr_printf(start_p, 0);
     }
         //если есть флаг минус
@@ -290,25 +225,11 @@ int ft_print_Xx(t_print_flags *my_struct, va_list *v_list, int *res_len)
     {
 //сперва минус
         if (print_num < 0)
-        {
-            write(1, "-", 1);
-            (*res_len)++;
-            start_p++;
-        }
-        while (zero_num > 0)
-        {
-            write(1, "0", 1);
-            (*res_len)++;
-            zero_num--;
-        }
+            ft_print_minus(&start_p, res_len);
+        ft_print_precis(zero_num, res_len);
         (*res_len) = (*res_len) + ft_putstr_printf(start_p, 0);
         //в конце пробелы
-        while (width_symbol_num > 0)
-        {
-            write(1, &width_symbol, 1);
-            (*res_len)++;
-            width_symbol_num--;
-        }
+        ft_print_width(width_symbol_num, width_symbol, res_len);
     }
     free(x_num_string);
     x_num_string = NULL;

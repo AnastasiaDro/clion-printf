@@ -83,6 +83,12 @@
 		<Unit filename="/Users/anastasia/CLionProjects/clion-printf/ft_make_parse.c">
 			<Option target="ft_printf_clion"/>
 		</Unit>
+		<Unit filename="/Users/anastasia/CLionProjects/clion-printf/ft_parse_utils.c">
+			<Option target="ft_printf_clion"/>
+		</Unit>
+		<Unit filename="/Users/anastasia/CLionProjects/clion-printf/ft_parse_utils.h">
+			<Option target="ft_printf_clion"/>
+		</Unit>
 		<Unit filename="/Users/anastasia/CLionProjects/clion-printf/ft_printf.c">
 			<Option target="ft_printf_clion"/>
 		</Unit>

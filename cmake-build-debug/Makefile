@@ -170,6 +170,33 @@ ft_make_parse.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/ft_make_parse.c.s
 .PHONY : ft_make_parse.c.s
 
+ft_parse_utils.o: ft_parse_utils.c.o
+
+.PHONY : ft_parse_utils.o
+
+# target to build an object file
+ft_parse_utils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/ft_parse_utils.c.o
+.PHONY : ft_parse_utils.c.o
+
+ft_parse_utils.i: ft_parse_utils.c.i
+
+.PHONY : ft_parse_utils.i
+
+# target to preprocess a source file
+ft_parse_utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/ft_parse_utils.c.i
+.PHONY : ft_parse_utils.c.i
+
+ft_parse_utils.s: ft_parse_utils.c.s
+
+.PHONY : ft_parse_utils.s
+
+# target to generate assembly for a file
+ft_parse_utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/ft_parse_utils.c.s
+.PHONY : ft_parse_utils.c.s
+
 ft_printf.o: ft_printf.c.o
 
 .PHONY : ft_printf.o
@@ -452,6 +479,9 @@ help:
 	@echo "... ft_make_parse.o"
 	@echo "... ft_make_parse.i"
 	@echo "... ft_make_parse.s"
+	@echo "... ft_parse_utils.o"
+	@echo "... ft_parse_utils.i"
+	@echo "... ft_parse_utils.s"
 	@echo "... ft_printf.o"
 	@echo "... ft_printf.i"
 	@echo "... ft_printf.s"
