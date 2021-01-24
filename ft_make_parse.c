@@ -13,6 +13,7 @@
 //внимание! тут подключаю другую либу! нужно со школьного мака
 //взять правильную
 #include "ft_printf.h"
+#include "ft_parse_utils.h"
 #include <stdio.h>
 
 int ft_make_parse(t_print_flags *my_struct, va_list *v_list, int *res_len)
@@ -66,15 +67,7 @@ int ft_print_int(t_print_flags *my_struct, va_list *v_list, int *res_len)
 	start_p = num_string;
 	//если есть ширина
 	if (my_struct->width)
-	{
-		if (my_struct->flag_zero)
-			width_symbol = '0';
-		//считаем пробелы без вычета нулей
-		width_symbol_num = my_struct->width - num_len;
-		//если число меньше нуля еще уменьшаем
-		if (print_num < 0)
-			width_symbol_num--;
-	}
+	    width_symbol_num = ft_calc_width(my_struct, &width_symbol, width_symbol_num, num_len, print_num);
 	//если есть точность, считаем нули
 	if (my_struct->precis)
 	{
@@ -193,15 +186,7 @@ int ft_print_Xx(t_print_flags *my_struct, va_list *v_list, int *res_len)
     start_p = x_num_string;
 
     if (my_struct->width)
-    {
-        if (my_struct->flag_zero)
-            width_symbol = '0';
-        //считаем пробелы без вычета нулей
-        width_symbol_num = my_struct->width - num_len;
-        //если число меньше нуля еще уменьшаем
-        if (print_num < 0)
-            width_symbol_num--;
-    }
+        width_symbol_num = ft_calc_width(my_struct, &width_symbol, width_symbol_num, num_len, print_num);
     //если есть точность, считаем нули
     if (my_struct->precis)
     {

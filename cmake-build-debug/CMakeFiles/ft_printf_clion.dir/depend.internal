@@ -3,6 +3,12 @@
 
 CMakeFiles/ft_printf_clion.dir/ft_make_parse.c.o
  /Users/anastasia/CLionProjects/clion-printf/ft_make_parse.c
+ /Users/anastasia/CLionProjects/clion-printf/ft_parse_utils.h
+ /Users/anastasia/CLionProjects/clion-printf/ft_printf.h
+ /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/libft.h
+CMakeFiles/ft_printf_clion.dir/ft_parse_utils.c.o
+ /Users/anastasia/CLionProjects/clion-printf/ft_parse_utils.c
+ /Users/anastasia/CLionProjects/clion-printf/ft_parse_utils.h
  /Users/anastasia/CLionProjects/clion-printf/ft_printf.h
  /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/libft.h
 CMakeFiles/ft_printf_clion.dir/ft_printf.c.o
