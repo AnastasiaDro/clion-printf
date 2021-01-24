@@ -22,9 +22,12 @@ int ft_make_parse(t_print_flags *my_struct, va_list *v_list, int *res_len)
 	symbol = my_struct->type;
 	//если знак поцента
 	if (symbol == '%')
-		write(1,"%%", 1);
-	//if (symbol == 'c')
-	//	ft_print_char(v_list, res_len);
+    {
+        write(1,"%%", 1);
+        (*res_len)++;
+    }
+	if (symbol == 'c')
+		ft_print_char(my_struct, v_list, res_len);
 	if (symbol == 's')
 		ft_print_string(my_struct, v_list, res_len);
 	//if (symbol == 'p')
@@ -145,8 +148,8 @@ int ft_print_string(t_print_flags *my_struct, va_list *v_list, int *res_len)
     str_for_print = va_arg(*v_list, char *);
     str_len = ft_strlen(str_for_print);
     //проверим флаг 0
-    if(my_struct->flag_zero)
-        width_symbol = '0';
+//    if(my_struct->flag_zero && !(my_struct->flag_minus))
+//        width_symbol = '0';
     //узнаем длину строки с учетом точности
     //и присвоим итоговой длине выведенной строки
     if (my_struct->precis < str_len)
@@ -178,9 +181,39 @@ int ft_print_string(t_print_flags *my_struct, va_list *v_list, int *res_len)
 }
 
 
-int ft_print_char(va_list *v_list, int *res_len)
+int ft_print_char(t_print_flags *my_struct, va_list *v_list, int *res_len)
 {
-	return 1;
+    char    char_for_print;
+    char 	width_symbol;
+    int		width_symbol_num;
+
+    char_for_print = (char)va_arg(*v_list, int);
+    width_symbol = ' ';
+    width_symbol_num = my_struct->width-1;
+
+    if (!(my_struct->flag_minus))
+    {
+        while (width_symbol_num > 0)
+        {
+            write(1, &width_symbol, 1);
+            (*res_len)++;
+            width_symbol_num--;
+        }
+        write(1, &char_for_print, 1);
+        (*res_len)++;
+    }
+    else
+    {
+        write(1, &char_for_print, 1);
+        (*res_len)++;
+        while (width_symbol_num > 0)
+        {
+            write(1, &width_symbol, 1);
+            (*res_len)++;
+            width_symbol_num--;
+        }
+    }
+	return (*res_len);
 }
 	
 
