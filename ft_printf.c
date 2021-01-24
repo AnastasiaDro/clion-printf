@@ -39,8 +39,8 @@ int ft_printf(const char *format_str, ...)
 		{ 
 		ft_putchar_fd(*p, 1);
 		res_len++;
-		}
 		p++;
+		}
 	}
 
 	//закончили с аргументами

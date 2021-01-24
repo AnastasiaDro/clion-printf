@@ -92,6 +92,7 @@ int ft_print_int(t_print_flags *my_struct, va_list *v_list, int *res_len)
 		{
 			write(1, &width_symbol, 1);
 			res_len++;
+			width_symbol_num--;
 		}
 		if (print_num < 0)
 		{
