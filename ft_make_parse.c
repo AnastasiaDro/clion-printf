@@ -62,8 +62,6 @@ int ft_print_int(t_print_flags *my_struct, va_list *v_list, int *res_len)
 
 	//вычисляем длину инта
 	num_len = ft_get_capacity(print_num, 10);
-//    if (print_num < 0)
-//        print_num = print_num * (-1);
 	num_string = ft_itoa(print_num);
 	start_p = num_string;
 	//если есть ширина

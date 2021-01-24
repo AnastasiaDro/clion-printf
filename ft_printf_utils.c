@@ -167,8 +167,9 @@ char *ft_get_x_num_str(int x_num, int num_cap, char *base)
     if (x_num < 0)
     {
         s[start] = '-';
-        num_cap = num_cap * (-1);
+        x_num = x_num * (-1);
         start++;
     }
-    return(ft_fill_x_s(&s[start], x_num, num_cap, base));
+    ft_fill_x_s(&s[start], x_num, num_cap, base);
+    return(s);
 }

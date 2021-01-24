@@ -15,14 +15,16 @@
 int main()
 {
     printf("ШЕСТНАДЦАТИРИЧНЫЕ\n");
-    ft_printf("six (with zero-flag and width and precis %-20.5xtratata\n"
-              "seven-hundred (without zero_flag and with precis less then number) %.1X",
-              -6, -700);
+    int res = ft_printf("six (with zero-flag and width and precis %-20.5xtratata\n"
+              "seven-hundred (without zero_flag and with precis less then number) %.1X\n",
+              6, 700);
+    printf("RES_MY %d\n", res);
     //original printf
     ft_printf("\noriginal function\n");
-    printf("six (with zero-flag and width and precis %-20.5xtratata\n"
-           "seven-hundred (without zero_flag and with precis less then number) %.1X",
-           -6, -700);
+   res =  printf("six (with zero-flag and width and precis %-20.5xtratata\n"
+           "seven-hundred (without zero_flag and with precis less then number) %.1X\n",
+           6, 700);
+    printf("RES_ORIG %d\n", res);
 
     printf("\nЧАРЫ\n");
 //    ft_printf("мой чар точность 15 %15c после\n", 'T');
