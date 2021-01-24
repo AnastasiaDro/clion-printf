@@ -57,7 +57,7 @@ int ft_print_int(t_print_flags *my_struct, va_list *v_list, int *res_len)
 	width_symbol = ' ';
 	//наше число для печати
 	print_num = va_arg(*v_list, int);
-	printf("\nMY VA_ARG\n %d\n", print_num);
+	//printf("\nMY VA_ARG\n %d\n", print_num);
 
 	//вычисляем длину инта
 	num_len = ft_get_capacity(print_num);
@@ -91,44 +91,45 @@ int ft_print_int(t_print_flags *my_struct, va_list *v_list, int *res_len)
 		while (width_symbol_num > 0)
 		{
 			write(1, &width_symbol, 1);
-			res_len++;
+            (*res_len)++;
 			width_symbol_num--;
 		}
 		if (print_num < 0)
 		{
 			write(1, "-", 1);
-			res_len++;
+            (*res_len)++;
 		}
 		while (zero_num > 0)
 		{
 			write(1, "0", 1);
-			res_len++;
+            (*res_len)++;
+			zero_num--;
 		}
-		res_len = res_len + ft_putstr_printf(num_string);
+        (*res_len) = (*res_len) + ft_putstr_printf(num_string);
 	}
 	//если есть флаг минус
 	else
 	{
-		width_symbol = ' ';
-		//сперва число с нулями
-		if (print_num < 0)
-		{
-			write(1, "-", 1);
-			res_len++;
-		}
-		while (zero_num > 0)
-		{
-			write(1, "0", 1);
-			res_len++;
-			zero_num--;
-		}
-		res_len = res_len + ft_putstr_printf(num_string);
-		while (width_symbol_num > 0)
-		{
-			write(1, &width_symbol_num, 1);
-			width_symbol_num--;
-			res_len++;
-		}
+//сперва минус
+        if (print_num < 0)
+        {
+            write(1, "-", 1);
+            (*res_len)++;
+        }
+        while (zero_num > 0)
+        {
+            write(1, "0", 1);
+            (*res_len)++;
+            zero_num--;
+        }
+        (*res_len) = (*res_len) + ft_putstr_printf(num_string);
+        //в конце пробелы
+        while (width_symbol_num > 0)
+        {
+            write(1, &width_symbol, 1);
+            (*res_len)++;
+            width_symbol_num--;
+        }
 	}
 	return (*res_len);
 }
