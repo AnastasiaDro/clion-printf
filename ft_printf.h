@@ -39,6 +39,8 @@ int ft_print_pointer(va_list v_list, int res_len);
 
 int ft_print_int(t_print_flags *my_struct, va_list *v_list, int *res_len);
 
+int ft_print_Xx(t_print_flags *my_struct, va_list *v_list, int *res_len);
+
 //считаем длину числа
 int ft_take_num_length(int number);
 int	ft_get_capacity(int n);

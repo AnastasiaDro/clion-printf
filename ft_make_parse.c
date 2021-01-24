@@ -36,8 +36,8 @@ int ft_make_parse(t_print_flags *my_struct, va_list *v_list, int *res_len)
 		ft_print_int(my_struct, v_list, res_len);
 	//if (symbol == 'u')
 		//
-	//if (symbol == 'X' || symbol =='x')
-		//
+	if (symbol == 'X' || symbol =='x')
+        ft_print_Xx(my_struct, v_list, res_len);
 	return (*res_len);
 }
 
@@ -214,6 +214,31 @@ int ft_print_char(t_print_flags *my_struct, va_list *v_list, int *res_len)
         }
     }
 	return (*res_len);
+}
+
+int ft_print_Xx(t_print_flags *my_struct, va_list *v_list, int *res_len)
+{
+    char    *base;
+    int     print_num;
+    int		num_len;
+    char	*x_num_string;
+    int		zero_num;
+    char 	width_symbol;
+    int		width_symbol_num;
+
+    zero_num = 0;
+    width_symbol_num = 0;
+    width_symbol = ' ';
+    //наше число для печати
+    print_num = va_arg(*v_list, int);
+
+
+    if (my_struct->type == 'X')
+        base = "0123456789ABCDEF";
+    else
+        base = "0123456789abcdef";
+
+    return (*res_len);
 }
 	
 
