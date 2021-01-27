@@ -49,13 +49,11 @@ int ft_print_int(t_print_flags *my_struct, va_list *v_list)
 	int		num_len;
 	int		print_num;
 	char	*num_string;
-	int		zero_num;
+	//int		zero_num;
 	char 	width_symbol;
-	//int		width_symbol_num;
 	char    *start_p;
 
-	zero_num = 0;
-	//width_symbol_num = 0;
+	//zero_num = 0;
 	width_symbol = ' ';
 	//наше число для печати
 	print_num = va_arg(*v_list, int);
@@ -70,10 +68,10 @@ int ft_print_int(t_print_flags *my_struct, va_list *v_list)
 	//если есть точность, считаем нули
 	if (my_struct->precis)
 	{
-		zero_num = my_struct->precis - num_len;
+        my_struct->precis = my_struct->precis - num_len;
 		width_symbol = ' ';
-		if (zero_num > 0)
-            my_struct->width = my_struct->width - zero_num;
+		if (my_struct->precis > 0)
+            my_struct->width = my_struct->width - my_struct->precis;
 	}
 	//если  не минус
 	if (!(my_struct->flag_minus))
@@ -82,7 +80,7 @@ int ft_print_int(t_print_flags *my_struct, va_list *v_list)
         ft_print_width(width_symbol, my_struct);
 		if (print_num < 0)
 		ft_print_minus(&start_p, my_struct);
-        ft_print_precis(zero_num, my_struct);
+        ft_print_precis(my_struct);
         my_struct->length = my_struct->length + ft_putstr_printf(start_p, 0);
 	}
 	//если есть флаг минус
@@ -91,7 +89,7 @@ int ft_print_int(t_print_flags *my_struct, va_list *v_list)
 //сперва минус
         if (print_num < 0)
             ft_print_minus(&start_p, my_struct);
-        ft_print_precis(zero_num, my_struct);
+        ft_print_precis(my_struct);
         my_struct->length = my_struct->length + ft_putstr_printf(start_p, 0);
         //в конце пробелы
         ft_print_width(width_symbol, my_struct);
@@ -165,12 +163,12 @@ int ft_print_Xx(t_print_flags *my_struct, va_list *v_list)
     int     print_num;
     int		num_len;
     char	*x_num_string;
-    int		zero_num;
+   // int		zero_num;
     char 	width_symbol;
    // int		width_symbol_num;
     char    *start_p;
 
-    zero_num = 0;
+//    zero_num = 0;
   //  width_symbol_num = 0;
     width_symbol = ' ';
     //наше число для печати
@@ -190,10 +188,10 @@ int ft_print_Xx(t_print_flags *my_struct, va_list *v_list)
     //если есть точность, считаем нули
     if (my_struct->precis)
     {
-        zero_num = my_struct->precis - num_len;
+        my_struct->precis = my_struct->precis - num_len;
         width_symbol = ' ';
-        if (zero_num > 0)
-            my_struct->width = my_struct->width - zero_num;
+        if (my_struct->precis > 0)
+            my_struct->width = my_struct->width - my_struct->precis;
     }
     //если  не минус
     if (!(my_struct->flag_minus))
@@ -202,7 +200,7 @@ int ft_print_Xx(t_print_flags *my_struct, va_list *v_list)
         ft_print_width(width_symbol, my_struct);
         if (print_num < 0)
             ft_print_minus(&start_p, my_struct);
-        ft_print_precis(zero_num, my_struct);
+        ft_print_precis(my_struct);
         my_struct->length = my_struct->length + ft_putstr_printf(start_p, 0);
     }
         //если есть флаг минус
@@ -211,7 +209,7 @@ int ft_print_Xx(t_print_flags *my_struct, va_list *v_list)
 //сперва минус
         if (print_num < 0)
             ft_print_minus(&start_p, my_struct);
-        ft_print_precis(zero_num, my_struct);
+        ft_print_precis(my_struct);
         my_struct->length = my_struct->length + ft_putstr_printf(start_p, 0);
         //в конце пробелы
         ft_print_width(width_symbol, my_struct);
