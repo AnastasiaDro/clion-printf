@@ -13,13 +13,13 @@
 #include "ft_printf.h"
 #include "ft_parse_utils.h"
 
-void ft_print_width(int width_symbol_num, char width_symbol, t_print_flags *my_struct)
+void ft_print_width(char width_symbol, t_print_flags *my_struct)
 {
-    while (width_symbol_num > 0)
+    while (my_struct->width > 0)
     {
         write(1, &width_symbol, 1);
         my_struct->length++;
-        width_symbol_num--;
+        my_struct->width--;
     }
 }
 
@@ -39,16 +39,16 @@ void ft_print_precis(int zero_num, t_print_flags *my_struct)
     }
 }
 
-int ft_calc_width(t_print_flags *my_struct, char *width_symbol, int width_symbol_num, int num_len, int print_num)
+int ft_calc_width(t_print_flags *my_struct, char *width_symbol, int num_len, int print_num)
 {
     if (my_struct->flag_zero)
         (*width_symbol) = '0';
     //считаем пробелы без вычета нулей
-    width_symbol_num = my_struct->width - num_len;
+    my_struct->width = my_struct->width - num_len;
     //если число меньше нуля еще уменьшаем
     if (print_num < 0)
-        width_symbol_num--;
-    return width_symbol_num;
+        my_struct->width--;
+    return my_struct->width;
 }
 
 

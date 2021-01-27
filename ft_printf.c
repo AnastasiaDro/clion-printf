@@ -42,7 +42,6 @@ int ft_printf(const char *format_str, ...)
 		p++;
 		}
 	}
-
 	//закончили с аргументами
 	va_end(v_list);
 	return (res_len);
