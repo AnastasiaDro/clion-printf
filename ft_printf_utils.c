@@ -19,7 +19,7 @@ t_print_flags *ft_create_struct()
 	my_struct = (t_print_flags *)malloc(sizeof(t_print_flags));
 	if (!my_struct)
 		return (NULL);
-	my_struct->lenght = 0;
+	my_struct->length = 0;
 	my_struct->flag_minus = 0;
 	my_struct->flag_zero = 0;
 	my_struct->width = 0;
@@ -52,7 +52,7 @@ int ft_fill_struct(t_print_flags *my_struct, int lenght, char **p)
         num_string = ft_num_for_sruct(p);
         my_struct->precis = ft_atoi(num_string);
     }
-    my_struct->lenght = lenght;
+    my_struct->length = lenght;
     free(num_string);
     //теперь выловим код выводимого значения (строка там или чар)
     my_struct->type = **p;

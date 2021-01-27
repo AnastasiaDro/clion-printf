@@ -33,7 +33,7 @@ int ft_printf(const char *format_str, ...)
 			ft_fill_struct(print_struct, res_len, &p);
 			//printf("\nstruct width %d\n", print_struct->width);
 			//printf("struct precis %d\n", print_struct->precis);
-			res_len = ft_make_parse(print_struct, &v_list, &res_len);
+			res_len = ft_make_parse(print_struct, &v_list);
 		}
 		else
 		{ 
@@ -45,5 +45,5 @@ int ft_printf(const char *format_str, ...)
 
 	//закончили с аргументами
 	va_end(v_list);
-	return 0;
+	return (res_len);
 }

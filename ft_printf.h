@@ -20,7 +20,7 @@
 
 typedef	struct	s_print_flags
 {
-	int		lenght;
+	int		length;
 	int 	flag_minus;
 	int		flag_zero;
 	int		width;
@@ -30,17 +30,17 @@ typedef	struct	s_print_flags
 
 int ft_printf(const char *, ...);
 
-int ft_make_parse(t_print_flags *my_struct, va_list *v_list, int *res_len);
+int ft_make_parse(t_print_flags *my_struct, va_list *v_list);
 
-int ft_print_char(t_print_flags *my_struct, va_list *v_list, int *res_len);
+int ft_print_char(t_print_flags *my_struct, va_list *v_list);
 
-int ft_print_string(t_print_flags *my_struct, va_list *v_list, int *res_len);
+int ft_print_string(t_print_flags *my_struct, va_list *v_list);
 
 int ft_print_pointer(va_list v_list, int res_len);
 
-int ft_print_int(t_print_flags *my_struct, va_list *v_list, int *res_len);
+int ft_print_int(t_print_flags *my_struct, va_list *v_list);
 
-int ft_print_Xx(t_print_flags *my_struct, va_list *v_list, int *res_len);
+int ft_print_Xx(t_print_flags *my_struct, va_list *v_list);
 
 //считаем длину числа
 int ft_take_num_length(int number);

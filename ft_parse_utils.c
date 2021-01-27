@@ -13,27 +13,28 @@
 #include "ft_printf.h"
 #include "ft_parse_utils.h"
 
-void ft_print_width(int width_symbol_num, char width_symbol, int *res_len)
+void ft_print_width(int width_symbol_num, char width_symbol, t_print_flags *my_struct)
 {
     while (width_symbol_num > 0)
     {
         write(1, &width_symbol, 1);
-        (*res_len)++;
+        my_struct->length++;
         width_symbol_num--;
     }
 }
 
-void ft_print_minus(char **start_p, int *res_len)
+void ft_print_minus(char **start_p, t_print_flags *my_struct)
 {
         write(1, "-", 1);
         (*start_p)++;
-        (*res_len)++;
+        my_struct->length++;
 }
 
-void ft_print_precis(int zero_num, int *res_len) {
+void ft_print_precis(int zero_num, t_print_flags *my_struct)
+{
     while (zero_num > 0) {
         write(1, "0", 1);
-        (*res_len)++;
+        my_struct->length++;
         zero_num--;
     }
 }
