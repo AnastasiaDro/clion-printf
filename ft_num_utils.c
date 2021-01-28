@@ -12,9 +12,9 @@
 
 #include "ft_printf.h"
 
-int	ft_get_capacity(int n, int base)
+int	ft_get_capacity(unsigned int n, int base)
 {
-	int nm;
+	unsigned int nm;
 	int num_cap;
 
 	nm = n;
@@ -28,7 +28,7 @@ int	ft_get_capacity(int n, int base)
 }
 
 //конвертируем в 16тиричную систему число
-char ft_convert_to_x(int n, char *base)
+char ft_convert_to_x(unsigned int n, char *base)
 {
     char res;
     
@@ -43,7 +43,7 @@ char *get_base(char type)
 {
     char *base;
 
-     if(type == 'X')
+    if(type == 'X')
         base = "ABCDEF";
     else
         base = "abcdef";
@@ -66,9 +66,9 @@ int ft_get_num_syst(char type, char **base)
     return (num_sys);
 }
 
-void ft_fill_s(char **s, int num, char type, int num_cap)
+void ft_fill_s(char **s, unsigned int num, char type, int num_cap)
 {
-    int divis;
+    unsigned int divis;
     int num_sys;
     char *base;
     
@@ -86,7 +86,7 @@ void ft_fill_s(char **s, int num, char type, int num_cap)
     }
 }
 
-char	*ft_get_s(int num, int num_cap, char type) 
+char	*ft_get_s(int num, int num_cap, char type)
 {
     int size;
     char *s;
@@ -96,6 +96,18 @@ char	*ft_get_s(int num, int num_cap, char type)
         return (NULL);
     if (num < 0)
         num = num * (-1);
+    ft_fill_s(&s, num, type, num_cap);
+    return (s);
+}
+
+char	*ft_get_unsign_s(unsigned int num, int num_cap, char type)
+{
+    int size;
+    char *s;
+
+    size = num_cap + 1;
+    if(!( s = ft_calloc(size, sizeof(char))))
+        return (NULL);
     ft_fill_s(&s, num, type, num_cap);
     return (s);
 }

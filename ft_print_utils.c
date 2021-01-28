@@ -38,14 +38,14 @@ void ft_print_precis(t_print_flags *my_struct)
     }
 }
 
-int ft_calc_width(t_print_flags *my_struct, int num_len, int print_num)
+int ft_calc_width(t_print_flags *my_struct, int num_len)
 {
     if (my_struct->flag_zero)
         my_struct->width_symbol = '0';
     //считаем пробелы без вычета нулей
     my_struct->width = my_struct->width - num_len;
     //если число меньше нуля еще уменьшаем
-    if (print_num < 0)
+    if (my_struct->less_zero)
         my_struct->width--;
     return my_struct->width;
 }
@@ -59,21 +59,20 @@ int ft_calc_precis(t_print_flags *my_struct, int num_len)
     return my_struct->precis;
 }
 
-void ft_print_right_align(t_print_flags *my_struct, int print_num, char *num_string)
+void ft_print_right_align(t_print_flags *my_struct,  char *num_string)
 {
     ft_print_width(my_struct);
-	if (print_num < 0)
+	if (my_struct->less_zero)
         ft_print_minus(my_struct);
     ft_print_precis(my_struct);
     my_struct->length = my_struct->length + ft_putstr_printf(num_string, 0);
 }
 
-void ft_print_left_align(t_print_flags *my_struct, int print_num, char *num_string)
+void ft_print_left_align(t_print_flags *my_struct, char *num_string)
 {
-	   if (print_num < 0)
-            ft_print_minus(my_struct);
-        ft_print_precis(my_struct);
-        my_struct->length = my_struct->length + ft_putstr_printf(num_string, 0);
-        //в конце пробелы
-        ft_print_width(my_struct);
+    if (my_struct->less_zero)
+        ft_print_minus(my_struct);
+    ft_print_precis(my_struct);
+    my_struct->length = my_struct->length + ft_putstr_printf(num_string, 0);
+    ft_print_width(my_struct);
 }

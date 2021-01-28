@@ -26,10 +26,11 @@ t_print_flags *ft_create_struct()
     my_struct->precis = 0;
     my_struct->type = 0;
     my_struct->width_symbol = ' ';
+    my_struct->less_zero = 0;
 	return (my_struct);
 }
 
-int ft_fill_struct(t_print_flags *my_struct, int lenght, char **p)
+int ft_fill_struct(t_print_flags *my_struct, int length, char **p)
 {
     char *num_string;
     if ((**p) == '-')
@@ -53,13 +54,13 @@ int ft_fill_struct(t_print_flags *my_struct, int lenght, char **p)
         num_string = ft_num_for_sruct(p);
         my_struct->precis = ft_atoi(num_string);
     }
-    my_struct->length = lenght;
+    my_struct->length = length;
     free(num_string);
     //теперь выловим код выводимого значения (строка там или чар)
     my_struct->type = **p;
     //сдвинем p с дэ
     (*p)++;
-    return (lenght);
+    return (length);
 }
 //вылавливает из строки число
 char *ft_num_for_sruct(char **p)

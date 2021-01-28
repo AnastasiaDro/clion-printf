@@ -14,22 +14,22 @@
 
 int main()
 {
-    char *p;
-    p = "trtratra";
-    printf("ПОИНТЕР %p\n", p);
+//    char *p;
+//    p = "trtratra";
+//    printf("ПОИНТЕР %p\n", p);
 
 
-    printf("ШЕСТНАДЦАТИРИЧНЫЕ\n");
-    int res = ft_printf("six (with zero-flag and width and precis %-20.5xtratata\n"
-              "seven-hundred (without zero_flag and with precis less then number) %.1X\n",
-              6, 700);
-    printf("RES_MY %d\n", res);
-    //original printf
-    ft_printf("\noriginal function\n");
-   res =  printf("six (with zero-flag and width and precis %-20.5xtratata\n"
-           "seven-hundred (without zero_flag and with precis less then number) %.1X\n",
-           6, 700);
-    printf("RES_ORIG %d\n", res);
+//    printf("ШЕСТНАДЦАТИРИЧНЫЕ\n");
+//    int res = ft_printf("six (with zero-flag and width and precis %-20.5xtratata\n"
+//              "seven-hundred (without zero_flag and with precis less then number) %.1X\n",
+//              6, 700);
+//    printf("RES_MY %d\n", res);
+//    //original printf
+//    ft_printf("\noriginal function\n");
+//   res =  printf("six (with zero-flag and width and precis %-20.5xtratata\n"
+//           "seven-hundred (without zero_flag and with precis less then number) %.1X\n",
+//           6, 700);
+//    printf("RES_ORIG %d\n", res);
 
 //    printf("\nЧАРЫ\n");
 //    ft_printf("мой чар точность 15 %15c после\n", 'T');
@@ -56,13 +56,17 @@ int main()
 //    printf("ширина 20, флаг 0 точность 7\n%20.7sпосле строки\n", "my string");
 //    ft_printf("%-10dtratata\n", 5);
 
-    printf("\nИНТЫ\n");
-    ft_printf("six (with zero-flag and width and precis %-20.5itratata\n"
-              "seven-hundred (without zero_flag and with precis less then number) %.1d",
-              -6, -700);
-    //original printf
-    ft_printf("\noriginal function\n");
-    printf("six (with zero-flag and width and precis %-20.5itratata\n"
-           "seven-hundred (without zero_flag and with precis less then number) %.1d",
-           -6, -700);
+//    printf("\nИНТЫ\n");
+//    ft_printf("six (with zero-flag and width and precis %-20.5itratata\n"
+//              "seven-hundred (without zero_flag and with precis less then number) %.1d",
+//              -6, -700);
+//    //original printf
+//    ft_printf("\noriginal function\n");
+//    printf("six (with zero-flag and width and precis %-20.5itratata\n"
+//           "seven-hundred (without zero_flag and with precis less then number) %.1d",
+//           -6, -700);
+
+    printf("\nUNSIGNED INTS\n");
+    ft_printf("unsigned %2.3u tratata\n", 4147483648);
+    printf("unsigned %2.3u tratata\n", 4147483648);
 }

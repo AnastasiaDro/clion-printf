@@ -27,6 +27,7 @@ typedef	struct	s_print_flags
 	int		precis;
 	char	type;
 	char	width_symbol;
+	int     less_zero;
 }				t_print_flags;
 
 int ft_printf(const char *, ...);
@@ -43,14 +44,12 @@ int ft_print_int(t_print_flags *my_struct, va_list *v_list);
 
 int ft_print_Xx(t_print_flags *my_struct, va_list *v_list);
 
-//считаем длину числа
-int ft_take_num_length(int number);
-int	ft_get_capacity(int n, int base);
+int ft_print_u(t_print_flags *my_struct, va_list *v_list);
 
 //utils
 t_print_flags *ft_create_struct();
 
-int ft_fill_struct(t_print_flags *my_struct, int lenght, char **p);
+int ft_fill_struct(t_print_flags *my_struct, int length, char **p);
 
 //берет цифры ширины или точности из строки и записывает их в отдельную спец строку
 char *ft_num_for_sruct(char **p);

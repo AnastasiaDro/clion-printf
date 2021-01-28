@@ -34,8 +34,8 @@ int ft_make_parse(t_print_flags *my_struct, va_list *v_list)
 		ft_print_string(my_struct, v_list);
 	if (symbol == 'd' || symbol =='i')
 		ft_print_int(my_struct, v_list);
-	//if (symbol == 'u')
-		//
+	if (symbol == 'u')
+        ft_print_u(my_struct, v_list);
 	if (symbol == 'X' || symbol =='x')
         ft_print_Xx(my_struct, v_list);
 	return (my_struct->length);
@@ -50,21 +50,25 @@ int ft_print_int(t_print_flags *my_struct, va_list *v_list)
 
 	//наше число для печати
 	print_num = va_arg(*v_list, int);
-
 	//вычисляем длину инта
-	num_len = ft_get_capacity(print_num, 10);
+    if (print_num < 0)
+    {
+        my_struct->less_zero = 1;
+        print_num = print_num * (-1);
+    }
+    num_len = ft_get_capacity((unsigned int)print_num, 10);
 	num_string = ft_get_s(print_num, num_len, my_struct->type);
 	//если есть ширина
 	if (my_struct->width)
-	    ft_calc_width(my_struct, num_len, print_num);
+	    ft_calc_width(my_struct, num_len);
 	//если есть точность, считаем нули
 	if (my_struct->precis)
         ft_calc_precis(my_struct, num_len);
 	//если  не минус
 	if (!(my_struct->flag_minus))
-        ft_print_right_align(my_struct, print_num, num_string);
+        ft_print_right_align(my_struct, num_string);
 	else
-        ft_print_left_align(my_struct, print_num, num_string);
+        ft_print_left_align(my_struct, num_string);
 	free(num_string);
 	num_string = NULL;
 	return (1);
@@ -101,10 +105,8 @@ int ft_print_string(t_print_flags *my_struct, va_list *v_list)
 int ft_print_char(t_print_flags *my_struct, va_list *v_list)
 {
     char    char_for_print;
-    char 	width_symbol;
 
     char_for_print = (char)va_arg(*v_list, int);
-    width_symbol = ' ';
     my_struct->width--;
 
     if (!(my_struct->flag_minus))
@@ -124,26 +126,48 @@ int ft_print_char(t_print_flags *my_struct, va_list *v_list)
 
 int ft_print_Xx(t_print_flags *my_struct, va_list *v_list)
 {
-    int     print_num;
+    unsigned int     print_num;
     int		num_len;
     char	*x_num_string;
 
     //наше число для печати
-    print_num = va_arg(*v_list, int);
+    print_num = va_arg(*v_list, unsigned int);
     num_len = ft_get_capacity(print_num, 16);
-    x_num_string = ft_get_s(print_num, num_len, my_struct->type);
+    x_num_string = ft_get_unsign_s(print_num, num_len, my_struct->type);
     if (my_struct->width)
-        ft_calc_width(my_struct, num_len, print_num);
+        ft_calc_width(my_struct, num_len);
     if (my_struct->precis)
         ft_calc_precis(my_struct, num_len);
     if (!(my_struct->flag_minus))
-        ft_print_right_align(my_struct, print_num, x_num_string);
+        ft_print_right_align(my_struct, x_num_string);
     else
-        ft_print_left_align(my_struct, print_num, x_num_string);
+        ft_print_left_align(my_struct, x_num_string);
     free(x_num_string);
     x_num_string = NULL;
     return (1);
 }
-	
+
+int ft_print_u(t_print_flags *my_struct, va_list *v_list)
+{
+    unsigned int     print_num;
+    int		         num_len;
+    char	         *num_string;
+
+    //наше число для печати
+    print_num = va_arg(*v_list, unsigned int);
+    num_len = ft_get_capacity(print_num, 10);
+    num_string = ft_get_unsign_s(print_num, num_len, my_struct->type);
+    if (my_struct->width)
+        ft_calc_width(my_struct, num_len);
+    if (my_struct->precis)
+        ft_calc_precis(my_struct, num_len);
+    if (!(my_struct->flag_minus))
+        ft_print_right_align(my_struct, num_string);
+    else
+        ft_print_left_align(my_struct, num_string);
+    free(num_string);
+    num_string = NULL;
+    return (1);
+}
 
 

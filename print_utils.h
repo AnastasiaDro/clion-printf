@@ -21,12 +21,12 @@ void ft_print_minus(t_print_flags *my_struct);
 
 void ft_print_precis(t_print_flags *my_struct);
 
-int ft_calc_width(t_print_flags *my_struct, int num_len, int print_num);
+int ft_calc_width(t_print_flags *my_struct, int num_len);
 
 int ft_calc_precis(t_print_flags *my_struct, int num_len);
 
-void ft_print_right_align(t_print_flags *my_struct, int print_num, char *num_string);
+void ft_print_right_align(t_print_flags *my_struct, char *num_string);
 
-void ft_print_left_align(t_print_flags *my_struct, int print_num, char *num_string);
+void ft_print_left_align(t_print_flags *my_struct, char *num_string);
 
 #endif
