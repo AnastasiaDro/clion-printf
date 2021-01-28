@@ -6,14 +6,15 @@
 /*   By: cerebus <cerebus@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/14 23:48:21 by cerebus           #+#    #+#             */
-/*   Updated: 2021/01/14 23:53:52 by cerebus          ###   ########.fr       */
+/*   Updated: 2021/01/28 12:51:26 by cerebus          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //внимание! тут подключаю другую либу! нужно со школьного мака
 //взять правильную
 #include "ft_printf.h"
-#include "ft_parse_utils.h"
+#include "print_utils.h"
+#include "num_utils.h"
 #include <stdio.h>
 
 int ft_make_parse(t_print_flags *my_struct, va_list *v_list)
@@ -49,19 +50,17 @@ int ft_print_int(t_print_flags *my_struct, va_list *v_list)
 	int		num_len;
 	int		print_num;
 	char	*num_string;
-	//int		zero_num;
 	char 	width_symbol;
-	char    *start_p;
+//	char    *start_p;
 
-	//zero_num = 0;
 	width_symbol = ' ';
 	//наше число для печати
 	print_num = va_arg(*v_list, int);
 
 	//вычисляем длину инта
 	num_len = ft_get_capacity(print_num, 10);
-	num_string = ft_itoa(print_num);
-	start_p = num_string;
+	num_string = ft_get_s(print_num, num_len, my_struct->type);
+	//start_p = num_string;
 	//если есть ширина
 	if (my_struct->width)
 	    ft_calc_width(my_struct, &width_symbol, num_len, print_num);
@@ -78,19 +77,22 @@ int ft_print_int(t_print_flags *my_struct, va_list *v_list)
 	{
 		//сперва ширина
         ft_print_width(width_symbol, my_struct);
-		if (print_num < 0)
-		ft_print_minus(&start_p, my_struct);
+		if (print_num < 0) {
+            ft_print_minus(my_struct);
+            num_len++;
+        }
         ft_print_precis(my_struct);
-        my_struct->length = my_struct->length + ft_putstr_printf(start_p, 0);
+        my_struct->length = my_struct->length + ft_putstr_printf(num_string, 0);
 	}
 	//если есть флаг минус
 	else
 	{
 //сперва минус
         if (print_num < 0)
-            ft_print_minus(&start_p, my_struct);
+            ft_print_minus(my_struct);
         ft_print_precis(my_struct);
-        my_struct->length = my_struct->length + ft_putstr_printf(start_p, 0);
+        my_struct->length = my_struct->length + ft_putstr_printf(num_string, 0);
+
         //в конце пробелы
         ft_print_width(width_symbol, my_struct);
 	}
@@ -135,11 +137,9 @@ int ft_print_char(t_print_flags *my_struct, va_list *v_list)
 {
     char    char_for_print;
     char 	width_symbol;
-    //int		width_symbol_num;
 
     char_for_print = (char)va_arg(*v_list, int);
     width_symbol = ' ';
-    //width_symbol_num = my_struct->width-1;
     my_struct->width--;
 
     if (!(my_struct->flag_minus))
@@ -159,30 +159,19 @@ int ft_print_char(t_print_flags *my_struct, va_list *v_list)
 
 int ft_print_Xx(t_print_flags *my_struct, va_list *v_list)
 {
-    char    *base;
     int     print_num;
     int		num_len;
     char	*x_num_string;
-   // int		zero_num;
     char 	width_symbol;
-   // int		width_symbol_num;
     char    *start_p;
 
-//    zero_num = 0;
-  //  width_symbol_num = 0;
     width_symbol = ' ';
     //наше число для печати
     print_num = va_arg(*v_list, int);
 
-
-    if (my_struct->type == 'X')
-        base = "ABCDEF";
-    else
-        base = "abcdef";
     num_len = ft_get_capacity(print_num, 16);
-    x_num_string = ft_get_x_num_str(print_num, num_len, base);
+    x_num_string = ft_get_s(print_num, num_len, my_struct->type);
     start_p = x_num_string;
-
     if (my_struct->width)
         ft_calc_width(my_struct, &width_symbol, num_len, print_num);
     //если есть точность, считаем нули
@@ -199,18 +188,18 @@ int ft_print_Xx(t_print_flags *my_struct, va_list *v_list)
         //сперва пробелы
         ft_print_width(width_symbol, my_struct);
         if (print_num < 0)
-            ft_print_minus(&start_p, my_struct);
+            ft_print_minus(my_struct);
         ft_print_precis(my_struct);
-        my_struct->length = my_struct->length + ft_putstr_printf(start_p, 0);
+        my_struct->length = my_struct->length + ft_putstr_printf(x_num_string, 0);
     }
         //если есть флаг минус
     else
     {
 //сперва минус
         if (print_num < 0)
-            ft_print_minus(&start_p, my_struct);
+            ft_print_minus( my_struct);
         ft_print_precis(my_struct);
-        my_struct->length = my_struct->length + ft_putstr_printf(start_p, 0);
+        my_struct->length = my_struct->length + ft_putstr_printf(x_num_string, 0);
         //в конце пробелы
         ft_print_width(width_symbol, my_struct);
     }

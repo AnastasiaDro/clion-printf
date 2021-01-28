@@ -31,8 +31,6 @@ int ft_printf(const char *format_str, ...)
 		{
 			print_struct = ft_create_struct();
 			ft_fill_struct(print_struct, res_len, &p);
-			//printf("\nstruct width %d\n", print_struct->width);
-			//printf("struct precis %d\n", print_struct->precis);
 			res_len = ft_make_parse(print_struct, &v_list);
 		}
 		else
