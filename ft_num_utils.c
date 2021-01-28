@@ -53,7 +53,7 @@ char *get_base(char type)
 int ft_get_num_syst(char type, char **base)
 {
     int num_sys;
-    if (type == 'd' || type == 'i')
+    if (type == 'd' || type == 'i' || type == 'u')
     {
         num_sys = 10;
         *base = NULL;

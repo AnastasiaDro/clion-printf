@@ -6,7 +6,7 @@
 /*   By: cerebus <cerebus@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/16 16:54:32 by cerebus           #+#    #+#             */
-/*   Updated: 2021/01/16 16:54:32 by cerebus          ###   ########.fr       */
+/*   Updated: 2021/01/28 15:32:08 by cerebus          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ t_print_flags *ft_create_struct()
 	my_struct->width = 0;
     my_struct->precis = 0;
     my_struct->type = 0;
+    my_struct->width_symbol = ' ';
 	return (my_struct);
 }
 

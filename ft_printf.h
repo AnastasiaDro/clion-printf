@@ -6,7 +6,7 @@
 /*   By: cerebus <cerebus@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/11 17:41:11 by cerebus           #+#    #+#             */
-/*   Updated: 2021/01/14 23:46:35 by cerebus          ###   ########.fr       */
+/*   Updated: 2021/01/28 15:31:47 by cerebus          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef	struct	s_print_flags
 	int		width;
 	int		precis;
 	char	type;
+	char	width_symbol;
 }				t_print_flags;
 
 int ft_printf(const char *, ...);
