@@ -170,32 +170,59 @@ ft_make_parse.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/ft_make_parse.c.s
 .PHONY : ft_make_parse.c.s
 
-ft_parse_utils.o: ft_parse_utils.c.o
+ft_num_utils.o: ft_num_utils.c.o
 
-.PHONY : ft_parse_utils.o
+.PHONY : ft_num_utils.o
 
 # target to build an object file
-ft_parse_utils.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/ft_parse_utils.c.o
-.PHONY : ft_parse_utils.c.o
+ft_num_utils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/ft_num_utils.c.o
+.PHONY : ft_num_utils.c.o
 
-ft_parse_utils.i: ft_parse_utils.c.i
+ft_num_utils.i: ft_num_utils.c.i
 
-.PHONY : ft_parse_utils.i
+.PHONY : ft_num_utils.i
 
 # target to preprocess a source file
-ft_parse_utils.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/ft_parse_utils.c.i
-.PHONY : ft_parse_utils.c.i
+ft_num_utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/ft_num_utils.c.i
+.PHONY : ft_num_utils.c.i
 
-ft_parse_utils.s: ft_parse_utils.c.s
+ft_num_utils.s: ft_num_utils.c.s
 
-.PHONY : ft_parse_utils.s
+.PHONY : ft_num_utils.s
 
 # target to generate assembly for a file
-ft_parse_utils.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/ft_parse_utils.c.s
-.PHONY : ft_parse_utils.c.s
+ft_num_utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/ft_num_utils.c.s
+.PHONY : ft_num_utils.c.s
+
+ft_print_utils.o: ft_print_utils.c.o
+
+.PHONY : ft_print_utils.o
+
+# target to build an object file
+ft_print_utils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/ft_print_utils.c.o
+.PHONY : ft_print_utils.c.o
+
+ft_print_utils.i: ft_print_utils.c.i
+
+.PHONY : ft_print_utils.i
+
+# target to preprocess a source file
+ft_print_utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/ft_print_utils.c.i
+.PHONY : ft_print_utils.c.i
+
+ft_print_utils.s: ft_print_utils.c.s
+
+.PHONY : ft_print_utils.s
+
+# target to generate assembly for a file
+ft_print_utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/ft_print_utils.c.s
+.PHONY : ft_print_utils.c.s
 
 ft_printf.o: ft_printf.c.o
 
@@ -479,9 +506,12 @@ help:
 	@echo "... ft_make_parse.o"
 	@echo "... ft_make_parse.i"
 	@echo "... ft_make_parse.s"
-	@echo "... ft_parse_utils.o"
-	@echo "... ft_parse_utils.i"
-	@echo "... ft_parse_utils.s"
+	@echo "... ft_num_utils.o"
+	@echo "... ft_num_utils.i"
+	@echo "... ft_num_utils.s"
+	@echo "... ft_print_utils.o"
+	@echo "... ft_print_utils.i"
+	@echo "... ft_print_utils.s"
 	@echo "... ft_printf.o"
 	@echo "... ft_printf.i"
 	@echo "... ft_printf.s"

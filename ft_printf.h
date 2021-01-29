@@ -6,7 +6,7 @@
 /*   By: cerebus <cerebus@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/11 17:41:11 by cerebus           #+#    #+#             */
-/*   Updated: 2021/01/14 23:46:35 by cerebus          ###   ########.fr       */
+/*   Updated: 2021/01/28 15:31:47 by cerebus          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,36 +20,38 @@
 
 typedef	struct	s_print_flags
 {
-	int		lenght;
+	int		length;
 	int 	flag_minus;
 	int		flag_zero;
 	int		width;
 	int		precis;
 	char	type;
+	char	width_symbol;
+	int     less_zero;
 }				t_print_flags;
 
 int ft_printf(const char *, ...);
 
-int ft_make_parse(t_print_flags *my_struct, va_list *v_list, int *res_len);
+int ft_make_parse(t_print_flags *my_struct, va_list *v_list);
 
-int ft_print_char(t_print_flags *my_struct, va_list *v_list, int *res_len);
+int ft_print_char(t_print_flags *my_struct, va_list *v_list);
 
-int ft_print_string(t_print_flags *my_struct, va_list *v_list, int *res_len);
+int ft_print_string(t_print_flags *my_struct, va_list *v_list);
 
-int ft_print_pointer(va_list v_list, int res_len);
+int ft_print_pointer(t_print_flags *my_struct, va_list *v_list);
 
-int ft_print_int(t_print_flags *my_struct, va_list *v_list, int *res_len);
+int ft_print_int(t_print_flags *my_struct, va_list *v_list);
 
-int ft_print_Xx(t_print_flags *my_struct, va_list *v_list, int *res_len);
+int ft_print_Xx(t_print_flags *my_struct, va_list *v_list);
 
-//считаем длину числа
-int ft_take_num_length(int number);
-int	ft_get_capacity(int n, int base);
+int ft_print_u(t_print_flags *my_struct, va_list *v_list);
 
 //utils
 t_print_flags *ft_create_struct();
 
-int ft_fill_struct(t_print_flags *my_struct, int lenght, char **p);
+int ft_fill_struct(t_print_flags *my_struct, int length, char **p, va_list *v_list);
+//получает параметры ширины или точности
+int ft_get_param(va_list *v_list, char **p);
 
 //берет цифры ширины или точности из строки и записывает их в отдельную спец строку
 char *ft_num_for_sruct(char **p);
