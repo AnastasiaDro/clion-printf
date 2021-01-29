@@ -13,15 +13,17 @@
 #ifndef	NUM_UTIS_H
 #define		NUM_UTIS_H
 	
-	int		ft_get_capacity(unsigned int n, int base);
+	int		ft_get_capacity(unsigned long int n, int base);
 
 	char	*get_base(char type);
 
 	int		ft_get_num_syst(char type, char **base);
 
-	void	ft_fill_s(char **s, unsigned int num, char type, int num_cap);
+	//void	ft_fill_s(char **s, unsigned int num, char type, int num_cap);
+
+	void 	ft_fill_s(char **s, unsigned long num, char type, int num_cap);
 
 	char	*ft_get_s(int num, int num_cap, char type);
 
-    char	*ft_get_unsign_s(unsigned int num, int num_cap, char type);
+    char	*ft_get_unsign_s(unsigned long int num, int num_cap, char type);
 #endif

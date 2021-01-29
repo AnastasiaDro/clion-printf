@@ -175,12 +175,11 @@ int ft_print_u(t_print_flags *my_struct, va_list *v_list)
 
 int ft_print_pointer(t_print_flags *my_struct, va_list *v_list)
 {
-    unsigned long long  print_ptr;
+    unsigned long int  print_ptr;
     int		            num_len;
     char	            *p_string;
 
-    print_ptr = (unsigned long long) va_arg(*v_list, void *);
-    //num_len = ft_get_capacity(print_ptr, 16);
+    print_ptr = (unsigned long int) va_arg(*v_list, void *);
     num_len = 12;
     p_string = ft_get_unsign_s(print_ptr, num_len, my_struct->type);
     if (my_struct->width)

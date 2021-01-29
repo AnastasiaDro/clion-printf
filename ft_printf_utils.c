@@ -30,7 +30,7 @@ t_print_flags *ft_create_struct()
 	return (my_struct);
 }
 
-int ft_fill_struct(t_print_flags *my_struct, int length, char **p)
+int ft_fill_struct(t_print_flags *my_struct, int length, char **p, va_list *v_list)
 {
     char *num_string;
     if ((**p) == '-')
@@ -42,17 +42,29 @@ int ft_fill_struct(t_print_flags *my_struct, int length, char **p)
         my_struct->flag_zero = 1;
         (*p)++;
     }
-    //обрабатываем ширину			ПОКА БЕЗ *
-    num_string = ft_num_for_sruct(p);
-    if (num_string)
-        my_struct->width = ft_atoi(num_string);
-    ft_make_string_clear(&num_string);
+    //обрабатываем ширину
+    //звёздочка
+   my_struct->width = ft_get_param(v_list, p);
+//	if (**p == '*')
+//		my_struct->width = va_arg(*v_list, int);
+//	else
+//	{
+//		num_string = ft_num_for_sruct(p);
+//		if (num_string)
+//			my_struct->width = ft_atoi(num_string);
+//		ft_make_string_clear(&num_string);
+//	}
+//    num_string = ft_num_for_sruct(p);
+//    if (num_string)
+//        my_struct->width = ft_atoi(num_string);
+//    ft_make_string_clear(&num_string);
     //обрабатываем точность			ПОКА БЕЗ *
     if (**p == '.')
     {
         (*p)++;
-        num_string = ft_num_for_sruct(p);
-        my_struct->precis = ft_atoi(num_string);
+		my_struct->precis = ft_get_param(v_list, p);
+//        num_string = ft_num_for_sruct(p);
+//        my_struct->precis = ft_atoi(num_string);
     }
     my_struct->length = length;
     free(num_string);
@@ -88,7 +100,6 @@ char *ft_num_for_sruct(char **p)
         num_string[i] = **p;
         (*p)++;
         i++;
-        //(*length)++;
     }
     return (num_string);
 }
@@ -112,6 +123,25 @@ int	ft_putstr_printf(char *s, int precis_len)
 	if (s)
 		write(1, s, str_len);
     return (str_len);
+}
+
+int ft_get_param(va_list *v_list, char **p)
+{
+	int param;
+	char *num_string;
+
+	if (**p == '*') {
+		(*p)++;
+		param = va_arg(*v_list, int);
+	}
+	else
+	{
+		num_string = ft_num_for_sruct(p);
+		if (num_string)
+			param = ft_atoi(num_string);
+		ft_make_string_clear(&num_string);
+	}
+	return (param);
 }
 
 //int	ft_get_capacity(int n, int base)
@@ -175,3 +205,5 @@ int	ft_putstr_printf(char *s, int precis_len)
 //    ft_fill_x_s(&s[start], x_num, num_cap, base);
 //    return(s);
 //}
+
+

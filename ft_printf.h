@@ -38,7 +38,7 @@ int ft_print_char(t_print_flags *my_struct, va_list *v_list);
 
 int ft_print_string(t_print_flags *my_struct, va_list *v_list);
 
-int ft_print_pointer(va_list v_list, int res_len);
+int ft_print_pointer(t_print_flags *my_struct, va_list *v_list);
 
 int ft_print_int(t_print_flags *my_struct, va_list *v_list);
 
@@ -49,7 +49,9 @@ int ft_print_u(t_print_flags *my_struct, va_list *v_list);
 //utils
 t_print_flags *ft_create_struct();
 
-int ft_fill_struct(t_print_flags *my_struct, int length, char **p);
+int ft_fill_struct(t_print_flags *my_struct, int length, char **p, va_list *v_list);
+//получает параметры ширины или точности
+int ft_get_param(va_list *v_list, char **p);
 
 //берет цифры ширины или точности из строки и записывает их в отдельную спец строку
 char *ft_num_for_sruct(char **p);
