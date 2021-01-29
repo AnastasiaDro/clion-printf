@@ -6,16 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/Users/anastasia/CLionProjects/clion-printf/ft_make_parse.c
-ft_printf.h
-/Users/anastasia/CLionProjects/clion-printf/ft_printf.h
-print_utils.h
-/Users/anastasia/CLionProjects/clion-printf/print_utils.h
-num_utils.h
-/Users/anastasia/CLionProjects/clion-printf/num_utils.h
-stdio.h
--
-
 /Users/anastasia/CLionProjects/clion-printf/ft_printf.h
 stdarg.h
 -
@@ -30,9 +20,9 @@ libft-finished-for-use/libft.h
 string.h
 -
 
-/Users/anastasia/CLionProjects/clion-printf/num_utils.h
-
-/Users/anastasia/CLionProjects/clion-printf/print_utils.h
+/Users/anastasia/CLionProjects/clion-printf/test_main.c
 ft_printf.h
 /Users/anastasia/CLionProjects/clion-printf/ft_printf.h
+stdio.h
+-
 

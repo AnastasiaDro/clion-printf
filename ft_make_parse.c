@@ -16,6 +16,7 @@
 #include "print_utils.h"
 #include "num_utils.h"
 #include <stdio.h>
+#include <string.h>
 
 int ft_make_parse(t_print_flags *my_struct, va_list *v_list)
 {
@@ -38,6 +39,8 @@ int ft_make_parse(t_print_flags *my_struct, va_list *v_list)
         ft_print_u(my_struct, v_list);
 	if (symbol == 'X' || symbol =='x')
         ft_print_Xx(my_struct, v_list);
+    if (symbol == 'p')
+        ft_print_pointer(my_struct, v_list);
 	return (my_struct->length);
 }
 
@@ -170,4 +173,25 @@ int ft_print_u(t_print_flags *my_struct, va_list *v_list)
     return (1);
 }
 
+int ft_print_pointer(t_print_flags *my_struct, va_list *v_list)
+{
+    unsigned long long  print_ptr;
+    int		            num_len;
+    char	            *p_string;
 
+    print_ptr = (unsigned long long) va_arg(*v_list, void *);
+    //num_len = ft_get_capacity(print_ptr, 16);
+    num_len = 12;
+    p_string = ft_get_unsign_s(print_ptr, num_len, my_struct->type);
+    if (my_struct->width)
+        ft_calc_width(my_struct, num_len);
+    if (my_struct->precis)
+        ft_calc_precis(my_struct, num_len);
+    if (!(my_struct->flag_minus))
+        ft_print_right_align(my_struct, p_string);
+    else
+        ft_print_left_align(my_struct, p_string);
+    free(p_string);
+    p_string = NULL;
+    return (1);
+}
