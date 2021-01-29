@@ -32,7 +32,7 @@ t_print_flags *ft_create_struct()
 
 int ft_fill_struct(t_print_flags *my_struct, int length, char **p, va_list *v_list)
 {
-    char *num_string;
+  //  char *num_string;
     if ((**p) == '-')
     {
         my_struct->flag_minus = 1;
@@ -67,7 +67,7 @@ int ft_fill_struct(t_print_flags *my_struct, int length, char **p, va_list *v_li
 //        my_struct->precis = ft_atoi(num_string);
     }
     my_struct->length = length;
-    free(num_string);
+   // free(num_string);
     //теперь выловим код выводимого значения (строка там или чар)
     my_struct->type = **p;
     //сдвинем p с дэ
@@ -130,6 +130,8 @@ int ft_get_param(va_list *v_list, char **p)
 	int param;
 	char *num_string;
 
+	param = 0;
+	num_string = NULL;
 	if (**p == '*') {
 		(*p)++;
 		param = va_arg(*v_list, int);
