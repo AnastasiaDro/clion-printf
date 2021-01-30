@@ -67,8 +67,6 @@ int ft_fill_struct(t_print_flags *my_struct, int length, char **p, va_list *v_li
 //        my_struct->precis = ft_atoi(num_string);
     }
     my_struct->length = length;
-   // free(num_string);
-    //теперь выловим код выводимого значения (строка там или чар)
     my_struct->type = **p;
     //сдвинем p с дэ
     (*p)++;
@@ -145,67 +143,5 @@ int ft_get_param(va_list *v_list, char **p)
 	}
 	return (param);
 }
-
-//int	ft_get_capacity(int n, int base)
-//{
-//	int nm;
-//	int num_cap;
-//
-//	nm = n;
-//	num_cap = 0;
-//	while (nm != 0)
-//	{
-//		nm = nm / base;
-//		num_cap++;
-//	}
-//	return (num_cap);
-//}
-
-//конвертируем в 16тиричную систему число
-//char ft_convert_to_x(int n, char *base)
-//{
-//    char res;
-//    if (n<10)
-//        res = n + '0';
-//    else
-//        res = base[n - 10];
-//    return (res);
-//}
-
-
-//char	*ft_fill_x_s(char *s, int x_num, int num_cap, char *base) {
-//    int divis;
-//    if (x_num == 0)
-//        s[0] = '0';
-//    while (num_cap > 0) {
-//        divis = x_num % 16;
-//        s[num_cap - 1] = ft_convert_to_x(divis, base);
-//        x_num = x_num / 16;
-//        num_cap--;
-//    }
-//    return (s);
-//}
-
-//char *ft_get_x_num_str(int x_num, int num_cap, char *base)
-//{
-//    int size;
-//    char *s;
-//    int start;
-//
-//    start = 0;
-//    size = (x_num < 1) ? num_cap + 2 : num_cap + 1;
-//    s = malloc(size * sizeof(char));
-//    if (!s)
-//        return (NULL);
-//    s[size] = '\0';
-//    if (x_num < 0)
-//    {
-//        s[start] = '-';
-//        x_num = x_num * (-1);
-//        start++;
-//    }
-//    ft_fill_x_s(&s[start], x_num, num_cap, base);
-//    return(s);
-//}
 
 
