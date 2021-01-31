@@ -61,7 +61,9 @@ char *ft_num_for_sruct(char **p);
 void ft_make_string_clear(char **str);
 
 //вывод строки + возврат ее длины
-int	ft_putstr_printf(char *s, int precis_len);
+//int	ft_putstr_printf(char *s, int precis_len);
+
+int	ft_putstr_printf(char *s, int precis_len, int dot);
 
 char *ft_get_x_num_str(int x_num, int num_cap, char *base);
 

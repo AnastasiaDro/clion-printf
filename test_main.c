@@ -97,7 +97,7 @@ int main()
 	printf("ORIG \n");
 	printf("%.0i, %0.d, %0.d, %0.d, %0.d", 0, -12345678, 97, -1562067968, 2147483647);
 	//printf("%8i, %8d, %8d, %8d, %8d, %8d, %8d, %8d", i, j, k, l, m, c, e, d); //T11
-	printf("%8d", e); //T11
+	//printf("%8d", e); //T11
 
 
 	printf("\nMY \n");
