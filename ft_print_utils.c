@@ -46,7 +46,7 @@ int ft_calc_width(t_print_flags *my_struct, int num_len)
     if (my_struct->flag_zero)
         my_struct->width_symbol = '0';
     //считаем пробелы без вычета нулей
-    width = my_struct->width - num_len;
+    width = width - num_len;
     //если число меньше нуля еще уменьшаем
     if (my_struct->less_zero)
         width--;
@@ -61,7 +61,7 @@ int ft_calc_precis(t_print_flags *my_struct, int num_len, int *width)
 	my_struct->width_symbol = ' ';
 	if (precis > 0)
         *width = *width - precis;
-    return my_struct->precis;
+    return precis;
 }
 
 void ft_print_right_align(t_print_flags *my_struct,  char *num_string, int width, int precis)
@@ -70,7 +70,7 @@ void ft_print_right_align(t_print_flags *my_struct,  char *num_string, int width
 	if (my_struct->less_zero)
         ft_print_minus(my_struct);
     ft_print_precis(my_struct, precis);
-    my_struct->length = my_struct->length + ft_putstr_printf(num_string, 0, my_struct->dot);
+    my_struct->length = my_struct->length + ft_putstr_printf(num_string, 0, my_struct);
 }
 
 void ft_print_left_align(t_print_flags *my_struct, char *num_string, int width, int precis)
@@ -78,7 +78,7 @@ void ft_print_left_align(t_print_flags *my_struct, char *num_string, int width, 
     if (my_struct->less_zero)
         ft_print_minus(my_struct);
 	ft_print_precis(my_struct, precis);
-    my_struct->length = my_struct->length + ft_putstr_printf(num_string, 0, my_struct->dot);
+    my_struct->length = my_struct->length + ft_putstr_printf(num_string, 0, my_struct);
 	ft_print_width(my_struct, width);
 }
 

@@ -98,14 +98,24 @@ void ft_make_string_clear(char **str)
 	free(tmp);
 }
 
-int	ft_putstr_printf(char *s, int precis_len, int dot)
+int	ft_putstr_printf(char *s, int precis, t_print_flags *my_struct)
 {
     int str_len;
+
+    str_len = 0;
+	if (my_struct->type == 's')
+		str_len = precis;
+	else
+	{
+		str_len = ft_strlen(s);
+		if (my_struct->dot && !my_struct->precis && str_len == 1 && s[0] == '0')
+			return 0;
+	}
   //  if (!precis_len)
-	if (!precis_len && dot)
-        str_len = ft_strlen(s);
-    else
-        str_len = precis_len;
+//	if (!precis && my_struct->dot)
+//        str_len = ft_strlen(s);
+//    else
+//        str_len = precis;
 	if (s)
 		write(1, s, str_len);
     return (str_len);
@@ -181,7 +191,7 @@ int ft_get_precis(va_list *v_list, char **p, t_print_flags *my_struct)
 			if (num_string)
 				param = ft_atoi(num_string);
 			ft_make_string_clear(&num_string);
-			my_struct->width = param;
+			my_struct->precis = param;
 		}
 	}
 	return (my_struct->precis);

@@ -97,11 +97,11 @@ int ft_print_string(t_print_flags *my_struct, va_list *v_list)
     if(!(my_struct->flag_minus))
     {
         ft_print_width(my_struct, my_struct->width);
-        my_struct->length = my_struct->length + ft_putstr_printf(str_for_print, str_len, my_struct->dot);
+        my_struct->length = my_struct->length + ft_putstr_printf(str_for_print, str_len, my_struct);
     }
     else
     {
-        my_struct->length = my_struct->length + ft_putstr_printf(str_for_print, str_len, my_struct->dot);
+        my_struct->length = my_struct->length + ft_putstr_printf(str_for_print, str_len, my_struct);
         ft_print_width(my_struct, my_struct->width);
     }
     return (1);
