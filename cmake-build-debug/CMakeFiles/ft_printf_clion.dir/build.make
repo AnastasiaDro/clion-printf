@@ -155,96 +155,96 @@ CMakeFiles/ft_printf_clion.dir/ft_printf_utils.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf_clion.dir/ft_printf_utils.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/anastasia/CLionProjects/clion-printf/ft_printf_utils.c -o CMakeFiles/ft_printf_clion.dir/ft_printf_utils.c.s
 
-CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_atoi.c.o: CMakeFiles/ft_printf_clion.dir/flags.make
-CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_atoi.c.o: ../libft-finished-for-use/ft_atoi.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anastasia/CLionProjects/clion-printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_atoi.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_atoi.c.o   -c /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/ft_atoi.c
+CMakeFiles/ft_printf_clion.dir/libft/ft_atoi.c.o: CMakeFiles/ft_printf_clion.dir/flags.make
+CMakeFiles/ft_printf_clion.dir/libft/ft_atoi.c.o: ../libft/ft_atoi.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anastasia/CLionProjects/clion-printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/ft_printf_clion.dir/libft/ft_atoi.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf_clion.dir/libft/ft_atoi.c.o   -c /Users/anastasia/CLionProjects/clion-printf/libft/ft_atoi.c
 
-CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_atoi.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_atoi.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/ft_atoi.c > CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_atoi.c.i
+CMakeFiles/ft_printf_clion.dir/libft/ft_atoi.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf_clion.dir/libft/ft_atoi.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/anastasia/CLionProjects/clion-printf/libft/ft_atoi.c > CMakeFiles/ft_printf_clion.dir/libft/ft_atoi.c.i
 
-CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_atoi.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_atoi.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/ft_atoi.c -o CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_atoi.c.s
+CMakeFiles/ft_printf_clion.dir/libft/ft_atoi.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf_clion.dir/libft/ft_atoi.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/anastasia/CLionProjects/clion-printf/libft/ft_atoi.c -o CMakeFiles/ft_printf_clion.dir/libft/ft_atoi.c.s
 
-CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_itoa.c.o: CMakeFiles/ft_printf_clion.dir/flags.make
-CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_itoa.c.o: ../libft-finished-for-use/ft_itoa.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anastasia/CLionProjects/clion-printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_itoa.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_itoa.c.o   -c /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/ft_itoa.c
+CMakeFiles/ft_printf_clion.dir/libft/ft_itoa.c.o: CMakeFiles/ft_printf_clion.dir/flags.make
+CMakeFiles/ft_printf_clion.dir/libft/ft_itoa.c.o: ../libft/ft_itoa.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anastasia/CLionProjects/clion-printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/ft_printf_clion.dir/libft/ft_itoa.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf_clion.dir/libft/ft_itoa.c.o   -c /Users/anastasia/CLionProjects/clion-printf/libft/ft_itoa.c
 
-CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_itoa.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_itoa.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/ft_itoa.c > CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_itoa.c.i
+CMakeFiles/ft_printf_clion.dir/libft/ft_itoa.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf_clion.dir/libft/ft_itoa.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/anastasia/CLionProjects/clion-printf/libft/ft_itoa.c > CMakeFiles/ft_printf_clion.dir/libft/ft_itoa.c.i
 
-CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_itoa.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_itoa.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/ft_itoa.c -o CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_itoa.c.s
+CMakeFiles/ft_printf_clion.dir/libft/ft_itoa.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf_clion.dir/libft/ft_itoa.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/anastasia/CLionProjects/clion-printf/libft/ft_itoa.c -o CMakeFiles/ft_printf_clion.dir/libft/ft_itoa.c.s
 
-CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_calloc.c.o: CMakeFiles/ft_printf_clion.dir/flags.make
-CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_calloc.c.o: ../libft-finished-for-use/ft_calloc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anastasia/CLionProjects/clion-printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_calloc.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_calloc.c.o   -c /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/ft_calloc.c
+CMakeFiles/ft_printf_clion.dir/libft/ft_calloc.c.o: CMakeFiles/ft_printf_clion.dir/flags.make
+CMakeFiles/ft_printf_clion.dir/libft/ft_calloc.c.o: ../libft/ft_calloc.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anastasia/CLionProjects/clion-printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/ft_printf_clion.dir/libft/ft_calloc.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf_clion.dir/libft/ft_calloc.c.o   -c /Users/anastasia/CLionProjects/clion-printf/libft/ft_calloc.c
 
-CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_calloc.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_calloc.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/ft_calloc.c > CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_calloc.c.i
+CMakeFiles/ft_printf_clion.dir/libft/ft_calloc.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf_clion.dir/libft/ft_calloc.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/anastasia/CLionProjects/clion-printf/libft/ft_calloc.c > CMakeFiles/ft_printf_clion.dir/libft/ft_calloc.c.i
 
-CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_calloc.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_calloc.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/ft_calloc.c -o CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_calloc.c.s
+CMakeFiles/ft_printf_clion.dir/libft/ft_calloc.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf_clion.dir/libft/ft_calloc.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/anastasia/CLionProjects/clion-printf/libft/ft_calloc.c -o CMakeFiles/ft_printf_clion.dir/libft/ft_calloc.c.s
 
-CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_bzero.c.o: CMakeFiles/ft_printf_clion.dir/flags.make
-CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_bzero.c.o: ../libft-finished-for-use/ft_bzero.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anastasia/CLionProjects/clion-printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_bzero.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_bzero.c.o   -c /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/ft_bzero.c
+CMakeFiles/ft_printf_clion.dir/libft/ft_bzero.c.o: CMakeFiles/ft_printf_clion.dir/flags.make
+CMakeFiles/ft_printf_clion.dir/libft/ft_bzero.c.o: ../libft/ft_bzero.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anastasia/CLionProjects/clion-printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/ft_printf_clion.dir/libft/ft_bzero.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf_clion.dir/libft/ft_bzero.c.o   -c /Users/anastasia/CLionProjects/clion-printf/libft/ft_bzero.c
 
-CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_bzero.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_bzero.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/ft_bzero.c > CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_bzero.c.i
+CMakeFiles/ft_printf_clion.dir/libft/ft_bzero.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf_clion.dir/libft/ft_bzero.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/anastasia/CLionProjects/clion-printf/libft/ft_bzero.c > CMakeFiles/ft_printf_clion.dir/libft/ft_bzero.c.i
 
-CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_bzero.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_bzero.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/ft_bzero.c -o CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_bzero.c.s
+CMakeFiles/ft_printf_clion.dir/libft/ft_bzero.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf_clion.dir/libft/ft_bzero.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/anastasia/CLionProjects/clion-printf/libft/ft_bzero.c -o CMakeFiles/ft_printf_clion.dir/libft/ft_bzero.c.s
 
-CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_strlen.c.o: CMakeFiles/ft_printf_clion.dir/flags.make
-CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_strlen.c.o: ../libft-finished-for-use/ft_strlen.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anastasia/CLionProjects/clion-printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_strlen.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_strlen.c.o   -c /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/ft_strlen.c
+CMakeFiles/ft_printf_clion.dir/libft/ft_strlen.c.o: CMakeFiles/ft_printf_clion.dir/flags.make
+CMakeFiles/ft_printf_clion.dir/libft/ft_strlen.c.o: ../libft/ft_strlen.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anastasia/CLionProjects/clion-printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/ft_printf_clion.dir/libft/ft_strlen.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf_clion.dir/libft/ft_strlen.c.o   -c /Users/anastasia/CLionProjects/clion-printf/libft/ft_strlen.c
 
-CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_strlen.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_strlen.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/ft_strlen.c > CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_strlen.c.i
+CMakeFiles/ft_printf_clion.dir/libft/ft_strlen.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf_clion.dir/libft/ft_strlen.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/anastasia/CLionProjects/clion-printf/libft/ft_strlen.c > CMakeFiles/ft_printf_clion.dir/libft/ft_strlen.c.i
 
-CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_strlen.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_strlen.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/ft_strlen.c -o CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_strlen.c.s
+CMakeFiles/ft_printf_clion.dir/libft/ft_strlen.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf_clion.dir/libft/ft_strlen.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/anastasia/CLionProjects/clion-printf/libft/ft_strlen.c -o CMakeFiles/ft_printf_clion.dir/libft/ft_strlen.c.s
 
-CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_strlcpy.c.o: CMakeFiles/ft_printf_clion.dir/flags.make
-CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_strlcpy.c.o: ../libft-finished-for-use/ft_strlcpy.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anastasia/CLionProjects/clion-printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_strlcpy.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_strlcpy.c.o   -c /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/ft_strlcpy.c
+CMakeFiles/ft_printf_clion.dir/libft/ft_strlcpy.c.o: CMakeFiles/ft_printf_clion.dir/flags.make
+CMakeFiles/ft_printf_clion.dir/libft/ft_strlcpy.c.o: ../libft/ft_strlcpy.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anastasia/CLionProjects/clion-printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/ft_printf_clion.dir/libft/ft_strlcpy.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf_clion.dir/libft/ft_strlcpy.c.o   -c /Users/anastasia/CLionProjects/clion-printf/libft/ft_strlcpy.c
 
-CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_strlcpy.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_strlcpy.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/ft_strlcpy.c > CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_strlcpy.c.i
+CMakeFiles/ft_printf_clion.dir/libft/ft_strlcpy.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf_clion.dir/libft/ft_strlcpy.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/anastasia/CLionProjects/clion-printf/libft/ft_strlcpy.c > CMakeFiles/ft_printf_clion.dir/libft/ft_strlcpy.c.i
 
-CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_strlcpy.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_strlcpy.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/ft_strlcpy.c -o CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_strlcpy.c.s
+CMakeFiles/ft_printf_clion.dir/libft/ft_strlcpy.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf_clion.dir/libft/ft_strlcpy.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/anastasia/CLionProjects/clion-printf/libft/ft_strlcpy.c -o CMakeFiles/ft_printf_clion.dir/libft/ft_strlcpy.c.s
 
-CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_putchar_fd.c.o: CMakeFiles/ft_printf_clion.dir/flags.make
-CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_putchar_fd.c.o: ../libft-finished-for-use/ft_putchar_fd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anastasia/CLionProjects/clion-printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_putchar_fd.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_putchar_fd.c.o   -c /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/ft_putchar_fd.c
+CMakeFiles/ft_printf_clion.dir/libft/ft_putchar_fd.c.o: CMakeFiles/ft_printf_clion.dir/flags.make
+CMakeFiles/ft_printf_clion.dir/libft/ft_putchar_fd.c.o: ../libft/ft_putchar_fd.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anastasia/CLionProjects/clion-printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/ft_printf_clion.dir/libft/ft_putchar_fd.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf_clion.dir/libft/ft_putchar_fd.c.o   -c /Users/anastasia/CLionProjects/clion-printf/libft/ft_putchar_fd.c
 
-CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_putchar_fd.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_putchar_fd.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/ft_putchar_fd.c > CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_putchar_fd.c.i
+CMakeFiles/ft_printf_clion.dir/libft/ft_putchar_fd.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf_clion.dir/libft/ft_putchar_fd.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/anastasia/CLionProjects/clion-printf/libft/ft_putchar_fd.c > CMakeFiles/ft_printf_clion.dir/libft/ft_putchar_fd.c.i
 
-CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_putchar_fd.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_putchar_fd.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/ft_putchar_fd.c -o CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_putchar_fd.c.s
+CMakeFiles/ft_printf_clion.dir/libft/ft_putchar_fd.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf_clion.dir/libft/ft_putchar_fd.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/anastasia/CLionProjects/clion-printf/libft/ft_putchar_fd.c -o CMakeFiles/ft_printf_clion.dir/libft/ft_putchar_fd.c.s
 
 # Object files for target ft_printf_clion
 ft_printf_clion_OBJECTS = \
@@ -254,13 +254,13 @@ ft_printf_clion_OBJECTS = \
 "CMakeFiles/ft_printf_clion.dir/ft_print_utils.c.o" \
 "CMakeFiles/ft_printf_clion.dir/ft_printf.c.o" \
 "CMakeFiles/ft_printf_clion.dir/ft_printf_utils.c.o" \
-"CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_atoi.c.o" \
-"CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_itoa.c.o" \
-"CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_calloc.c.o" \
-"CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_bzero.c.o" \
-"CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_strlen.c.o" \
-"CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_strlcpy.c.o" \
-"CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_putchar_fd.c.o"
+"CMakeFiles/ft_printf_clion.dir/libft/ft_atoi.c.o" \
+"CMakeFiles/ft_printf_clion.dir/libft/ft_itoa.c.o" \
+"CMakeFiles/ft_printf_clion.dir/libft/ft_calloc.c.o" \
+"CMakeFiles/ft_printf_clion.dir/libft/ft_bzero.c.o" \
+"CMakeFiles/ft_printf_clion.dir/libft/ft_strlen.c.o" \
+"CMakeFiles/ft_printf_clion.dir/libft/ft_strlcpy.c.o" \
+"CMakeFiles/ft_printf_clion.dir/libft/ft_putchar_fd.c.o"
 
 # External object files for target ft_printf_clion
 ft_printf_clion_EXTERNAL_OBJECTS =
@@ -271,13 +271,13 @@ ft_printf_clion: CMakeFiles/ft_printf_clion.dir/ft_num_utils.c.o
 ft_printf_clion: CMakeFiles/ft_printf_clion.dir/ft_print_utils.c.o
 ft_printf_clion: CMakeFiles/ft_printf_clion.dir/ft_printf.c.o
 ft_printf_clion: CMakeFiles/ft_printf_clion.dir/ft_printf_utils.c.o
-ft_printf_clion: CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_atoi.c.o
-ft_printf_clion: CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_itoa.c.o
-ft_printf_clion: CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_calloc.c.o
-ft_printf_clion: CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_bzero.c.o
-ft_printf_clion: CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_strlen.c.o
-ft_printf_clion: CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_strlcpy.c.o
-ft_printf_clion: CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_putchar_fd.c.o
+ft_printf_clion: CMakeFiles/ft_printf_clion.dir/libft/ft_atoi.c.o
+ft_printf_clion: CMakeFiles/ft_printf_clion.dir/libft/ft_itoa.c.o
+ft_printf_clion: CMakeFiles/ft_printf_clion.dir/libft/ft_calloc.c.o
+ft_printf_clion: CMakeFiles/ft_printf_clion.dir/libft/ft_bzero.c.o
+ft_printf_clion: CMakeFiles/ft_printf_clion.dir/libft/ft_strlen.c.o
+ft_printf_clion: CMakeFiles/ft_printf_clion.dir/libft/ft_strlcpy.c.o
+ft_printf_clion: CMakeFiles/ft_printf_clion.dir/libft/ft_putchar_fd.c.o
 ft_printf_clion: CMakeFiles/ft_printf_clion.dir/build.make
 ft_printf_clion: CMakeFiles/ft_printf_clion.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/anastasia/CLionProjects/clion-printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking C executable ft_printf_clion"

@@ -278,194 +278,194 @@ ft_printf_utils.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/ft_printf_utils.c.s
 .PHONY : ft_printf_utils.c.s
 
-libft-finished-for-use/ft_atoi.o: libft-finished-for-use/ft_atoi.c.o
+libft/ft_atoi.o: libft/ft_atoi.c.o
 
-.PHONY : libft-finished-for-use/ft_atoi.o
-
-# target to build an object file
-libft-finished-for-use/ft_atoi.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_atoi.c.o
-.PHONY : libft-finished-for-use/ft_atoi.c.o
-
-libft-finished-for-use/ft_atoi.i: libft-finished-for-use/ft_atoi.c.i
-
-.PHONY : libft-finished-for-use/ft_atoi.i
-
-# target to preprocess a source file
-libft-finished-for-use/ft_atoi.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_atoi.c.i
-.PHONY : libft-finished-for-use/ft_atoi.c.i
-
-libft-finished-for-use/ft_atoi.s: libft-finished-for-use/ft_atoi.c.s
-
-.PHONY : libft-finished-for-use/ft_atoi.s
-
-# target to generate assembly for a file
-libft-finished-for-use/ft_atoi.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_atoi.c.s
-.PHONY : libft-finished-for-use/ft_atoi.c.s
-
-libft-finished-for-use/ft_bzero.o: libft-finished-for-use/ft_bzero.c.o
-
-.PHONY : libft-finished-for-use/ft_bzero.o
+.PHONY : libft/ft_atoi.o
 
 # target to build an object file
-libft-finished-for-use/ft_bzero.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_bzero.c.o
-.PHONY : libft-finished-for-use/ft_bzero.c.o
+libft/ft_atoi.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft/ft_atoi.c.o
+.PHONY : libft/ft_atoi.c.o
 
-libft-finished-for-use/ft_bzero.i: libft-finished-for-use/ft_bzero.c.i
+libft/ft_atoi.i: libft/ft_atoi.c.i
 
-.PHONY : libft-finished-for-use/ft_bzero.i
+.PHONY : libft/ft_atoi.i
 
 # target to preprocess a source file
-libft-finished-for-use/ft_bzero.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_bzero.c.i
-.PHONY : libft-finished-for-use/ft_bzero.c.i
+libft/ft_atoi.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft/ft_atoi.c.i
+.PHONY : libft/ft_atoi.c.i
 
-libft-finished-for-use/ft_bzero.s: libft-finished-for-use/ft_bzero.c.s
+libft/ft_atoi.s: libft/ft_atoi.c.s
 
-.PHONY : libft-finished-for-use/ft_bzero.s
+.PHONY : libft/ft_atoi.s
 
 # target to generate assembly for a file
-libft-finished-for-use/ft_bzero.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_bzero.c.s
-.PHONY : libft-finished-for-use/ft_bzero.c.s
+libft/ft_atoi.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft/ft_atoi.c.s
+.PHONY : libft/ft_atoi.c.s
 
-libft-finished-for-use/ft_calloc.o: libft-finished-for-use/ft_calloc.c.o
+libft/ft_bzero.o: libft/ft_bzero.c.o
 
-.PHONY : libft-finished-for-use/ft_calloc.o
+.PHONY : libft/ft_bzero.o
 
 # target to build an object file
-libft-finished-for-use/ft_calloc.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_calloc.c.o
-.PHONY : libft-finished-for-use/ft_calloc.c.o
+libft/ft_bzero.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft/ft_bzero.c.o
+.PHONY : libft/ft_bzero.c.o
 
-libft-finished-for-use/ft_calloc.i: libft-finished-for-use/ft_calloc.c.i
+libft/ft_bzero.i: libft/ft_bzero.c.i
 
-.PHONY : libft-finished-for-use/ft_calloc.i
+.PHONY : libft/ft_bzero.i
 
 # target to preprocess a source file
-libft-finished-for-use/ft_calloc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_calloc.c.i
-.PHONY : libft-finished-for-use/ft_calloc.c.i
+libft/ft_bzero.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft/ft_bzero.c.i
+.PHONY : libft/ft_bzero.c.i
 
-libft-finished-for-use/ft_calloc.s: libft-finished-for-use/ft_calloc.c.s
+libft/ft_bzero.s: libft/ft_bzero.c.s
 
-.PHONY : libft-finished-for-use/ft_calloc.s
+.PHONY : libft/ft_bzero.s
 
 # target to generate assembly for a file
-libft-finished-for-use/ft_calloc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_calloc.c.s
-.PHONY : libft-finished-for-use/ft_calloc.c.s
+libft/ft_bzero.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft/ft_bzero.c.s
+.PHONY : libft/ft_bzero.c.s
 
-libft-finished-for-use/ft_itoa.o: libft-finished-for-use/ft_itoa.c.o
+libft/ft_calloc.o: libft/ft_calloc.c.o
 
-.PHONY : libft-finished-for-use/ft_itoa.o
+.PHONY : libft/ft_calloc.o
 
 # target to build an object file
-libft-finished-for-use/ft_itoa.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_itoa.c.o
-.PHONY : libft-finished-for-use/ft_itoa.c.o
+libft/ft_calloc.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft/ft_calloc.c.o
+.PHONY : libft/ft_calloc.c.o
 
-libft-finished-for-use/ft_itoa.i: libft-finished-for-use/ft_itoa.c.i
+libft/ft_calloc.i: libft/ft_calloc.c.i
 
-.PHONY : libft-finished-for-use/ft_itoa.i
+.PHONY : libft/ft_calloc.i
 
 # target to preprocess a source file
-libft-finished-for-use/ft_itoa.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_itoa.c.i
-.PHONY : libft-finished-for-use/ft_itoa.c.i
+libft/ft_calloc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft/ft_calloc.c.i
+.PHONY : libft/ft_calloc.c.i
 
-libft-finished-for-use/ft_itoa.s: libft-finished-for-use/ft_itoa.c.s
+libft/ft_calloc.s: libft/ft_calloc.c.s
 
-.PHONY : libft-finished-for-use/ft_itoa.s
+.PHONY : libft/ft_calloc.s
 
 # target to generate assembly for a file
-libft-finished-for-use/ft_itoa.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_itoa.c.s
-.PHONY : libft-finished-for-use/ft_itoa.c.s
+libft/ft_calloc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft/ft_calloc.c.s
+.PHONY : libft/ft_calloc.c.s
 
-libft-finished-for-use/ft_putchar_fd.o: libft-finished-for-use/ft_putchar_fd.c.o
+libft/ft_itoa.o: libft/ft_itoa.c.o
 
-.PHONY : libft-finished-for-use/ft_putchar_fd.o
+.PHONY : libft/ft_itoa.o
 
 # target to build an object file
-libft-finished-for-use/ft_putchar_fd.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_putchar_fd.c.o
-.PHONY : libft-finished-for-use/ft_putchar_fd.c.o
+libft/ft_itoa.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft/ft_itoa.c.o
+.PHONY : libft/ft_itoa.c.o
 
-libft-finished-for-use/ft_putchar_fd.i: libft-finished-for-use/ft_putchar_fd.c.i
+libft/ft_itoa.i: libft/ft_itoa.c.i
 
-.PHONY : libft-finished-for-use/ft_putchar_fd.i
+.PHONY : libft/ft_itoa.i
 
 # target to preprocess a source file
-libft-finished-for-use/ft_putchar_fd.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_putchar_fd.c.i
-.PHONY : libft-finished-for-use/ft_putchar_fd.c.i
+libft/ft_itoa.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft/ft_itoa.c.i
+.PHONY : libft/ft_itoa.c.i
 
-libft-finished-for-use/ft_putchar_fd.s: libft-finished-for-use/ft_putchar_fd.c.s
+libft/ft_itoa.s: libft/ft_itoa.c.s
 
-.PHONY : libft-finished-for-use/ft_putchar_fd.s
+.PHONY : libft/ft_itoa.s
 
 # target to generate assembly for a file
-libft-finished-for-use/ft_putchar_fd.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_putchar_fd.c.s
-.PHONY : libft-finished-for-use/ft_putchar_fd.c.s
+libft/ft_itoa.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft/ft_itoa.c.s
+.PHONY : libft/ft_itoa.c.s
 
-libft-finished-for-use/ft_strlcpy.o: libft-finished-for-use/ft_strlcpy.c.o
+libft/ft_putchar_fd.o: libft/ft_putchar_fd.c.o
 
-.PHONY : libft-finished-for-use/ft_strlcpy.o
+.PHONY : libft/ft_putchar_fd.o
 
 # target to build an object file
-libft-finished-for-use/ft_strlcpy.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_strlcpy.c.o
-.PHONY : libft-finished-for-use/ft_strlcpy.c.o
+libft/ft_putchar_fd.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft/ft_putchar_fd.c.o
+.PHONY : libft/ft_putchar_fd.c.o
 
-libft-finished-for-use/ft_strlcpy.i: libft-finished-for-use/ft_strlcpy.c.i
+libft/ft_putchar_fd.i: libft/ft_putchar_fd.c.i
 
-.PHONY : libft-finished-for-use/ft_strlcpy.i
+.PHONY : libft/ft_putchar_fd.i
 
 # target to preprocess a source file
-libft-finished-for-use/ft_strlcpy.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_strlcpy.c.i
-.PHONY : libft-finished-for-use/ft_strlcpy.c.i
+libft/ft_putchar_fd.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft/ft_putchar_fd.c.i
+.PHONY : libft/ft_putchar_fd.c.i
 
-libft-finished-for-use/ft_strlcpy.s: libft-finished-for-use/ft_strlcpy.c.s
+libft/ft_putchar_fd.s: libft/ft_putchar_fd.c.s
 
-.PHONY : libft-finished-for-use/ft_strlcpy.s
+.PHONY : libft/ft_putchar_fd.s
 
 # target to generate assembly for a file
-libft-finished-for-use/ft_strlcpy.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_strlcpy.c.s
-.PHONY : libft-finished-for-use/ft_strlcpy.c.s
+libft/ft_putchar_fd.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft/ft_putchar_fd.c.s
+.PHONY : libft/ft_putchar_fd.c.s
 
-libft-finished-for-use/ft_strlen.o: libft-finished-for-use/ft_strlen.c.o
+libft/ft_strlcpy.o: libft/ft_strlcpy.c.o
 
-.PHONY : libft-finished-for-use/ft_strlen.o
+.PHONY : libft/ft_strlcpy.o
 
 # target to build an object file
-libft-finished-for-use/ft_strlen.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_strlen.c.o
-.PHONY : libft-finished-for-use/ft_strlen.c.o
+libft/ft_strlcpy.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft/ft_strlcpy.c.o
+.PHONY : libft/ft_strlcpy.c.o
 
-libft-finished-for-use/ft_strlen.i: libft-finished-for-use/ft_strlen.c.i
+libft/ft_strlcpy.i: libft/ft_strlcpy.c.i
 
-.PHONY : libft-finished-for-use/ft_strlen.i
+.PHONY : libft/ft_strlcpy.i
 
 # target to preprocess a source file
-libft-finished-for-use/ft_strlen.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_strlen.c.i
-.PHONY : libft-finished-for-use/ft_strlen.c.i
+libft/ft_strlcpy.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft/ft_strlcpy.c.i
+.PHONY : libft/ft_strlcpy.c.i
 
-libft-finished-for-use/ft_strlen.s: libft-finished-for-use/ft_strlen.c.s
+libft/ft_strlcpy.s: libft/ft_strlcpy.c.s
 
-.PHONY : libft-finished-for-use/ft_strlen.s
+.PHONY : libft/ft_strlcpy.s
 
 # target to generate assembly for a file
-libft-finished-for-use/ft_strlen.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_strlen.c.s
-.PHONY : libft-finished-for-use/ft_strlen.c.s
+libft/ft_strlcpy.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft/ft_strlcpy.c.s
+.PHONY : libft/ft_strlcpy.c.s
+
+libft/ft_strlen.o: libft/ft_strlen.c.o
+
+.PHONY : libft/ft_strlen.o
+
+# target to build an object file
+libft/ft_strlen.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft/ft_strlen.c.o
+.PHONY : libft/ft_strlen.c.o
+
+libft/ft_strlen.i: libft/ft_strlen.c.i
+
+.PHONY : libft/ft_strlen.i
+
+# target to preprocess a source file
+libft/ft_strlen.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft/ft_strlen.c.i
+.PHONY : libft/ft_strlen.c.i
+
+libft/ft_strlen.s: libft/ft_strlen.c.s
+
+.PHONY : libft/ft_strlen.s
+
+# target to generate assembly for a file
+libft/ft_strlen.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft/ft_strlen.c.s
+.PHONY : libft/ft_strlen.c.s
 
 test_main.o: test_main.c.o
 
@@ -518,27 +518,27 @@ help:
 	@echo "... ft_printf_utils.o"
 	@echo "... ft_printf_utils.i"
 	@echo "... ft_printf_utils.s"
-	@echo "... libft-finished-for-use/ft_atoi.o"
-	@echo "... libft-finished-for-use/ft_atoi.i"
-	@echo "... libft-finished-for-use/ft_atoi.s"
-	@echo "... libft-finished-for-use/ft_bzero.o"
-	@echo "... libft-finished-for-use/ft_bzero.i"
-	@echo "... libft-finished-for-use/ft_bzero.s"
-	@echo "... libft-finished-for-use/ft_calloc.o"
-	@echo "... libft-finished-for-use/ft_calloc.i"
-	@echo "... libft-finished-for-use/ft_calloc.s"
-	@echo "... libft-finished-for-use/ft_itoa.o"
-	@echo "... libft-finished-for-use/ft_itoa.i"
-	@echo "... libft-finished-for-use/ft_itoa.s"
-	@echo "... libft-finished-for-use/ft_putchar_fd.o"
-	@echo "... libft-finished-for-use/ft_putchar_fd.i"
-	@echo "... libft-finished-for-use/ft_putchar_fd.s"
-	@echo "... libft-finished-for-use/ft_strlcpy.o"
-	@echo "... libft-finished-for-use/ft_strlcpy.i"
-	@echo "... libft-finished-for-use/ft_strlcpy.s"
-	@echo "... libft-finished-for-use/ft_strlen.o"
-	@echo "... libft-finished-for-use/ft_strlen.i"
-	@echo "... libft-finished-for-use/ft_strlen.s"
+	@echo "... libft/ft_atoi.o"
+	@echo "... libft/ft_atoi.i"
+	@echo "... libft/ft_atoi.s"
+	@echo "... libft/ft_bzero.o"
+	@echo "... libft/ft_bzero.i"
+	@echo "... libft/ft_bzero.s"
+	@echo "... libft/ft_calloc.o"
+	@echo "... libft/ft_calloc.i"
+	@echo "... libft/ft_calloc.s"
+	@echo "... libft/ft_itoa.o"
+	@echo "... libft/ft_itoa.i"
+	@echo "... libft/ft_itoa.s"
+	@echo "... libft/ft_putchar_fd.o"
+	@echo "... libft/ft_putchar_fd.i"
+	@echo "... libft/ft_putchar_fd.s"
+	@echo "... libft/ft_strlcpy.o"
+	@echo "... libft/ft_strlcpy.i"
+	@echo "... libft/ft_strlcpy.s"
+	@echo "... libft/ft_strlen.o"
+	@echo "... libft/ft_strlen.i"
+	@echo "... libft/ft_strlen.s"
 	@echo "... test_main.o"
 	@echo "... test_main.i"
 	@echo "... test_main.s"

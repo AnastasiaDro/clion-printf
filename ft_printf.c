@@ -31,6 +31,7 @@ int ft_printf(const char *format_str, ...)
 			print_struct = ft_create_struct();
 			ft_fill_struct(print_struct, res_len, &p, &v_list);
 			res_len = ft_make_parse(print_struct, &v_list);
+			free(print_struct);
 		}
 		else
 		{ 
@@ -41,6 +42,5 @@ int ft_printf(const char *format_str, ...)
 	}
 	//закончили с аргументами
 	va_end(v_list);
-	free(print_struct);
 	return (res_len);
 }

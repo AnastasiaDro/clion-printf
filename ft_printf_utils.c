@@ -27,6 +27,7 @@ t_print_flags *ft_create_struct()
     my_struct->type = 0;
     my_struct->width_symbol = ' ';
     my_struct->less_zero = 0;
+    my_struct->dot = 0;
 	return (my_struct);
 }
 
@@ -44,28 +45,14 @@ int ft_fill_struct(t_print_flags *my_struct, int length, char **p, va_list *v_li
     }
     //обрабатываем ширину
     //звёздочка
-   my_struct->width = ft_get_param(v_list, p);
-//	if (**p == '*')
-//		my_struct->width = va_arg(*v_list, int);
-//	else
-//	{
-//		num_string = ft_num_for_sruct(p);
-//		if (num_string)
-//			my_struct->width = ft_atoi(num_string);
-//		ft_make_string_clear(&num_string);
-//	}
-//    num_string = ft_num_for_sruct(p);
-//    if (num_string)
-//        my_struct->width = ft_atoi(num_string);
-//    ft_make_string_clear(&num_string);
-    //обрабатываем точность			ПОКА БЕЗ *
-    if (**p == '.')
-    {
-        (*p)++;
-		my_struct->precis = ft_get_param(v_list, p);
-//        num_string = ft_num_for_sruct(p);
-//        my_struct->precis = ft_atoi(num_string);
-    }
+   //my_struct->width = ft_get_param(v_list, p);
+   ft_get_width(v_list, p, my_struct);
+    ft_get_precis(v_list, p, my_struct);
+//    if (**p == '.')
+//    {
+//        (*p)++;
+//		my_struct->precis = ft_get_param(v_list, p);
+//    }
     my_struct->length = length;
     my_struct->type = **p;
     //сдвинем p с дэ
@@ -123,25 +110,78 @@ int	ft_putstr_printf(char *s, int precis_len)
     return (str_len);
 }
 
-int ft_get_param(va_list *v_list, char **p)
+//int ft_get_param(va_list *v_list, char **p)
+//{
+//	int param;
+//	char *num_string;
+//
+//	param = 0;
+//	num_string = NULL;
+//	if (**p == '*') {
+//		(*p)++;
+//		param = va_arg(*v_list, int);
+//	}
+//	else
+//	{
+//		num_string = ft_num_for_sruct(p);
+//		if (num_string)
+//			param = ft_atoi(num_string);
+//		ft_make_string_clear(&num_string);
+//	}
+//	return (param);
+//}
+
+
+int ft_get_width(va_list *v_list, char **p, t_print_flags *my_struct) {
+	int param;
+	char *num_string;
+
+	param = 0;
+	num_string = NULL;
+	if (**p == '*')
+	{
+		(*p)++;
+		param = va_arg(*v_list, int);
+		if (param < 0) {
+			my_struct->width = param * (-1);
+			my_struct->flag_minus = 1;
+		}
+		else
+		{
+			my_struct->width = param;
+		}
+	} else {
+		num_string = ft_num_for_sruct(p);
+		if (num_string)
+			param = ft_atoi(num_string);
+		ft_make_string_clear(&num_string);
+		my_struct->width = param;
+	}
+	return my_struct->width;
+}
+
+int ft_get_precis(va_list *v_list, char **p, t_print_flags *my_struct)
 {
 	int param;
 	char *num_string;
 
 	param = 0;
 	num_string = NULL;
-	if (**p == '*') {
+	if (**p == '.') {
 		(*p)++;
-		param = va_arg(*v_list, int);
+		my_struct->dot = 1;
+		if (**p == '*')
+		{
+			(*p)++;
+			my_struct->precis = va_arg(*v_list, int);
+		}
+		else {
+			num_string = ft_num_for_sruct(p);
+			if (num_string)
+				param = ft_atoi(num_string);
+			ft_make_string_clear(&num_string);
+			my_struct->width = param;
+		}
 	}
-	else
-	{
-		num_string = ft_num_for_sruct(p);
-		if (num_string)
-			param = ft_atoi(num_string);
-		ft_make_string_clear(&num_string);
-	}
-	return (param);
+	return (my_struct->precis);
 }
-
-

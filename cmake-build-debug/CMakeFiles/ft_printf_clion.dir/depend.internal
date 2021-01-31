@@ -4,43 +4,43 @@
 CMakeFiles/ft_printf_clion.dir/ft_make_parse.c.o
  /Users/anastasia/CLionProjects/clion-printf/ft_make_parse.c
  /Users/anastasia/CLionProjects/clion-printf/ft_printf.h
- /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/libft.h
+ /Users/anastasia/CLionProjects/clion-printf/libft/libft.h
  /Users/anastasia/CLionProjects/clion-printf/num_utils.h
  /Users/anastasia/CLionProjects/clion-printf/print_utils.h
 CMakeFiles/ft_printf_clion.dir/ft_num_utils.c.o
  /Users/anastasia/CLionProjects/clion-printf/ft_num_utils.c
  /Users/anastasia/CLionProjects/clion-printf/ft_printf.h
- /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/libft.h
+ /Users/anastasia/CLionProjects/clion-printf/libft/libft.h
 CMakeFiles/ft_printf_clion.dir/ft_print_utils.c.o
  /Users/anastasia/CLionProjects/clion-printf/ft_print_utils.c
  /Users/anastasia/CLionProjects/clion-printf/ft_printf.h
- /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/libft.h
+ /Users/anastasia/CLionProjects/clion-printf/libft/libft.h
  /Users/anastasia/CLionProjects/clion-printf/print_utils.h
 CMakeFiles/ft_printf_clion.dir/ft_printf.c.o
  /Users/anastasia/CLionProjects/clion-printf/ft_printf.c
  /Users/anastasia/CLionProjects/clion-printf/ft_printf.h
- /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/libft.h
+ /Users/anastasia/CLionProjects/clion-printf/libft/libft.h
 CMakeFiles/ft_printf_clion.dir/ft_printf_utils.c.o
  /Users/anastasia/CLionProjects/clion-printf/ft_printf.h
  /Users/anastasia/CLionProjects/clion-printf/ft_printf_utils.c
- /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/libft.h
-CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_atoi.c.o
- /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/ft_atoi.c
-CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_bzero.c.o
- /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/ft_bzero.c
-CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_calloc.c.o
- /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/ft_calloc.c
- /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/libft.h
-CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_itoa.c.o
- /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/ft_itoa.c
-CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_putchar_fd.c.o
- /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/ft_putchar_fd.c
-CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_strlcpy.c.o
- /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/ft_strlcpy.c
- /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/libft.h
-CMakeFiles/ft_printf_clion.dir/libft-finished-for-use/ft_strlen.c.o
- /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/ft_strlen.c
+ /Users/anastasia/CLionProjects/clion-printf/libft/libft.h
+CMakeFiles/ft_printf_clion.dir/libft/ft_atoi.c.o
+ /Users/anastasia/CLionProjects/clion-printf/libft/ft_atoi.c
+CMakeFiles/ft_printf_clion.dir/libft/ft_bzero.c.o
+ /Users/anastasia/CLionProjects/clion-printf/libft/ft_bzero.c
+CMakeFiles/ft_printf_clion.dir/libft/ft_calloc.c.o
+ /Users/anastasia/CLionProjects/clion-printf/libft/ft_calloc.c
+ /Users/anastasia/CLionProjects/clion-printf/libft/libft.h
+CMakeFiles/ft_printf_clion.dir/libft/ft_itoa.c.o
+ /Users/anastasia/CLionProjects/clion-printf/libft/ft_itoa.c
+CMakeFiles/ft_printf_clion.dir/libft/ft_putchar_fd.c.o
+ /Users/anastasia/CLionProjects/clion-printf/libft/ft_putchar_fd.c
+CMakeFiles/ft_printf_clion.dir/libft/ft_strlcpy.c.o
+ /Users/anastasia/CLionProjects/clion-printf/libft/ft_strlcpy.c
+ /Users/anastasia/CLionProjects/clion-printf/libft/libft.h
+CMakeFiles/ft_printf_clion.dir/libft/ft_strlen.c.o
+ /Users/anastasia/CLionProjects/clion-printf/libft/ft_strlen.c
 CMakeFiles/ft_printf_clion.dir/test_main.c.o
  /Users/anastasia/CLionProjects/clion-printf/ft_printf.h
- /Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/libft.h
+ /Users/anastasia/CLionProjects/clion-printf/libft/libft.h
  /Users/anastasia/CLionProjects/clion-printf/test_main.c

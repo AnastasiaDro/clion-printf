@@ -15,7 +15,7 @@
 # include <stdarg.h>
 # include <unistd.h>
 # include <stdlib.h>
-# include "libft-finished-for-use/libft.h"
+# include "libft/libft.h"
 //# include "ft_parse_utils.h"
 
 typedef	struct	s_print_flags
@@ -28,6 +28,7 @@ typedef	struct	s_print_flags
 	char	type;
 	char	width_symbol;
 	int     less_zero;
+	int		dot;
 }				t_print_flags;
 
 int ft_printf(const char *, ...);
@@ -63,4 +64,8 @@ void ft_make_string_clear(char **str);
 int	ft_putstr_printf(char *s, int precis_len);
 
 char *ft_get_x_num_str(int x_num, int num_cap, char *base);
+
+int ft_get_width(va_list *v_list, char **p, t_print_flags *my_struct);
+
+int ft_get_precis(va_list *v_list, char **p, t_print_flags *my_struct);
 #endif

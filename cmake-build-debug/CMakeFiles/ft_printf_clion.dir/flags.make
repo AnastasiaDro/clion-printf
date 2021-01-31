@@ -6,5 +6,5 @@ C_FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacO
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use 
+C_INCLUDES = -I/Users/anastasia/CLionProjects/clion-printf/libft 
 

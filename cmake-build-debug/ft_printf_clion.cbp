@@ -44,7 +44,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use"/>
+					<Add directory="/Users/anastasia/CLionProjects/clion-printf/libft"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -65,7 +65,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use"/>
+					<Add directory="/Users/anastasia/CLionProjects/clion-printf/libft"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -98,25 +98,25 @@
 		<Unit filename="/Users/anastasia/CLionProjects/clion-printf/ft_printf_utils.c">
 			<Option target="ft_printf_clion"/>
 		</Unit>
-		<Unit filename="/Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/ft_atoi.c">
+		<Unit filename="/Users/anastasia/CLionProjects/clion-printf/libft/ft_atoi.c">
 			<Option target="ft_printf_clion"/>
 		</Unit>
-		<Unit filename="/Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/ft_bzero.c">
+		<Unit filename="/Users/anastasia/CLionProjects/clion-printf/libft/ft_bzero.c">
 			<Option target="ft_printf_clion"/>
 		</Unit>
-		<Unit filename="/Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/ft_calloc.c">
+		<Unit filename="/Users/anastasia/CLionProjects/clion-printf/libft/ft_calloc.c">
 			<Option target="ft_printf_clion"/>
 		</Unit>
-		<Unit filename="/Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/ft_itoa.c">
+		<Unit filename="/Users/anastasia/CLionProjects/clion-printf/libft/ft_itoa.c">
 			<Option target="ft_printf_clion"/>
 		</Unit>
-		<Unit filename="/Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/ft_putchar_fd.c">
+		<Unit filename="/Users/anastasia/CLionProjects/clion-printf/libft/ft_putchar_fd.c">
 			<Option target="ft_printf_clion"/>
 		</Unit>
-		<Unit filename="/Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/ft_strlcpy.c">
+		<Unit filename="/Users/anastasia/CLionProjects/clion-printf/libft/ft_strlcpy.c">
 			<Option target="ft_printf_clion"/>
 		</Unit>
-		<Unit filename="/Users/anastasia/CLionProjects/clion-printf/libft-finished-for-use/ft_strlen.c">
+		<Unit filename="/Users/anastasia/CLionProjects/clion-printf/libft/ft_strlen.c">
 			<Option target="ft_printf_clion"/>
 		</Unit>
 		<Unit filename="/Users/anastasia/CLionProjects/clion-printf/test_main.c">

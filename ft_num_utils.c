@@ -6,7 +6,7 @@
 /*   By: cerebus <cerebus@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/16 16:54:32 by cerebus           #+#    #+#             */
-/*   Updated: 2021/01/28 12:39:37 by cerebus          ###   ########.fr       */
+/*   Updated: 2021/01/30 17:35:53 by cerebus          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,11 @@ int	ft_get_capacity(unsigned long int n, int base)
 {
 	unsigned long int nm;
 	int num_cap;
-
+    //ТЕСТ
+    // char *c;
+    // c = malloc(5*sizeof(char));
+	if (n < 10)
+		return 1;
 	nm = n;
 	num_cap = 0;
 	while (nm != 0)
