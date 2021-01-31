@@ -101,7 +101,8 @@ void ft_make_string_clear(char **str)
 int	ft_putstr_printf(char *s, int precis_len)
 {
     int str_len;
-    if (!precis_len)
+  //  if (!precis_len)
+	if (!precis_len)
         str_len = ft_strlen(s);
     else
         str_len = precis_len;

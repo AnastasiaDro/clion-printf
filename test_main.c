@@ -95,26 +95,26 @@ int main()
 
 	//printf("\nзвёздочки с интами\n");
 	printf("ORIG \n");
-	//printf("%%0.i, %0.d, %0.d, %0.d, %0.d, %0.d, %0.d, %0.d", 8, -12, 123456789, 0, -12345678, 97, -1562067968, 2147483647);
+	printf("%.0i, %0.d, %0.d, %0.d, %0.d", 0, -12345678, 97, -1562067968, 2147483647);
 	//printf("%8i, %8d, %8d, %8d, %8d, %8d, %8d, %8d", i, j, k, l, m, c, e, d); //T11
 	printf("%8d", e); //T11
 
 
 	printf("\nMY \n");
 //	ft_printf("%8i, %8d, %8d, %8d, %8d, %8d, %8d, %8d", i, j, k, l, m, c, e, d); //T11
-	ft_printf("%8d", e); //T11
-//	ft_printf("%0.i, %0.d, %0.d, %0.d, %0.d, %0.d, %0.d, %0.d", 8, -12, 123456789, 0, -12345678, 97, -1562067968, 2147483647);
+//	ft_printf("%8d", e); //T11
+	ft_printf("%.0i, %0.d, %0.d, %0.d, %0.d", 0, -12345678, 97, -1562067968, 2147483647);
 //	printf("\nзвёздочки с интами\n");
 //	ft_printf("со звездочками без флагов %*.*duuu\n", 8, 4, 10);
 //	printf("со звездочками без флагов %*.*duuu\n", 8, 4, 10);
 //    printf("\nUNSIGNED INTS\n");
-    unsigned int mint = 4147483648;
-//    ft_printf("unsigned %2.3u tratata\n", mint);
-//    printf("unsigned %2.3u tratata\n", mint);
-    unsigned int *ptr = &mint;
-    printf("\nPOINTERS\n");
-    ft_printf("unsigned %2p tratata\n", ptr);
-   printf("unsigned %2p tratata\n", ptr);
+//    unsigned int mint = 4147483648;
+////    ft_printf("unsigned %2.3u tratata\n", mint);
+////    printf("unsigned %2.3u tratata\n", mint);
+//    unsigned int *ptr = &mint;
+//    printf("\nPOINTERS\n");
+//    ft_printf("unsigned %2p tratata\n", ptr);
+//   printf("unsigned %2p tratata\n", ptr);
 
     // int i = 1;
     // while(1)
