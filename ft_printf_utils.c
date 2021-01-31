@@ -98,11 +98,11 @@ void ft_make_string_clear(char **str)
 	free(tmp);
 }
 
-int	ft_putstr_printf(char *s, int precis_len)
+int	ft_putstr_printf(char *s, int precis_len, int dot)
 {
     int str_len;
   //  if (!precis_len)
-	if (!precis_len)
+	if (!precis_len && dot)
         str_len = ft_strlen(s);
     else
         str_len = precis_len;
