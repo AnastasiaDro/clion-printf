@@ -21,6 +21,13 @@
 
 	//void	ft_fill_s(char **s, unsigned int num, char type, int num_cap);
 
+void ft_fill_int_s(char **s, unsigned int num, char type, int num_cap);
+void ft_fill_x_s(char **s, unsigned long num, char type, int num_cap);
+
+char	*ft_x_get_s(int num, int num_cap, char type);
+
+char	*ft_int_get_s(int num, int num_cap, char type);
+
 	void 	ft_fill_s(char **s, unsigned long num, char type, int num_cap);
 
 	char	*ft_get_s(int num, int num_cap, char type);

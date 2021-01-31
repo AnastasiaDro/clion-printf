@@ -60,7 +60,7 @@ int ft_print_int(t_print_flags *my_struct, va_list *v_list)
         print_num = print_num * (-1);
     }
     num_len = ft_get_capacity((unsigned int)print_num, 10);
-	num_string = ft_get_s(print_num, num_len, my_struct->type);
+	num_string = ft_int_get_s(print_num, num_len, my_struct->type);
 	//если есть ширина
 	if (my_struct->width)
 	    ft_calc_width(my_struct, num_len);
