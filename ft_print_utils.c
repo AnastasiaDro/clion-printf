@@ -45,11 +45,7 @@ int ft_calc_width(t_print_flags *my_struct, int num_len)
 	width = my_struct->width;
     if (my_struct->flag_zero && !my_struct->flag_minus)
         my_struct->width_symbol = '0';
-    //считаем пробелы без вычета нулей
-//	if ()
-
     width = width - num_len;
-    //если число меньше нуля еще уменьшаем
     if (my_struct->less_zero)
         width--;
     return width;
@@ -102,7 +98,6 @@ int ft_print(t_print_flags *my_struct, int num_len, char *num_string)
 	width = 0;
 	precis = 0;
 	if (my_struct->width) {
-		//if (my_struct->dot && !my_struct->precis && my_struct->width == 1 && *num_string == '0' && num_len == 1)
 		if (my_struct->dot && !my_struct->precis && *num_string == '0' && num_len == 1)
 			width = my_struct->width;
 		else

@@ -33,7 +33,6 @@ t_print_flags *ft_create_struct()
 
 int ft_fill_struct(t_print_flags *my_struct, int length, char **p, va_list *v_list)
 {
-	//новое
 	while(**p == '0' || **p == '-')
 	{
 		if(**p == '0' && my_struct->flag_zero == 0 && my_struct->flag_minus == 0)
@@ -42,30 +41,8 @@ int ft_fill_struct(t_print_flags *my_struct, int length, char **p, va_list *v_li
 			my_struct->flag_minus = 1;
 		(*p)++;
 	}
-
-  //  char *num_string;
-
-//    if ((**p) == '-')
-//    {
-//        my_struct->flag_minus = 1;
-//        (*p)++;
-//    } else if ((**p) == '0')
-//    {
-//        my_struct->flag_zero = 1;
-//        (*p)++;
-//    }
-
-
-    //обрабатываем ширину
-    //звёздочка
-   //my_struct->width = ft_get_param(v_list, p);
    ft_get_width(v_list, p, my_struct);
     ft_get_precis(v_list, p, my_struct);
-//    if (**p == '.')
-//    {
-//        (*p)++;
-//		my_struct->precis = ft_get_param(v_list, p);
-//    }
     my_struct->length = length;
     my_struct->type = **p;
     //сдвинем p с дэ
@@ -124,37 +101,10 @@ int	ft_putstr_printf(char *s, int precis, t_print_flags *my_struct)
 		if (my_struct->dot && !my_struct->precis && str_len == 1 && s[0] == '0')
 			return 0;
 	}
-  //  if (!precis_len)
-//	if (!precis && my_struct->dot)
-//        str_len = ft_strlen(s);
-//    else
-//        str_len = precis;
 	if (s)
 		write(1, s, str_len);
     return (str_len);
 }
-
-//int ft_get_param(va_list *v_list, char **p)
-//{
-//	int param;
-//	char *num_string;
-//
-//	param = 0;
-//	num_string = NULL;
-//	if (**p == '*') {
-//		(*p)++;
-//		param = va_arg(*v_list, int);
-//	}
-//	else
-//	{
-//		num_string = ft_num_for_sruct(p);
-//		if (num_string)
-//			param = ft_atoi(num_string);
-//		ft_make_string_clear(&num_string);
-//	}
-//	return (param);
-//}
-
 
 int ft_get_width(va_list *v_list, char **p, t_print_flags *my_struct) {
 	int param;
@@ -195,7 +145,6 @@ int ft_get_precis(va_list *v_list, char **p, t_print_flags *my_struct)
 		(*p)++;
 		my_struct->dot = 1;
 		//новое
-		my_struct->flag_zero = 0;
 		if (**p == '*')
 		{
 			(*p)++;
@@ -203,10 +152,14 @@ int ft_get_precis(va_list *v_list, char **p, t_print_flags *my_struct)
 			if (my_struct->precis < 0) {
 				my_struct->precis = 0;
 				my_struct->dot = 0;
-				my_struct->flag_zero = 1;
+				return 0;
+			} else
+			{
+				my_struct->flag_zero = 0;
 			}
 		}
 		else {
+			my_struct->flag_zero = 0;
 			num_string = ft_num_for_sruct(p);
 			if (num_string)
 				param = ft_atoi(num_string);

@@ -117,11 +117,6 @@ void ft_fill_x_s(char **s, unsigned long num, char type, int num_cap)
     num_sys = ft_get_num_syst(type, &base);
     if (num == 0)
         (*s)[0] = '0';
-//	if (num == 2147483648)
-//	{
-//		ft_strlcpy(*s, "2147483648", 11);
-//		return ;
-//	}
     while (num_cap > limit) {
         divis = num % num_sys;
         if(num_sys == 16)
@@ -145,20 +140,6 @@ char	*ft_int_get_s(int num, int num_cap, char type)
         num = num * (-1);
     ft_fill_int_s(&s, num, type, num_cap);
     return (s);
-}
-
-char	*ft_x_get_s(int num, int num_cap, char type)
-{
-	int size;
-	char *s;
-
-	size = num_cap + 1;
-	if(!( s = ft_calloc(size, sizeof(char))))
-		return (NULL);
-	if (num < 0)
-		num = num * (-1);
-	ft_fill_x_s(&s, num, type, num_cap);
-	return (s);
 }
 
 char	*ft_get_unsign_s(unsigned long int num, int num_cap, char type)
