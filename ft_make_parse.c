@@ -156,7 +156,7 @@ int ft_print_pointer(t_print_flags *my_struct, va_list *v_list)
     char	            *p_string;
 
     print_ptr = (unsigned long int) va_arg(*v_list, void *);
-    num_len = 12;
+    num_len = ft_get_capacity(print_ptr, 16);
     p_string = ft_get_unsign_s(print_ptr, num_len, my_struct->type);
 	ft_print(my_struct, num_len, p_string);
     free(p_string);

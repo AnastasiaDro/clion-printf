@@ -106,6 +106,9 @@ int main()
 	char	*t = "0x12345678";
 	char	*u = "-0";
 
-	printf("%3s, %3s, %3s, %3s, %3s\n", "abcdefghijklmnop", "-a", "-12", "0", "%%");
-	ft_printf("%3s, %3s, %3s, %3s, %3s", "abcdefghijklmnop",  "-a",  "-12",  "0",  "%%");
+	printf("ORIG \n");
+	printf("%*p, %*x, %*p, %*x\n", a, (void *)1, a, 1, a, NULL, a, 0);
+	printf("MY \n");
+	ft_printf("%*p, %*x, %*p, %*x\n", a, (void *)1, a, 1, a, NULL, a, 0);
+
 }

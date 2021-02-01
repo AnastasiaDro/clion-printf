@@ -46,6 +46,8 @@ int ft_calc_width(t_print_flags *my_struct, int num_len)
     if (my_struct->flag_zero && !my_struct->flag_minus)
         my_struct->width_symbol = '0';
     width = width - num_len;
+	if (my_struct->type == 'p')
+		width = width - 2;
     if (my_struct->less_zero)
         width--;
     return width;
