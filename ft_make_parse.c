@@ -80,8 +80,7 @@ int ft_print_string(t_print_flags *my_struct, va_list *v_list)
     if (my_struct->precis < str_len && my_struct->dot)
         str_len = my_struct->precis;
     //узнаем количество символов ширины
-    if (my_struct->width > str_len)
-        my_struct->width = my_struct->width - str_len;
+    my_struct->width = my_struct->width - str_len;
     if(!(my_struct->flag_minus))
     {
         ft_print_width(my_struct, my_struct->width);

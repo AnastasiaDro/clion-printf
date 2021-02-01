@@ -106,38 +106,6 @@ int main()
 	char	*t = "0x12345678";
 	char	*u = "-0";
 
-//    // {
-//    //    i++;
-//    // }
-
-	printf("%0*.*i, %0*.*d, %0*.*d, %0*.*d\n", 2, -2, 8, 2, -2, -12, 2, -2, 12345, 2, -2, 0);  // 1st '*' = 2, 2nd '*' = -2
-
-	ft_printf("%0*.*i, %0*.*d, %0*.*d, %0*.*d\n", 2, -2, 8, 2, -2, -12, 2, -2, 12345, 2, -2, 0);
-
-	printf("%*.*i, %*.*d, %*.*d, %*.*d\n", 2, -2, 8, 2, -2, -12, 2, -2, 12345, 2, -2, 0);  // 1st '*' = 2, 2nd '*' = -2
-
-	ft_printf("%*.*i, %*.*d, %*.*d, %*.*d\n", 2, -2, 8, 2, -2, -12, 2, -2, 12345, 2, -2, 0);  // 1st '*' = 2, 2nd '*' = -2)
-
-
-
-//	printf("%0*d, %0*d, %0*d, %0*d, %0*d, %0*d, %0*d\n", a, j, a, k, a, b, a, m, a, 97, a, e, a, d);
-//	ft_printf("%0*d, %0*d, %0*d, %0*d, %0*d, %0*d, %0*d\n",  a, j, a, k, a, b, a, m, a, 97, a, e, a, d);
-//	a = 2;
-//	while (a < 10) //T214-256
-//	{
-//		printf("\nORIG 1\n");
-//		printf("%0*i, %*x, %*X, %*u, %*x, %*X, %*u, %*x, %*X, %*u, %*x, %*X, %*u, %*x, %*X, %*u, %*x, %*X, %*u, %*x, %*X, %*u, %*x, %*X", a, i, a, i, a, i, a, j, a, j, a, j, a, k, a, k, a, k, a, l, a, l, a, l, a, m, a, m, a, m, a, c, a, c, a, c, a, d, a, d, a, d, a, e, a, e, a, e);
-//		printf("\nMY 1\n");
-//		ft_printf("%0*i, %*x, %*X, %*u, %*x, %*X, %*u, %*x, %*X, %*u, %*x, %*X, %*u, %*x, %*X, %*u, %*x, %*X, %*u, %*x, %*X, %*u, %*x, %*X", a, i, a, i, a, i, a, j, a, j, a, j, a, k, a, k, a, k, a, l, a, l, a, l, a, m, a, m, a, m, a, c, a, c, a, c, a, d, a, d, a, d, a, e, a, e, a, e);
-//		printf("\nORIG 2\n");
-//		printf("%0*u, %0*x, %0*X, %0*u, %0*x, %0*X, %0*u, %0*x, %0*X, %0*u, %0*x, %0*X, %0*u, %0*x, %0*X, %0*u, %0*x, %0*X, %0*u, %0*x, %0*X, %0*u, %0*x, %0*X", a, i, a, i, a, i, a, j, a, j, a, j, a, k, a, k, a, k, a, l, a, l, a, l, a, m, a, m, a, m, a, c, a, c, a, c, a, d, a, d, a, d, a, e, a, e, a, e);
-//		printf("\nMY 2\n");
-//		ft_printf("%0*u, %0*x, %0*X, %0*u, %0*x, %0*X, %0*u, %0*x, %0*X, %0*u, %0*x, %0*X, %0*u, %0*x, %0*X, %0*u, %0*x, %0*X, %0*u, %0*x, %0*X, %0*u, %0*x, %0*X", a, i, a, i, a, i, a, j, a, j, a, j, a, k, a, k, a, k, a, l, a, l, a, l, a, m, a, m, a, m, a, c, a, c, a, c, a, d, a, d, a, d, a, e, a, e, a, e);
-		printf("\nORIG a=%d\n", a);
-		printf("%0*i, %0*d, %0*d, %0*d, %0*d, %0*d, %0*d, %0*d", a, i, a, j, a, k, a, l, a, m, a, c, a, e, a, d);
-		ft_printf("\nMY a=%d\n", a);
-		ft_printf("%0*i, %0*d, %0*d, %0*d, %0*d, %0*d, %0*d, %0*d", a, i, a, j, a, k, a, l, a, m, a, c, a, e, a, d);
-//		a++;
-//	}
-//	a = -1;
+	printf("%3s, %3s, %3s, %3s, %3s\n", "abcdefghijklmnop", "-a", "-12", "0", "%%");
+	ft_printf("%3s, %3s, %3s, %3s, %3s", "abcdefghijklmnop",  "-a",  "-12",  "0",  "%%");
 }
