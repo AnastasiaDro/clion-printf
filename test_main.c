@@ -84,7 +84,7 @@ int main()
 //	printf("%.1d\n", 0);
 //	printf("MY \n");
 //	ft_printf("%.1d\n", 0);
-	int		a = -4;
+	int		a = 4;
 	int		b = 0;
 	char	c = 'a';
 	int		d = 2147483647;
@@ -105,55 +105,14 @@ int main()
 	char	*s = "-2147483648";
 	char	*t = "0x12345678";
 	char	*u = "-0";
-//
-//	//printf("\nзвёздочки с интами\n");
-//	printf("ORIG \n");
-////	printf("%.0i, %0.d, %0.d, %0.d, %0.d", 0, -12345678, 97, -1562067968, 2147483647);
-////	printf("%8i, %8d, %8d, %8d, %8d, %8d, %8d, %8d", i, j, k, l, m, c, e, d); //T11
-//	 //T11
-//	printf("ORIG \n");
-	//printf(" %s, %c, %d, %u, %x, %X",  n, c, c, j, j, j);
-//	printf("%0d", e);
-//	printf("0-d    %0-i, %0-d, %0-d, %0-d, %0-d, %0-d, %0-d, %0-d\n", i, j, k, l, m, c, e, d);
-//	printf("-0     %-0i, %-0d, %-0d\n", i, j, k);
-//	printf("--0    %--0i, %--0d, %--0d, %--0d\n", i, j, k);
-	//printf("--010  %--010i, %--010d, %--010d\n", i, j, k);
-//	printf("%00-i, %00-d\n", i, j);
-	//printf("8d   %1.d, %1.d, %1.d, %1.d, %1.d\n", l, m, c, e, d);
-//	printf("8.d		%8.d, %1.d, %1.d, %1.d, %1.d\n", l, m, c, e, d);
-//	printf("d=0 8d %8.d, %1.d, %1.d, %1.d, %1.d\n", l, m, c, e, d);
-//	printf("\nMY \n");
-//	ft_printf(" %s, %c, %d, %u, %x, %X",  n, c, c, j, j, j);
-//	ft_printf("0-d    %0-i, %0-d, %0-d, %0-d, %0-d, %0-d, %0-d, %0-d\n", i, j, k, l, m, c, e, d);
-//	ft_printf("-0     %-0i, %-0d, %-0d\n", i, j, k);
-//	ft_printf("--     %--0i, %--0d, %--0d, %--0d\n", i, j, k);
-	//ft_printf("--010  %--010i, %--010d, %--010d\n", i, j, k);
-	//ft_printf("%00-i, %00-d\n", i, j);
-	//printf("8d   %1.d, %1.d, %1.d, %1.d, %1.d\n", l, m, c, e, d);
-//	ft_printf("8.d		%8.d, %1.d, %1.d, %1.d, %1.d\n", l, m, c, e, d);
-//	ft_printf("d=0 8d %8.d, %1.d, %1.d, %1.d, %1.d", l, m, c, e, d);
-//	//ft_printf("%8i, %8d, %8d, %8d, %8d, %8d, %8d, %8d", i, j, k, l, m, c, e, d); //T11
-//	ft_printf("%0d\n", e); //T11
-//	//ft_printf("%.0i, %0.d, %0.d, %0.d, %0.d", 0, -12345678, 97, -1562067968, 2147483647);
-////	printf("\nзвёздочки с интами\n");
-//	ft_printf("со звездочками без флагов %*.*duuu\n", 8, 4, 10);
-//	printf("со звездочками без флагов %*.*duuu\n", 8, 4, 10);
-////    printf("\nUNSIGNED INTS\n");
-////    unsigned int mint = 4147483648;
-//////    ft_printf("unsigned %2.3u tratata\n", mint);
-//////    printf("unsigned %2.3u tratata\n", mint);
-////    unsigned int *ptr = &mint;
-////    printf("\nPOINTERS\n");
-////    ft_printf("unsigned %2p tratata\n", ptr);
-////   printf("unsigned %2p tratata\n", ptr);
-//
-//    // int i = 1;
-//    // while(1)
+
 //    // {
 //    //    i++;
 //    // }
-printf("%.*d", 5, 5);
-	a = 2;
+
+	printf("%0*d, %0*d, %0*d, %0*d, %0*d, %0*d, %0*d\n", a, j, a, k, a, b, a, m, a, 97, a, e, a, d);
+	ft_printf("%0*d, %0*d, %0*d, %0*d, %0*d, %0*d, %0*d\n",  a, j, a, k, a, b, a, m, a, 97, a, e, a, d);
+//	a = 2;
 //	while (a < 10) //T214-256
 //	{
 		//printf("\nORIG 1\n");
@@ -165,11 +124,9 @@ printf("%.*d", 5, 5);
 //		printf("\nMY 2\n");
 //		ft_printf("%0*u, %0*x, %0*X, %0*u, %0*x, %0*X, %0*u, %0*x, %0*X, %0*u, %0*x, %0*X, %0*u, %0*x, %0*X, %0*u, %0*x, %0*X, %0*u, %0*x, %0*X, %0*u, %0*x, %0*X", a, i, a, i, a, i, a, j, a, j, a, j, a, k, a, k, a, k, a, l, a, l, a, l, a, m, a, m, a, m, a, c, a, c, a, c, a, d, a, d, a, d, a, e, a, e, a, e);
 		printf("\nORIG a=%d\n", a);
-
-		// i = 8, int		j = -12;
-		printf("%.*d, %.*x, %.*X, %.*u, %.*x, %.*X, %.*u", a, i, a, i, a, i, a, j, a, j, a, j, a, e);
+		printf("%0*i, %0*d, %0*d, %0*d, %0*d, %0*d, %0*d, %0*d", a, i, a, j, a, k, a, l, a, m, a, c, a, e, a, d);
 		ft_printf("\nMY a=%d\n", a);
-		ft_printf("%.*d, %.*x, %.*X, %.*u, %.*x, %.*X, %.*u", a, i, a, i, a, i, a, j, a, j, a, j, a, e);
+		ft_printf("%0*i, %0*d, %0*d, %0*d, %0*d, %0*d, %0*d, %0*d", a, i, a, j, a, k, a, l, a, m, a, c, a, e, a, d);
 //		a++;
 //	}
 //	a = -1;
