@@ -50,6 +50,8 @@ int ft_print_int(t_print_flags *my_struct, va_list *v_list)
 	int		num_len;
 	int		print_num;
 	char	*num_string;
+//	int		width;
+//	int 	precis;
 
 	//наше число для печати
 	print_num = va_arg(*v_list, int);
@@ -62,16 +64,17 @@ int ft_print_int(t_print_flags *my_struct, va_list *v_list)
     num_len = ft_get_capacity((unsigned int)print_num, 10);
 	num_string = ft_int_get_s(print_num, num_len, my_struct->type);
 	//если есть ширина
-	if (my_struct->width)
-	    ft_calc_width(my_struct, num_len);
-	//если есть точность, считаем нули
-	if (my_struct->precis)
-        ft_calc_precis(my_struct, num_len);
-	//если  не минус
-	if (!(my_struct->flag_minus))
-        ft_print_right_align(my_struct, num_string);
-	else
-        ft_print_left_align(my_struct, num_string);
+	ft_print(my_struct, num_len, num_string);
+//	if (my_struct->width)
+//	    width = ft_calc_width(my_struct, num_len);
+//	//если есть точность, считаем нули
+//	if (my_struct->precis)
+//        precis = ft_calc_precis(my_struct, num_len, &width);
+//	//если  не минус
+//	if (!(my_struct->flag_minus))
+//        ft_print_right_align(my_struct, num_string, width, precis);
+//	else
+//        ft_print_left_align(my_struct, num_string, width, precis);
 	free(num_string);
 	num_string = NULL;
 	return (1);
@@ -86,20 +89,20 @@ int ft_print_string(t_print_flags *my_struct, va_list *v_list)
     str_len = ft_strlen(str_for_print);
     //узнаем длину строки с учетом точности
     //и присвоим итоговой длине выведенной строки
-    if (my_struct->precis < str_len)
+    if (my_struct->precis < str_len && my_struct->dot)
         str_len = my_struct->precis;
     //узнаем количество символов ширины
     if (my_struct->width > str_len)
         my_struct->width = my_struct->width - str_len;
     if(!(my_struct->flag_minus))
     {
-        ft_print_width(my_struct);
-        my_struct->length = my_struct->length + ft_putstr_printf(str_for_print, str_len);
+        ft_print_width(my_struct, my_struct->width);
+        my_struct->length = my_struct->length + ft_putstr_printf(str_for_print, str_len, my_struct);
     }
     else
     {
-        my_struct->length = my_struct->length + ft_putstr_printf(str_for_print, str_len);
-        ft_print_width(my_struct);
+        my_struct->length = my_struct->length + ft_putstr_printf(str_for_print, str_len, my_struct);
+        ft_print_width(my_struct, my_struct->width);
     }
     return (1);
 }
@@ -114,7 +117,7 @@ int ft_print_char(t_print_flags *my_struct, va_list *v_list)
 
     if (!(my_struct->flag_minus))
     {
-        ft_print_width(my_struct);
+        ft_print_width(my_struct, my_struct->width);
         write(1, &char_for_print, 1);
         my_struct->length++;
     }
@@ -122,7 +125,7 @@ int ft_print_char(t_print_flags *my_struct, va_list *v_list)
     {
         write(1, &char_for_print, 1);
         my_struct->length++;
-        ft_print_width(my_struct);
+        ft_print_width(my_struct, my_struct->width);
     }
 	return (1);
 }
@@ -137,14 +140,15 @@ int ft_print_Xx(t_print_flags *my_struct, va_list *v_list)
     print_num = va_arg(*v_list, unsigned int);
     num_len = ft_get_capacity(print_num, 16);
     x_num_string = ft_get_unsign_s(print_num, num_len, my_struct->type);
-    if (my_struct->width)
-        ft_calc_width(my_struct, num_len);
-    if (my_struct->precis)
-        ft_calc_precis(my_struct, num_len);
-    if (!(my_struct->flag_minus))
-        ft_print_right_align(my_struct, x_num_string);
-    else
-        ft_print_left_align(my_struct, x_num_string);
+    ft_print(my_struct, num_len, x_num_string);
+//    if (my_struct->width)
+//        ft_calc_width(my_struct, num_len);
+//    if (my_struct->precis)
+//        ft_calc_precis(my_struct, num_len);
+//    if (!(my_struct->flag_minus))
+//        ft_print_right_align(my_struct, x_num_string);
+//    else
+//        ft_print_left_align(my_struct, x_num_string);
     free(x_num_string);
     x_num_string = NULL;
     return (1);
@@ -160,14 +164,15 @@ int ft_print_u(t_print_flags *my_struct, va_list *v_list)
     print_num = va_arg(*v_list, unsigned int);
     num_len = ft_get_capacity(print_num, 10);
     num_string = ft_get_unsign_s(print_num, num_len, my_struct->type);
-    if (my_struct->width)
-        ft_calc_width(my_struct, num_len);
-    if (my_struct->precis)
-        ft_calc_precis(my_struct, num_len);
-    if (!(my_struct->flag_minus))
-        ft_print_right_align(my_struct, num_string);
-    else
-        ft_print_left_align(my_struct, num_string);
+    ft_print(my_struct, num_len, num_string);
+//    if (my_struct->width)
+//        ft_calc_width(my_struct, num_len);
+//    if (my_struct->precis)
+//        ft_calc_precis(my_struct, num_len);
+//    if (!(my_struct->flag_minus))
+//        ft_print_right_align(my_struct, num_string);
+//    else
+//        ft_print_left_align(my_struct, num_string);
     free(num_string);
     num_string = NULL;
     return (1);
@@ -182,14 +187,15 @@ int ft_print_pointer(t_print_flags *my_struct, va_list *v_list)
     print_ptr = (unsigned long int) va_arg(*v_list, void *);
     num_len = 12;
     p_string = ft_get_unsign_s(print_ptr, num_len, my_struct->type);
-    if (my_struct->width)
-        ft_calc_width(my_struct, num_len);
-    if (my_struct->precis)
-        ft_calc_precis(my_struct, num_len);
-    if (!(my_struct->flag_minus))
-        ft_print_right_align(my_struct, p_string);
-    else
-        ft_print_left_align(my_struct, p_string);
+	ft_print(my_struct, num_len, p_string);
+//    if (my_struct->width)
+//        ft_calc_width(my_struct, num_len);
+//    if (my_struct->precis)
+//        ft_calc_precis(my_struct, num_len);
+//    if (!(my_struct->flag_minus))
+//        ft_print_right_align(my_struct, p_string);
+//    else
+//        ft_print_left_align(my_struct, p_string);
     free(p_string);
     p_string = NULL;
     return (1);
