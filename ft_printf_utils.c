@@ -194,6 +194,8 @@ int ft_get_precis(va_list *v_list, char **p, t_print_flags *my_struct)
 	if (**p == '.') {
 		(*p)++;
 		my_struct->dot = 1;
+		//новое
+		my_struct->flag_zero = 0;
 		if (**p == '*')
 		{
 			(*p)++;

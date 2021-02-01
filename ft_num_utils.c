@@ -16,9 +16,6 @@ int	ft_get_capacity(unsigned long int n, int base)
 {
 	unsigned long int nm;
 	int num_cap;
-    //ТЕСТ
-    // char *c;
-    // c = malloc(5*sizeof(char));
 	if (n < 10)
 		return 1;
 	nm = n;
