@@ -33,16 +33,29 @@ t_print_flags *ft_create_struct()
 
 int ft_fill_struct(t_print_flags *my_struct, int length, char **p, va_list *v_list)
 {
+	//новое
+	while(**p == '0' || **p == '-')
+	{
+		if(**p == '0' && my_struct->flag_zero == 0 && my_struct->flag_minus == 0)
+			my_struct->flag_zero = 1;
+		if(**p == '-' && my_struct->flag_minus == 0)
+			my_struct->flag_minus = 1;
+		(*p)++;
+	}
+
   //  char *num_string;
-    if ((**p) == '-')
-    {
-        my_struct->flag_minus = 1;
-        (*p)++;
-    } else if ((**p) == '0')
-    {
-        my_struct->flag_zero = 1;
-        (*p)++;
-    }
+
+//    if ((**p) == '-')
+//    {
+//        my_struct->flag_minus = 1;
+//        (*p)++;
+//    } else if ((**p) == '0')
+//    {
+//        my_struct->flag_zero = 1;
+//        (*p)++;
+//    }
+
+
     //обрабатываем ширину
     //звёздочка
    //my_struct->width = ft_get_param(v_list, p);
