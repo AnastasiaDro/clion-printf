@@ -89,7 +89,7 @@ int ft_print_string(t_print_flags *my_struct, va_list *v_list)
     str_len = ft_strlen(str_for_print);
     //узнаем длину строки с учетом точности
     //и присвоим итоговой длине выведенной строки
-    if (my_struct->precis < str_len)
+    if (my_struct->precis < str_len && my_struct->dot)
         str_len = my_struct->precis;
     //узнаем количество символов ширины
     if (my_struct->width > str_len)

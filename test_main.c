@@ -15,21 +15,21 @@
 
 int main()
 {
-    char *p;
-    p = "trtratra";
-    printf("ПОИНТЕР %p\n", p);
-    int res;
+//    char *p;
+//    p = "trtratra";
+//    printf("ПОИНТЕР %p\n", p);
+//    int res;
 
-     printf("ШЕСТНАДЦАТИРИЧНЫЕ\n");
-     res = ft_printf("six (with zero-flag and width and precis %-20.5xtratata\n"
-               "seven-hundred (without zero_flag and with precis less then number) %.1X\n",
-               6, 700);
-    printf("RES_MY %d\n", res);
-    //original printf
-    ft_printf("\noriginal function\n");
-   res =  printf("six (with zero-flag and width and precis %-20.5xtratata\n"
-           "seven-hundred (without zero_flag and with precis less then number) %.1X\n",
-           6, 700);
+//     printf("ШЕСТНАДЦАТИРИЧНЫЕ\n");
+//     res = ft_printf("six (with zero-flag and width and precis %-20.5xtratata\n"
+//               "seven-hundred (without zero_flag and with precis less then number) %.1X\n",
+//               6, 700);
+//    printf("RES_MY %d\n", res);
+//    //original printf
+//    ft_printf("\noriginal function\n");
+  // res =  printf("six (with zero-flag and width and precis %-20.5xtratata\n"
+   //        "seven-hundred (without zero_flag and with precis less then number) %.1X\n",
+  //         6, 700);
 //    printf("RES_ORIG %d\n", res);
 //
 //    printf("\nЧАРЫ\n");
@@ -84,25 +84,41 @@ int main()
 //	printf("%.1d\n", 0);
 //	printf("MY \n");
 //	ft_printf("%.1d\n", 0);
-//	int		i = 8;
-//	int		j = -12;
-//	int		k = 123456789;
-//	int		l = 0;
-//	int		m = -12345678;
-//	char	c = 'a';
-//	int		d = 2147483647;
-//	int		e = -2147483648;
+	int		a = -4;
+	int		b = 0;
+	char	c = 'a';
+	int		d = 2147483647;
+	int		e = -2147483648;
+	int		f = 42;
+	int		g = 25;
+	int		h = 4200;
+	int		i = 8;
+	int		j = -12;
+	int		k = 123456789;
+	int		l = 0;
+	int		m = -12345678;
+	char	*n = "abcdefghijklmnop";
+	char	*o = "-a";
+	char	*p = "-12";
+	char	*q = "0";
+	char	*r = "%%";
+	char	*s = "-2147483648";
+	char	*t = "0x12345678";
+	char	*u = "-0";
 //
 //	//printf("\nзвёздочки с интами\n");
 //	printf("ORIG \n");
 ////	printf("%.0i, %0.d, %0.d, %0.d, %0.d", 0, -12345678, 97, -1562067968, 2147483647);
 ////	printf("%8i, %8d, %8d, %8d, %8d, %8d, %8d, %8d", i, j, k, l, m, c, e, d); //T11
-//	printf("%8d", e); //T11
-//
-//
-//	printf("\nMY \n");
+//	 //T11
+	printf("ORIG \n");
+	printf(" %s, %c, %d, %u, %x, %X",  n, c, c, j, j, j);
+//	printf("%0d", e);
+	printf("\nMY \n");
+	ft_printf(" %s, %c, %d, %u, %x, %X",  n, c, c, j, j, j);
+
 //	//ft_printf("%8i, %8d, %8d, %8d, %8d, %8d, %8d, %8d", i, j, k, l, m, c, e, d); //T11
-//	ft_printf("%8d\n", e); //T11
+//	ft_printf("%0d\n", e); //T11
 //	//ft_printf("%.0i, %0.d, %0.d, %0.d, %0.d", 0, -12345678, 97, -1562067968, 2147483647);
 ////	printf("\nзвёздочки с интами\n");
 //	ft_printf("со звездочками без флагов %*.*duuu\n", 8, 4, 10);
