@@ -114,18 +114,24 @@ int main()
 	printf("ORIG \n");
 	//printf(" %s, %c, %d, %u, %x, %X",  n, c, c, j, j, j);
 //	printf("%0d", e);
-	printf("0-d    %0-i, %0-d, %0-d, %0-d, %0-d, %0-d, %0-d, %0-d\n", i, j, k, l, m, c, e, d);
-	printf("-0     %-0i, %-0d, %-0d\n", i, j, k);
-	printf("--0    %--0i, %--0d, %--0d, %--0d\n", i, j, k);
-	printf("--010  %--010i, %--010d, %--010d\n", i, j, k);
-	printf("%00-i, %00-d\n", i, j);
+//	printf("0-d    %0-i, %0-d, %0-d, %0-d, %0-d, %0-d, %0-d, %0-d\n", i, j, k, l, m, c, e, d);
+//	printf("-0     %-0i, %-0d, %-0d\n", i, j, k);
+//	printf("--0    %--0i, %--0d, %--0d, %--0d\n", i, j, k);
+	//printf("--010  %--010i, %--010d, %--010d\n", i, j, k);
+//	printf("%00-i, %00-d\n", i, j);
+	//printf("8d   %1.d, %1.d, %1.d, %1.d, %1.d\n", l, m, c, e, d);
+	printf("8.d		%8.d, %1.d, %1.d, %1.d, %1.d\n", l, m, c, e, d);
+	printf("d=0 8d %8.d, %1.d, %1.d, %1.d, %1.d\n", l, m, c, e, d);
 	printf("\nMY \n");
 //	ft_printf(" %s, %c, %d, %u, %x, %X",  n, c, c, j, j, j);
-	ft_printf("0-d    %0-i, %0-d, %0-d, %0-d, %0-d, %0-d, %0-d, %0-d\n", i, j, k, l, m, c, e, d);
-	ft_printf("-0     %-0i, %-0d, %-0d\n", i, j, k);
-	ft_printf("--     %--0i, %--0d, %--0d, %--0d\n", i, j, k);
-	ft_printf("--010  %--010i, %--010d, %--010d\n", i, j, k);
-	ft_printf("%00-i, %00-d\n", i, j);
+//	ft_printf("0-d    %0-i, %0-d, %0-d, %0-d, %0-d, %0-d, %0-d, %0-d\n", i, j, k, l, m, c, e, d);
+//	ft_printf("-0     %-0i, %-0d, %-0d\n", i, j, k);
+//	ft_printf("--     %--0i, %--0d, %--0d, %--0d\n", i, j, k);
+	//ft_printf("--010  %--010i, %--010d, %--010d\n", i, j, k);
+	//ft_printf("%00-i, %00-d\n", i, j);
+	//printf("8d   %1.d, %1.d, %1.d, %1.d, %1.d\n", l, m, c, e, d);
+	ft_printf("8.d		%8.d, %1.d, %1.d, %1.d, %1.d\n", l, m, c, e, d);
+	ft_printf("d=0 8d %8.d, %1.d, %1.d, %1.d, %1.d", l, m, c, e, d);
 //	//ft_printf("%8i, %8d, %8d, %8d, %8d, %8d, %8d, %8d", i, j, k, l, m, c, e, d); //T11
 //	ft_printf("%0d\n", e); //T11
 //	//ft_printf("%.0i, %0.d, %0.d, %0.d, %0.d", 0, -12345678, 97, -1562067968, 2147483647);
