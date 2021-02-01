@@ -200,6 +200,11 @@ int ft_get_precis(va_list *v_list, char **p, t_print_flags *my_struct)
 		{
 			(*p)++;
 			my_struct->precis = va_arg(*v_list, int);
+			if (my_struct->precis < 0) {
+				my_struct->precis = 0;
+				my_struct->dot = 0;
+				my_struct->flag_zero = 1;
+			}
 		}
 		else {
 			num_string = ft_num_for_sruct(p);
