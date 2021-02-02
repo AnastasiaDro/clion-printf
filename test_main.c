@@ -107,8 +107,8 @@ int main()
 	char	*u = "-0";
 
 	printf("ORIG \n");
-	printf("%*p, %*x, %*p, %*x\n", a, (void *)1, a, 1, a, NULL, a, 0);
+	printf("%-2s, %.s, %-4s, %-2.4s, %-8.12s, %3s, %8s, %---2s, %.*s, %.0s, %.1s, %.2s, %.4s, %.8s\n", NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, -2, NULL, NULL, NULL, NULL, NULL, NULL);
 	printf("MY \n");
-	ft_printf("%*p, %*x, %*p, %*x\n", a, (void *)1, a, 1, a, NULL, a, 0);
+	ft_printf("%-2s, %.s, %-4s, %-2.4s, %-8.12s, %3s, %8s, %---2s, %.*s, %.0s, %.1s, %.2s, %.4s, %.8s\n", NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, -2, NULL, NULL, NULL, NULL, NULL, NULL);
 
 }

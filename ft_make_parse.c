@@ -74,6 +74,8 @@ int ft_print_string(t_print_flags *my_struct, va_list *v_list)
     int     str_len;
 
     str_for_print = va_arg(*v_list, char *);
+	if (!str_for_print)
+		str_for_print = "(null)";
     str_len = ft_strlen(str_for_print);
     //узнаем длину строки с учетом точности
     //и присвоим итоговой длине выведенной строки
