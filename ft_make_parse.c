@@ -24,10 +24,7 @@ int ft_make_parse(t_print_flags *my_struct, va_list *v_list)
 
 	symbol = my_struct->type;
 	if (symbol == '%')
-    {
-        write(1,"%%", 1);
-        my_struct->length++;
-    }
+		ft_print_percent(my_struct);
 	if (symbol == 'c')
 		ft_print_char(my_struct, v_list);
 	if (symbol == 's')
@@ -45,16 +42,11 @@ int ft_make_parse(t_print_flags *my_struct, va_list *v_list)
 
 int ft_print_int(t_print_flags *my_struct, va_list *v_list)
 {
-	//длина нашего инта
 	int		num_len;
 	int		print_num;
 	char	*num_string;
-//	int		width;
-//	int 	precis;
 
-	//наше число для печати
 	print_num = va_arg(*v_list, int);
-	//вычисляем длину инта
     if (print_num < 0)
     {
         my_struct->less_zero = 1;
@@ -77,11 +69,8 @@ int ft_print_string(t_print_flags *my_struct, va_list *v_list)
 	if (!str_for_print)
 		str_for_print = "(null)";
     str_len = ft_strlen(str_for_print);
-    //узнаем длину строки с учетом точности
-    //и присвоим итоговой длине выведенной строки
     if (my_struct->precis < str_len && my_struct->dot)
         str_len = my_struct->precis;
-    //узнаем количество символов ширины
     my_struct->width = my_struct->width - str_len;
     if(!(my_struct->flag_minus))
     {
@@ -96,6 +85,14 @@ int ft_print_string(t_print_flags *my_struct, va_list *v_list)
     return (1);
 }
 
+int ft_print_percent(t_print_flags *my_struct)
+{
+	char *percent;
+
+	percent = "%";
+	ft_print(my_struct, 1, percent);
+	return (1);
+}
 
 int ft_print_char(t_print_flags *my_struct, va_list *v_list)
 {
@@ -103,7 +100,6 @@ int ft_print_char(t_print_flags *my_struct, va_list *v_list)
 
     char_for_print = (char)va_arg(*v_list, int);
     my_struct->width--;
-
     if (!(my_struct->flag_minus))
     {
         ft_print_width(my_struct, my_struct->width);
@@ -125,7 +121,6 @@ int ft_print_Xx(t_print_flags *my_struct, va_list *v_list)
     int		num_len;
     char	*x_num_string;
 
-    //наше число для печати
     print_num = va_arg(*v_list, unsigned int);
     num_len = ft_get_capacity(print_num, 16);
     x_num_string = ft_get_unsign_s(print_num, num_len, my_struct->type);
@@ -141,7 +136,6 @@ int ft_print_u(t_print_flags *my_struct, va_list *v_list)
     int		         num_len;
     char	         *num_string;
 
-    //наше число для печати
     print_num = va_arg(*v_list, unsigned int);
     num_len = ft_get_capacity(print_num, 10);
     num_string = ft_get_unsign_s(print_num, num_len, my_struct->type);

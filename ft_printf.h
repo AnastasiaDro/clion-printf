@@ -35,6 +35,8 @@ int ft_printf(const char *, ...);
 
 int ft_make_parse(t_print_flags *my_struct, va_list *v_list);
 
+int ft_print_percent(t_print_flags *my_struct);
+
 int ft_print_char(t_print_flags *my_struct, va_list *v_list);
 
 int ft_print_string(t_print_flags *my_struct, va_list *v_list);

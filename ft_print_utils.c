@@ -66,7 +66,6 @@ int ft_calc_precis(t_print_flags *my_struct, int num_len, int *width)
 
 void ft_print_right_align(t_print_flags *my_struct,  char *num_string, int width, int precis)
 {
-
 	if (my_struct->width_symbol == '0')
 	{
 		if (my_struct->less_zero)
@@ -105,10 +104,8 @@ int ft_print(t_print_flags *my_struct, int num_len, char *num_string)
 		else
 			width = ft_calc_width(my_struct, num_len);
 	}
-	//если есть точность, считаем нули
 	if (my_struct->precis)
 		precis = ft_calc_precis(my_struct, num_len, &width);
-	//если  не минус
 	if (!(my_struct->flag_minus))
 		ft_print_right_align(my_struct, num_string, width, precis);
 	else

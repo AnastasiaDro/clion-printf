@@ -33,23 +33,31 @@ t_print_flags *ft_create_struct()
 
 int ft_fill_struct(t_print_flags *my_struct, int length, char **p, va_list *v_list)
 {
-	while(**p == '0' || **p == '-')
+	int flag_space;
+
+	flag_space = 0;
+	while(**p == '0' || **p == '-' || **p == ' ')
 	{
 		if(**p == '0' && my_struct->flag_zero == 0 && my_struct->flag_minus == 0)
 			my_struct->flag_zero = 1;
 		if(**p == '-' && my_struct->flag_minus == 0)
 			my_struct->flag_minus = 1;
+		if (**p == ' ' && flag_space == 0)
+		{
+			flag_space = 1;
+			write(1, " ", 1);
+			length++;
+		}
 		(*p)++;
 	}
    ft_get_width(v_list, p, my_struct);
     ft_get_precis(v_list, p, my_struct);
     my_struct->length = length;
     my_struct->type = **p;
-    //сдвинем p с дэ
     (*p)++;
     return (length);
 }
-//вылавливает из строки число
+
 char *ft_num_for_sruct(char **p)
 {
     char 	*tmp;
@@ -61,8 +69,8 @@ char *ft_num_for_sruct(char **p)
     str_len = 10;
     if(!(num_string = ft_calloc(str_len + 1, sizeof(char))))
         return (NULL);
-    while ((**p) >= '0' && (**p) <= '9')    //тут мы должны получить все цифры из format строки, обозначающие ширину.
-    {									//не обрабатывается случай сочетания -0
+    while ((**p) >= '0' && (**p) <= '9')
+    {
         if(i > str_len)
         {
             str_len = str_len + 10;
@@ -121,9 +129,7 @@ int ft_get_width(va_list *v_list, char **p, t_print_flags *my_struct) {
 			my_struct->flag_minus = 1;
 		}
 		else
-		{
 			my_struct->width = param;
-		}
 	} else {
 		num_string = ft_num_for_sruct(p);
 		if (num_string)
@@ -136,35 +142,30 @@ int ft_get_width(va_list *v_list, char **p, t_print_flags *my_struct) {
 
 int ft_get_precis(va_list *v_list, char **p, t_print_flags *my_struct)
 {
-	int param;
 	char *num_string;
 
-	param = 0;
-	num_string = NULL;
-	if (**p == '.') {
+	if (**p == '.')
+	{
 		(*p)++;
 		my_struct->dot = 1;
-		//новое
 		if (**p == '*')
 		{
 			(*p)++;
 			my_struct->precis = va_arg(*v_list, int);
-			if (my_struct->precis < 0) {
+			if (my_struct->precis < 0)
+			{
 				my_struct->precis = 0;
 				my_struct->dot = 0;
 				return 0;
 			} else
-			{
 				my_struct->flag_zero = 0;
-			}
 		}
-		else {
+		else
+		{
 			my_struct->flag_zero = 0;
-			num_string = ft_num_for_sruct(p);
-			if (num_string)
-				param = ft_atoi(num_string);
+			if ((num_string = ft_num_for_sruct(p)))
+				my_struct->precis = ft_atoi(num_string);
 			ft_make_string_clear(&num_string);
-			my_struct->precis = param;
 		}
 	}
 	return (my_struct->precis);
