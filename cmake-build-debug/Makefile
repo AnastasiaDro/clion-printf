@@ -143,6 +143,33 @@ ft_printf_clion/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/build
 .PHONY : ft_printf_clion/fast
 
+add_x_num_utils.o: add_x_num_utils.c.o
+
+.PHONY : add_x_num_utils.o
+
+# target to build an object file
+add_x_num_utils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/add_x_num_utils.c.o
+.PHONY : add_x_num_utils.c.o
+
+add_x_num_utils.i: add_x_num_utils.c.i
+
+.PHONY : add_x_num_utils.i
+
+# target to preprocess a source file
+add_x_num_utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/add_x_num_utils.c.i
+.PHONY : add_x_num_utils.c.i
+
+add_x_num_utils.s: add_x_num_utils.c.s
+
+.PHONY : add_x_num_utils.s
+
+# target to generate assembly for a file
+add_x_num_utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/add_x_num_utils.c.s
+.PHONY : add_x_num_utils.c.s
+
 ft_make_parse.o: ft_make_parse.c.o
 
 .PHONY : ft_make_parse.o
@@ -277,6 +304,33 @@ ft_printf_utils.s: ft_printf_utils.c.s
 ft_printf_utils.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/ft_printf_utils.c.s
 .PHONY : ft_printf_utils.c.s
+
+get_width_precis.o: get_width_precis.c.o
+
+.PHONY : get_width_precis.o
+
+# target to build an object file
+get_width_precis.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/get_width_precis.c.o
+.PHONY : get_width_precis.c.o
+
+get_width_precis.i: get_width_precis.c.i
+
+.PHONY : get_width_precis.i
+
+# target to preprocess a source file
+get_width_precis.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/get_width_precis.c.i
+.PHONY : get_width_precis.c.i
+
+get_width_precis.s: get_width_precis.c.s
+
+.PHONY : get_width_precis.s
+
+# target to generate assembly for a file
+get_width_precis.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/get_width_precis.c.s
+.PHONY : get_width_precis.c.s
 
 libft/ft_atoi.o: libft/ft_atoi.c.o
 
@@ -467,6 +521,33 @@ libft/ft_strlen.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft/ft_strlen.c.s
 .PHONY : libft/ft_strlen.c.s
 
+parse_nums_funcs.o: parse_nums_funcs.c.o
+
+.PHONY : parse_nums_funcs.o
+
+# target to build an object file
+parse_nums_funcs.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/parse_nums_funcs.c.o
+.PHONY : parse_nums_funcs.c.o
+
+parse_nums_funcs.i: parse_nums_funcs.c.i
+
+.PHONY : parse_nums_funcs.i
+
+# target to preprocess a source file
+parse_nums_funcs.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/parse_nums_funcs.c.i
+.PHONY : parse_nums_funcs.c.i
+
+parse_nums_funcs.s: parse_nums_funcs.c.s
+
+.PHONY : parse_nums_funcs.s
+
+# target to generate assembly for a file
+parse_nums_funcs.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/parse_nums_funcs.c.s
+.PHONY : parse_nums_funcs.c.s
+
 test_main.o: test_main.c.o
 
 .PHONY : test_main.o
@@ -503,6 +584,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ft_printf_clion"
+	@echo "... add_x_num_utils.o"
+	@echo "... add_x_num_utils.i"
+	@echo "... add_x_num_utils.s"
 	@echo "... ft_make_parse.o"
 	@echo "... ft_make_parse.i"
 	@echo "... ft_make_parse.s"
@@ -518,6 +602,9 @@ help:
 	@echo "... ft_printf_utils.o"
 	@echo "... ft_printf_utils.i"
 	@echo "... ft_printf_utils.s"
+	@echo "... get_width_precis.o"
+	@echo "... get_width_precis.i"
+	@echo "... get_width_precis.s"
 	@echo "... libft/ft_atoi.o"
 	@echo "... libft/ft_atoi.i"
 	@echo "... libft/ft_atoi.s"
@@ -539,6 +626,9 @@ help:
 	@echo "... libft/ft_strlen.o"
 	@echo "... libft/ft_strlen.i"
 	@echo "... libft/ft_strlen.s"
+	@echo "... parse_nums_funcs.o"
+	@echo "... parse_nums_funcs.i"
+	@echo "... parse_nums_funcs.s"
 	@echo "... test_main.o"
 	@echo "... test_main.i"
 	@echo "... test_main.s"

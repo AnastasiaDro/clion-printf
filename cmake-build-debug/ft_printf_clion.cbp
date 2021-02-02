@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/anastasia/CLionProjects/clion-printf/add_x_num_utils.c">
+			<Option target="ft_printf_clion"/>
+		</Unit>
+		<Unit filename="/Users/anastasia/CLionProjects/clion-printf/add_x_num_utils.h">
+			<Option target="ft_printf_clion"/>
+		</Unit>
 		<Unit filename="/Users/anastasia/CLionProjects/clion-printf/ft_make_parse.c">
 			<Option target="ft_printf_clion"/>
 		</Unit>
@@ -96,6 +102,12 @@
 			<Option target="ft_printf_clion"/>
 		</Unit>
 		<Unit filename="/Users/anastasia/CLionProjects/clion-printf/ft_printf_utils.c">
+			<Option target="ft_printf_clion"/>
+		</Unit>
+		<Unit filename="/Users/anastasia/CLionProjects/clion-printf/get_width_precis.c">
+			<Option target="ft_printf_clion"/>
+		</Unit>
+		<Unit filename="/Users/anastasia/CLionProjects/clion-printf/get_width_precis.h">
 			<Option target="ft_printf_clion"/>
 		</Unit>
 		<Unit filename="/Users/anastasia/CLionProjects/clion-printf/libft/ft_atoi.c">
@@ -117,6 +129,12 @@
 			<Option target="ft_printf_clion"/>
 		</Unit>
 		<Unit filename="/Users/anastasia/CLionProjects/clion-printf/libft/ft_strlen.c">
+			<Option target="ft_printf_clion"/>
+		</Unit>
+		<Unit filename="/Users/anastasia/CLionProjects/clion-printf/parse_nums_funcs.c">
+			<Option target="ft_printf_clion"/>
+		</Unit>
+		<Unit filename="/Users/anastasia/CLionProjects/clion-printf/parse_nums_funcs.h">
 			<Option target="ft_printf_clion"/>
 		</Unit>
 		<Unit filename="/Users/anastasia/CLionProjects/clion-printf/test_main.c">

@@ -6,13 +6,14 @@
 #    By: cerebus <cerebus@student.21-school.ru>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/30 14:29:50 by cerebus           #+#    #+#              #
-#    Updated: 2021/01/30 20:45:54 by cerebus          ###   ########.fr        #
+#    Updated: 2021/02/02 22:27:41 by cerebus          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	libftprintf.a
 FLAGS	=	-Wall -Wextra -Werror -I $(INC)
-PRINTF	= 	ft_printf.c ft_printf_utils.c ft_make_parse.c ft_num_utils.c  ft_print_utils.c
+PRINTF	= 	ft_printf.c ft_printf_utils.c ft_make_parse.c ft_num_utils.c  ft_print_utils.c get_width_precis.c\
+			parse_nums_funcs.c add_x_num_utils.c
 LIB		=	libft/ft_atoi.c libft/ft_bzero.c libft/ft_isalnum.c libft/ft_isalpha.c libft/ft_isascii.c libft/ft_isdigit.c\
 			libft/ft_isprint.c libft/ft_memccpy.c libft/ft_memchr.c libft/ft_memcmp.c libft/ft_memcpy.c\
 			libft/ft_memmove.c libft/ft_memset.c libft/ft_strchr.c libft/ft_strlcat.c libft/ft_strlcpy.c\
