@@ -75,12 +75,12 @@ void ft_fill_int_s(char **s, unsigned int num, char type, int num_cap)
 	int limit;
 
 	limit = 0;
-	if (type == 'p')
-	{
-		(*s)[0] = '0';
-		(*s)[1] = 'x';
-		limit = 2;
-	}
+//	if (type == 'p')
+//	{
+//		(*s)[0] = '0';
+//		(*s)[1] = 'x';
+//		limit = 2;
+//	}
 	num_sys = ft_get_num_syst(type, &base);
 	if (num == 0)
 		(*s)[0] = '0';
@@ -100,7 +100,7 @@ void ft_fill_int_s(char **s, unsigned int num, char type, int num_cap)
 	}
 }
 
-void ft_fill_x_s(char **s, unsigned long num, char type, int num_cap)
+void ft_fill_x_s(char **s, unsigned long num, int num_cap, t_print_flags *my_struct)
 {
     unsigned long divis;
     int num_sys;
@@ -108,13 +108,17 @@ void ft_fill_x_s(char **s, unsigned long num, char type, int num_cap)
     int limit;
 
     limit = 0;
-    if (type == 'p')
+    if (my_struct->type == 'p')
     {
         (*s)[0] = '0';
         (*s)[1] = 'x';
         limit = 2;
+		if (num == 0  && my_struct->dot) {
+			my_struct->width = my_struct->width - 2;
+			return;
+		}
     }
-    num_sys = ft_get_num_syst(type, &base);
+    num_sys = ft_get_num_syst(my_struct->type, &base);
     if (num == 0)
         (*s)[0] = '0';
     while (num_cap > limit) {
@@ -142,17 +146,17 @@ char	*ft_int_get_s(int num, int num_cap, char type)
     return (s);
 }
 
-char	*ft_get_unsign_s(unsigned long int num, int num_cap, char type)
+char	*ft_get_unsign_s(unsigned long int num, int num_cap, t_print_flags *my_struct)
 {
     int size;
     char *s;
 
-    if (type == 'p')
+    if (my_struct->type == 'p')
         num_cap = num_cap + 2;
     size = num_cap + 1;
     if(!( s = ft_calloc(size, sizeof(char))))
         return (NULL);
-    ft_fill_x_s(&s, num, type, num_cap);
+    ft_fill_x_s(&s, num, num_cap, my_struct);
     return (s);
 }
 

@@ -123,7 +123,7 @@ int ft_print_Xx(t_print_flags *my_struct, va_list *v_list)
 
     print_num = va_arg(*v_list, unsigned int);
     num_len = ft_get_capacity(print_num, 16);
-    x_num_string = ft_get_unsign_s(print_num, num_len, my_struct->type);
+    x_num_string = ft_get_unsign_s(print_num, num_len, my_struct);
     ft_print(my_struct, num_len, x_num_string);
     free(x_num_string);
     x_num_string = NULL;
@@ -138,7 +138,7 @@ int ft_print_u(t_print_flags *my_struct, va_list *v_list)
 
     print_num = va_arg(*v_list, unsigned int);
     num_len = ft_get_capacity(print_num, 10);
-    num_string = ft_get_unsign_s(print_num, num_len, my_struct->type);
+    num_string = ft_get_unsign_s(print_num, num_len, my_struct);
     ft_print(my_struct, num_len, num_string);
     free(num_string);
     num_string = NULL;
@@ -152,8 +152,12 @@ int ft_print_pointer(t_print_flags *my_struct, va_list *v_list)
     char	            *p_string;
 
     print_ptr = (unsigned long int) va_arg(*v_list, void *);
+//	if (print_ptr == 0)
+//	{
+//		write(1, "0x", 2);
+//	}
     num_len = ft_get_capacity(print_ptr, 16);
-    p_string = ft_get_unsign_s(print_ptr, num_len, my_struct->type);
+    p_string = ft_get_unsign_s(print_ptr, num_len, my_struct);
 	ft_print(my_struct, num_len, p_string);
     free(p_string);
     p_string = NULL;

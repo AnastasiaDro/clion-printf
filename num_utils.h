@@ -32,5 +32,6 @@ char	*ft_int_get_s(int num, int num_cap, char type);
 
 	char	*ft_get_s(int num, int num_cap, char type);
 
-    char	*ft_get_unsign_s(unsigned long int num, int num_cap, char type);
+    //char	*ft_get_unsign_s(unsigned long int num, int num_cap, char type);
+char *ft_get_unsign_s(unsigned long int num, int num_cap, t_print_flags *my_struct);
 #endif
