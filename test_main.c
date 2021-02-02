@@ -113,13 +113,15 @@ int main()
 	printf("-->|%-9p|<--\n", ptr);
 //			+Printf("-->|%-16.p|<--\n", p);	==>	-->|0x0                |<--
 //			Printf("-->|%-16p|<--\n", p);	==>	-->|0x0
-//	printf("%% *.5i 42 == |% *.5i|\n", 4, 42);
+	printf("%% *.5i 42 == |% *.5i|\n", 4, 42);
 //	printf("%% *.5i 42 == |%    -*.5i|\n", 4, 42);
 	//printf("%-2s, %.s, %-4s, %-2.4s, %-8.12s, %3s, %8s, %---2s, %.*s, %.0s, %.1s, %.2s, %.4s, %.8s\n", NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, -2, NULL, NULL, NULL, NULL, NULL, NULL);
 	printf("MY \n");
 	ft_printf("-->|%-9.p|<--\n", ptr);
 	ft_printf("-->|%-9p|<--\n", ptr);
-//	ft_printf("%% *.5i 42 == |% *.5i|\n", 4, 42);
+	ft_printf("%% *.5i 42 == |% *.5i|\n", 4, 42);
 	//ft_printf("%-2s, %.s, %-4s, %-2.4s, %-8.12s, %3s, %8s, %---2s, %.*s, %.0s, %.1s, %.2s, %.4s, %.8s\n", NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, -2, NULL, NULL, NULL, NULL, NULL, NULL);
-
+//	int y = 1;
+//	while (y>0)
+//		y++;
 }
