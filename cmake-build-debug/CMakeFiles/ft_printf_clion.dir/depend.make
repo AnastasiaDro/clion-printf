@@ -13,6 +13,7 @@ CMakeFiles/ft_printf_clion.dir/ft_make_parse.c.o: ../libft/libft.h
 CMakeFiles/ft_printf_clion.dir/ft_make_parse.c.o: ../parse_nums_funcs.h
 CMakeFiles/ft_printf_clion.dir/ft_make_parse.c.o: ../print_utils.h
 
+CMakeFiles/ft_printf_clion.dir/ft_num_utils.c.o: ../add_x_num_utils.h
 CMakeFiles/ft_printf_clion.dir/ft_num_utils.c.o: ../ft_num_utils.c
 CMakeFiles/ft_printf_clion.dir/ft_num_utils.c.o: ../ft_printf.h
 CMakeFiles/ft_printf_clion.dir/ft_num_utils.c.o: ../libft/libft.h

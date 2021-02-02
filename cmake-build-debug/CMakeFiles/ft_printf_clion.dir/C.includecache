@@ -15,8 +15,14 @@ add_x_num_utils.h
 /Users/anastasia/CLionProjects/clion-printf/add_x_num_utils.h
 
 /Users/anastasia/CLionProjects/clion-printf/add_x_num_utils.h
+
+/Users/anastasia/CLionProjects/clion-printf/ft_num_utils.c
 ft_printf.h
 /Users/anastasia/CLionProjects/clion-printf/ft_printf.h
+num_utils.h
+/Users/anastasia/CLionProjects/clion-printf/num_utils.h
+add_x_num_utils.h
+/Users/anastasia/CLionProjects/clion-printf/add_x_num_utils.h
 
 /Users/anastasia/CLionProjects/clion-printf/ft_printf.h
 stdarg.h

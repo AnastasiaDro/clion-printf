@@ -12,6 +12,7 @@
 
 #include "ft_printf.h"
 #include "num_utils.h"
+#include "add_x_num_utils.h"
 
 int		ft_get_capacity(unsigned long int n, int base)
 {

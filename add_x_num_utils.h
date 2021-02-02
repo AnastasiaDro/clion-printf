@@ -10,9 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#ifndef ADD_X_NUM_UTILS_H
+# define ADD_X_NUM_UTILS_H
 
-void	ft_fill_x_s(char **s, unsigned long num, int num_cap, t_print_flags *my_struct);
+void	ft_fill_x_s(char **s, unsigned long num,
+			int num_cap, t_print_flags *my_struct);
+
 char	ft_convert_to_x(unsigned int n, char *base);
+
 char	*get_base(char type);
-int 	ft_add_0x(char **s, unsigned long num, int *limit, t_print_flags *my_struct);
+
+int		ft_add_0x(char **s, unsigned long num,
+			int *limit, t_print_flags *my_struct);
+
+#endif
