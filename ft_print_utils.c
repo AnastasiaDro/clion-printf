@@ -6,7 +6,7 @@
 /*   By: cerebus <cerebus@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/14 23:48:21 by cerebus           #+#    #+#             */
-/*   Updated: 2021/01/28 15:41:12 by cerebus          ###   ########.fr       */
+/*   Updated: 2021/02/02 19:32:31 by cerebus          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,4 +111,22 @@ int ft_print(t_print_flags *my_struct, int num_len, char *num_string)
 	else
 		ft_print_left_align(my_struct, num_string, width, precis);
 	return 1;
+}
+
+int				ft_putstr_printf(char *s, int precis, t_print_flags *my_struct)
+{
+	int str_len;
+
+	str_len = 0;
+	if (my_struct->type == 's')
+		str_len = precis;
+	else
+	{
+		str_len = ft_strlen(s);
+		if (my_struct->dot && !my_struct->precis && str_len == 1 && s[0] == '0')
+			return (0);
+	}
+	if (s)
+		write(1, s, str_len);
+	return (str_len);
 }

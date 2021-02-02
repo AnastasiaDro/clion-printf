@@ -6,13 +6,14 @@
 /*   By: cerebus <cerebus@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/16 16:54:32 by cerebus           #+#    #+#             */
-/*   Updated: 2021/01/28 15:32:08 by cerebus          ###   ########.fr       */
+/*   Updated: 2021/02/02 19:41:03 by cerebus          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "get_width_precis.h"
 
-t_print_flags *ft_create_struct()
+t_print_flags	*ft_create_struct(void)
 {
 	t_print_flags *my_struct;
 
@@ -23,24 +24,26 @@ t_print_flags *ft_create_struct()
 	my_struct->flag_minus = 0;
 	my_struct->flag_zero = 0;
 	my_struct->width = 0;
-    my_struct->precis = 0;
-    my_struct->type = 0;
-    my_struct->width_symbol = ' ';
-    my_struct->less_zero = 0;
-    my_struct->dot = 0;
+	my_struct->precis = 0;
+	my_struct->type = 0;
+	my_struct->width_symbol = ' ';
+	my_struct->less_zero = 0;
+	my_struct->dot = 0;
 	return (my_struct);
 }
 
-int ft_fill_struct(t_print_flags *my_struct, int length, char **p, va_list *v_list)
+int				ft_fill_struct(t_print_flags *my_struct,
+						int length, char **p, va_list *v_list)
 {
 	int flag_space;
 
 	flag_space = 0;
-	while(**p == '0' || **p == '-' || **p == ' ')
+	while (**p == '0' || **p == '-' || **p == ' ')
 	{
-		if(**p == '0' && my_struct->flag_zero == 0 && my_struct->flag_minus == 0)
+		if (**p == '0' && my_struct->flag_zero == 0
+				&& my_struct->flag_minus == 0)
 			my_struct->flag_zero = 1;
-		if(**p == '-' && my_struct->flag_minus == 0)
+		if (**p == '-' && my_struct->flag_minus == 0)
 			my_struct->flag_minus = 1;
 		if (**p == ' ' && flag_space == 0)
 		{
@@ -50,123 +53,17 @@ int ft_fill_struct(t_print_flags *my_struct, int length, char **p, va_list *v_li
 		}
 		(*p)++;
 	}
-   ft_get_width(v_list, p, my_struct);
-    ft_get_precis(v_list, p, my_struct);
-    my_struct->length = length;
-    my_struct->type = **p;
-    (*p)++;
-    return (length);
+	ft_get_width(v_list, p, my_struct);
+	ft_get_precis(v_list, p, my_struct);
+	my_struct->length = length;
+	my_struct->type = **p;
+	(*p)++;
+	return (length);
 }
 
-char *ft_num_for_sruct(char **p)
+void			ft_just_print(char **p, int *res_len)
 {
-    char 	*tmp;
-    char 	*num_string;
-    int		str_len;
-    int 	i;
-
-    i = 0;
-    str_len = 10;
-    if(!(num_string = ft_calloc(str_len + 1, sizeof(char))))
-        return (NULL);
-    while ((**p) >= '0' && (**p) <= '9')
-    {
-        if(i > str_len)
-        {
-            str_len = str_len + 10;
-            tmp = num_string;
-            num_string = ft_calloc(str_len+1, sizeof(char));
-            ft_strlcpy(num_string, tmp, str_len); //т.к. строка tmp всегда короче width_string, то мы можем пихать любое число, больше ее длины
-            free(tmp);
-            tmp = NULL;
-        }
-        num_string[i] = **p;
-        (*p)++;
-        i++;
-    }
-    return (num_string);
-}
-
-void ft_make_string_clear(char **str)
-{
-	char *tmp;
-
-	tmp = *str;
-	*str = NULL;
-	free(tmp);
-}
-
-int	ft_putstr_printf(char *s, int precis, t_print_flags *my_struct)
-{
-    int str_len;
-
-    str_len = 0;
-	if (my_struct->type == 's')
-		str_len = precis;
-	else
-	{
-		str_len = ft_strlen(s);
-		if (my_struct->dot && !my_struct->precis && str_len == 1 && s[0] == '0')
-			return 0;
-	}
-	if (s)
-		write(1, s, str_len);
-    return (str_len);
-}
-
-int ft_get_width(va_list *v_list, char **p, t_print_flags *my_struct) {
-	int param;
-	char *num_string;
-
-	param = 0;
-	num_string = NULL;
-	if (**p == '*')
-	{
-		(*p)++;
-		param = va_arg(*v_list, int);
-		if (param < 0) {
-			my_struct->width = param * (-1);
-			my_struct->flag_minus = 1;
-		}
-		else
-			my_struct->width = param;
-	} else {
-		num_string = ft_num_for_sruct(p);
-		if (num_string)
-			param = ft_atoi(num_string);
-		ft_make_string_clear(&num_string);
-		my_struct->width = param;
-	}
-	return my_struct->width;
-}
-
-int ft_get_precis(va_list *v_list, char **p, t_print_flags *my_struct)
-{
-	char *num_string;
-
-	if (**p == '.')
-	{
-		(*p)++;
-		my_struct->dot = 1;
-		if (**p == '*')
-		{
-			(*p)++;
-			my_struct->precis = va_arg(*v_list, int);
-			if (my_struct->precis < 0)
-			{
-				my_struct->precis = 0;
-				my_struct->dot = 0;
-				return 0;
-			} else
-				my_struct->flag_zero = 0;
-		}
-		else
-		{
-			my_struct->flag_zero = 0;
-			if ((num_string = ft_num_for_sruct(p)))
-				my_struct->precis = ft_atoi(num_string);
-			ft_make_string_clear(&num_string);
-		}
-	}
-	return (my_struct->precis);
+	ft_putchar_fd((**p), 1);
+	(*res_len)++;
+	(*p)++;
 }
