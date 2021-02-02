@@ -6,7 +6,7 @@
 /*   By: cerebus <cerebus@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/16 16:54:32 by cerebus           #+#    #+#             */
-/*   Updated: 2021/02/02 17:22:18 by cerebus          ###   ########.fr       */
+/*   Updated: 2021/02/02 23:09:32 by cerebus          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,28 +28,6 @@ int		ft_get_capacity(unsigned long int n, int base)
 		num_cap++;
 	}
 	return (num_cap);
-}
-
-char	ft_convert_to_x(unsigned int n, char *base)
-{
-	char res;
-
-	if (n < 10)
-		res = n + '0';
-	else
-		res = base[n - 10];
-	return (res);
-}
-
-char	*get_base(char type)
-{
-	char *base;
-
-	if (type == 'X')
-		base = "ABCDEF";
-	else
-		base = "abcdef";
-	return (base);
 }
 
 int		ft_get_num_syst(char type, char **base)
@@ -93,43 +71,6 @@ void	ft_fill_int_s(char **s, unsigned int num, char type, int num_cap)
 	}
 }
 
-void	ft_fill_x_s(char **s, unsigned long num, int num_cap, t_print_flags *my_struct)
-{
-	unsigned long	divis;
-	int				num_sys;
-	char			*base;
-	int				limit;
-
-	limit = 0;
-	if (my_struct->type == 'p')
-		 if (ft_add_0x(s, num, &limit, my_struct))
-			 return ;
-	num_sys = ft_get_num_syst(my_struct->type, &base);
-	if (num == 0)
-		(*s)[0] = '0';
-	while (num_cap > limit)
-	{
-		divis = num % num_sys;
-		(*s)[num_cap - 1] = ft_convert_to_x(divis, base);
-		num = num / num_sys;
-		num_cap--;
-	}
-}
-
-int	ft_add_0x(char **s, unsigned long num, int *limit, t_print_flags *my_struct)
-{
-	(*s)[0] = '0';
-	(*s)[1] = 'x';
-	*limit = 2;
-	if (num == 0 && my_struct->dot)
-	{
-		my_struct->width = my_struct->width - 2;
-		return 1;
-	}
-	return 0;
-}
-
-
 char	*ft_int_get_s(int num, int num_cap, char type)
 {
 	int		size;
@@ -144,7 +85,8 @@ char	*ft_int_get_s(int num, int num_cap, char type)
 	return (s);
 }
 
-char	*ft_get_unsign_s(unsigned long int num, int num_cap, t_print_flags *my_struct)
+char	*ft_get_unsign_s(unsigned long int num,
+				int num_cap, t_print_flags *my_struct)
 {
 	int		size;
 	char	*s;
