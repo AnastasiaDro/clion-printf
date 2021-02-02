@@ -11,8 +11,8 @@
 /* ************************************************************************** */
 
 #ifndef FT_PARSE_UTILS_H
-#define FT_PARSE_UTILS_H
-#include "ft_printf.h"
+# define FT_PARSE_UTILS_H
+# include "ft_printf.h"
 
 void	ft_print_width(t_print_flags *my_struct, int width);
 

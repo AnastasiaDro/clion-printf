@@ -6,65 +6,67 @@
 /*   By: cerebus <cerebus@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/14 23:48:21 by cerebus           #+#    #+#             */
-/*   Updated: 2021/02/02 19:32:31 by cerebus          ###   ########.fr       */
+/*   Updated: 2021/02/02 23:42:52 by cerebus          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "print_utils.h"
 
-void ft_print_width(t_print_flags *my_struct, int width)
+void	ft_print_width(t_print_flags *my_struct, int width)
 {
-    while (width > 0)
-    {
-        write(1, &(my_struct->width_symbol), 1);
-        my_struct->length++;
-        width--;
-    }
+	while (width > 0)
+	{
+		write(1, &(my_struct->width_symbol), 1);
+		my_struct->length++;
+		width--;
+	}
 }
 
-void ft_print_minus(t_print_flags *my_struct)
+void	ft_print_minus(t_print_flags *my_struct)
 {
-        write(1, "-", 1);
-        my_struct->length++;
+	write(1, "-", 1);
+	my_struct->length++;
 }
 
-void ft_print_precis(t_print_flags *my_struct, int precis)
+void	ft_print_precis(t_print_flags *my_struct, int precis)
 {
-    while (precis > 0) {
-        write(1, "0", 1);
-        my_struct->length++;
-       precis--;
-    }
+	while (precis > 0)
+	{
+		write(1, "0", 1);
+		my_struct->length++;
+		precis--;
+	}
 }
 
-int ft_calc_width(t_print_flags *my_struct, int num_len)
+int		ft_calc_width(t_print_flags *my_struct, int num_len)
 {
 	int width;
 
 	width = my_struct->width;
-    if (my_struct->flag_zero && !my_struct->flag_minus)
-        my_struct->width_symbol = '0';
-    width = width - num_len;
+	if (my_struct->flag_zero && !my_struct->flag_minus)
+		my_struct->width_symbol = '0';
+	width = width - num_len;
 	if (my_struct->type == 'p')
 		width = width - 2;
-    if (my_struct->less_zero)
-        width--;
-    return width;
+	if (my_struct->less_zero)
+		width--;
+	return (width);
 }
 
-int ft_calc_precis(t_print_flags *my_struct, int num_len, int *width)
+int		ft_calc_precis(t_print_flags *my_struct, int num_len, int *width)
 {
 	int precis;
 
-    precis = my_struct->precis - num_len;
+	precis = my_struct->precis - num_len;
 	my_struct->width_symbol = ' ';
 	if (precis > 0)
-        *width = *width - precis;
-    return precis;
+		*width = *width - precis;
+	return (precis);
 }
 
-void ft_print_right_align(t_print_flags *my_struct,  char *num_string, int width, int precis)
+void	ft_print_right_align(t_print_flags *my_struct,
+			char *num_string, int width, int precis)
 {
 	if (my_struct->width_symbol == '0')
 	{
@@ -75,31 +77,36 @@ void ft_print_right_align(t_print_flags *my_struct,  char *num_string, int width
 	else
 	{
 		ft_print_width(my_struct, width);
-		if(my_struct->less_zero)
+		if (my_struct->less_zero)
 			ft_print_minus(my_struct);
 	}
-    ft_print_precis(my_struct, precis);
-    my_struct->length = my_struct->length + ft_putstr_printf(num_string, 0, my_struct);
+	ft_print_precis(my_struct, precis);
+	my_struct->length = my_struct->length +
+			ft_putstr_printf(num_string, 0, my_struct);
 }
 
-void ft_print_left_align(t_print_flags *my_struct, char *num_string, int width, int precis)
+void	ft_print_left_align(t_print_flags *my_struct,
+			char *num_string, int width, int precis)
 {
-    if (my_struct->less_zero)
-        ft_print_minus(my_struct);
+	if (my_struct->less_zero)
+		ft_print_minus(my_struct);
 	ft_print_precis(my_struct, precis);
-    my_struct->length = my_struct->length + ft_putstr_printf(num_string, 0, my_struct);
+	my_struct->length = my_struct->length +
+			ft_putstr_printf(num_string, 0, my_struct);
 	ft_print_width(my_struct, width);
 }
 
-int ft_print(t_print_flags *my_struct, int num_len, char *num_string)
+int		ft_print(t_print_flags *my_struct, int num_len, char *num_string)
 {
 	int		width;
-	int 	precis;
+	int		precis;
 
 	width = 0;
 	precis = 0;
-	if (my_struct->width) {
-		if (my_struct->dot && !my_struct->precis && *num_string == '0' && num_len == 1)
+	if (my_struct->width)
+	{
+		if (my_struct->dot && !my_struct->precis &&
+				*num_string == '0' && num_len == 1)
 			width = my_struct->width;
 		else
 			width = ft_calc_width(my_struct, num_len);
@@ -110,10 +117,10 @@ int ft_print(t_print_flags *my_struct, int num_len, char *num_string)
 		ft_print_right_align(my_struct, num_string, width, precis);
 	else
 		ft_print_left_align(my_struct, num_string, width, precis);
-	return 1;
+	return (1);
 }
 
-int				ft_putstr_printf(char *s, int precis, t_print_flags *my_struct)
+int		ft_putstr_printf(char *s, int precis, t_print_flags *my_struct)
 {
 	int str_len;
 
