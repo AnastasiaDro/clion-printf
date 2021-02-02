@@ -6,7 +6,7 @@
 /*   By: cerebus <cerebus@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 19:58:58 by cerebus           #+#    #+#             */
-/*   Updated: 2021/02/02 20:02:55 by cerebus          ###   ########.fr       */
+/*   Updated: 2021/02/02 23:29:41 by cerebus          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int ft_parse_int(t_print_flags *my_struct, va_list *v_list)
 	ft_print(my_struct, num_len, num_string);
 	free(num_string);
 	num_string = NULL;
-	return (1);
+	return (my_struct->length);
 }
 
 
@@ -47,7 +47,7 @@ int ft_parse_Xx(t_print_flags *my_struct, va_list *v_list)
     ft_print(my_struct, num_len, x_num_string);
     free(x_num_string);
     x_num_string = NULL;
-    return (1);
+    return (my_struct->length);
 }
 
 int ft_parse_u(t_print_flags *my_struct, va_list *v_list)
@@ -62,7 +62,7 @@ int ft_parse_u(t_print_flags *my_struct, va_list *v_list)
     ft_print(my_struct, num_len, num_string);
     free(num_string);
     num_string = NULL;
-    return (1);
+    return (my_struct->length);
 }
 
 int ft_parse_pointer(t_print_flags *my_struct, va_list *v_list)
@@ -77,5 +77,5 @@ int ft_parse_pointer(t_print_flags *my_struct, va_list *v_list)
 	ft_print(my_struct, num_len, p_string);
     free(p_string);
     p_string = NULL;
-    return (1);
+    return (my_struct->length);
 }
