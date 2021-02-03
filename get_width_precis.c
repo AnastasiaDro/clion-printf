@@ -6,7 +6,7 @@
 /*   By: cerebus <cerebus@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 22:09:46 by cerebus           #+#    #+#             */
-/*   Updated: 2021/02/02 23:48:56 by cerebus          ###   ########.fr       */
+/*   Updated: 2021/02/03 13:25:17 by cerebus          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,21 @@ int		ft_get_width(va_list *v_list, char **p, t_print_flags *my_struct)
 	return (my_struct->width);
 }
 
+int		ft_get_star_precis(va_list *v_list, char **p, t_print_flags *my_struct)
+{
+	(*p)++;
+	my_struct->precis = va_arg(*v_list, int);
+	if (my_struct->precis < 0)
+	{
+		my_struct->precis = 0;
+		my_struct->dot = 0;
+		return (0);
+	}
+	else
+		my_struct->flag_zero = 0;
+	return (1);
+}
+
 int		ft_get_precis(va_list *v_list, char **p, t_print_flags *my_struct)
 {
 	char *num_string;
@@ -57,16 +72,8 @@ int		ft_get_precis(va_list *v_list, char **p, t_print_flags *my_struct)
 		my_struct->dot = 1;
 		if (**p == '*')
 		{
-			(*p)++;
-			my_struct->precis = va_arg(*v_list, int);
-			if (my_struct->precis < 0)
-			{
-				my_struct->precis = 0;
-				my_struct->dot = 0;
+			if (!(ft_parse_star_precis(v_list, p, my_struct)))
 				return (0);
-			}
-			else
-				my_struct->flag_zero = 0;
 		}
 		else
 		{
