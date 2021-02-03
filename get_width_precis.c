@@ -72,7 +72,7 @@ int		ft_get_precis(va_list *v_list, char **p, t_print_flags *my_struct)
 		my_struct->dot = 1;
 		if (**p == '*')
 		{
-			if (!(ft_parse_star_precis(v_list, p, my_struct)))
+			if (!(ft_get_star_precis(v_list, p, my_struct)))
 				return (0);
 		}
 		else

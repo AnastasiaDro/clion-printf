@@ -6,7 +6,7 @@
 /*   By: cerebus <cerebus@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/11 17:41:11 by cerebus           #+#    #+#             */
-/*   Updated: 2021/02/03 13:33:43 by cerebus          ###   ########.fr       */
+/*   Updated: 2021/02/03 13:48:11 by cerebus          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ typedef	struct	s_print_flags
 	int		dot;
 }				t_print_flags;
 
-int				ft_printf(const char *, ...);
+int				ft_printf(const char *format_str, ...);
 
 int				ft_make_parse(t_print_flags *my_struct, va_list *v_list);
 

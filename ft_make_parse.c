@@ -12,6 +12,7 @@
 
 #include "ft_printf.h"
 #include "print_utils.h"
+#include "print_width_precis.h"
 #include "parse_nums_funcs.h"
 
 int	ft_make_parse(t_print_flags *my_struct, va_list *v_list)
@@ -30,7 +31,7 @@ int	ft_make_parse(t_print_flags *my_struct, va_list *v_list)
 	if (symbol == 'u')
 		return (ft_parse_u(my_struct, v_list));
 	if (symbol == 'X' || symbol == 'x')
-		return (ft_parse_Xx(my_struct, v_list));
+		return (ft_parse_xx(my_struct, v_list));
 	if (symbol == 'p')
 		return (ft_parse_pointer(my_struct, v_list));
 	return (my_struct->length);
