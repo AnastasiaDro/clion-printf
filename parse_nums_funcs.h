@@ -18,7 +18,7 @@ int ft_parse_pointer(t_print_flags *my_struct, va_list *v_list);
 
 int ft_parse_int(t_print_flags *my_struct, va_list *v_list);
 
-int ft_parse_Xx(t_print_flags *my_struct, va_list *v_list);
+int ft_parse_xx(t_print_flags *my_struct, va_list *v_list);
 
 int ft_parse_u(t_print_flags *my_struct, va_list *v_list);
 #endif
